@@ -1,6 +1,12 @@
 import type { AppProps } from "next/app";
 import { Poppins } from "next/font/google";
 
+// import { vars } from "../styles/global.css";
+// import { Provider as StyleProvider } from "react-redux";
+// import { createTheme } from "@vanilla-extract/css";
+
+// const theme = createTheme(vars);
+
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700", "800"],
   subsets: ["devanagari"],

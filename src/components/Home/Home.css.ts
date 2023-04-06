@@ -24,7 +24,7 @@ export const HomeStyle = style({
     },
     "screen and (min-height: 768px)": {
       height: "calc(100vh - 100px)",
-      marginTop: 0,
+      marginTop: -100,
     },
   },
 });
@@ -40,7 +40,7 @@ export const HomeTitle = style({
 
   width: "100%",
   textAlign: "center",
-  fontSize: "clamp(30px, calc(100vw - 88vw), 100px)",
+  fontSize: "clamp(30px, calc(100vw - 90vw), 100px)",
 });
 
 export const HomeIcons = style({

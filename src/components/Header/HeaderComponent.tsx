@@ -32,7 +32,7 @@ export default function HeaderComponent() {
       <h1 className={`${Logo} ${poppinsBold.className}`}>
         <span className={`${LogoMobile}`}>JH</span>{" "}
         <span className={`${LogoTabletDesktop}`}>JOOHNQ</span>
-        <Icon icon="line-md:light-dark-loop" />
+        <Icon icon="line-md:moon-alt-to-sunny-outline-loop-transition" />
       </h1>
       <nav>
         <ul className={HeaderList}>

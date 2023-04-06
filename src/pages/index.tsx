@@ -2,6 +2,7 @@ import Head from "next/head";
 import "../styles/styles.css";
 import HeaderComponent from "@/components/Header/HeaderComponent";
 import HomeComponent from "@/components/Home/HomeComponent";
+import StacksComponent from "@/components/StacksComponent/StacksComponent";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <HeaderComponent />
       <main>
         <HomeComponent />
+        <StacksComponent />
       </main>
     </>
   );
