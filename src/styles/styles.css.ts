@@ -9,11 +9,7 @@ globalStyle("body", {
   backgroundColor: vars.color.blueDark,
 });
 
-export const Glassmorphism = style({
-  backgroundColor: vars.color.white25,
-  boxShadow: vars.color.shadow,
-  borderRadius: vars.borderRadius.base,
-  border: vars.color.border,
-  backdropFilter: vars.filter.backdrop,
-  WebkitBackdropFilter: vars.webkitFilter.backdrop,
+export const Container = style({
+  maxWidth: 1420,
+  margin: "auto",
 });
