@@ -10,12 +10,15 @@ export const HeaderStyle = style({
   paddingRight: 50,
   borderBottomLeftRadius: 10,
   borderBottomRightRadius: 10,
+  position: "relative",
+  zIndex: 10,
 });
 
 export const Logo = style({});
 
 export const LogoMobile = style({
   fontSize: 34,
+  marginRight: 20,
   "@media": {
     "screen and (min-width: 500px)": {
       display: "none",
@@ -25,6 +28,7 @@ export const LogoMobile = style({
 
 export const LogoTabletDesktop = style({
   fontSize: 40,
+  marginRight: 20,
   "@media": {
     "screen and (max-width: 500px)": {
       display: "none",
@@ -42,7 +46,6 @@ export const HeaderList = style({
 
 export const HeaderListItem = style({
   fontSize: 20,
-  cursor: "pointer",
 
   display: "flex",
   alignItems: "center",
@@ -71,6 +74,11 @@ export const HeaderListItem_text = style({
   textDecoration: "none",
   color: vars.color.white,
   fontSize: 24,
+
+  ":hover": {
+    color: vars.color.purpleLight,
+  },
+
   "@media": {
     "(max-width: 1280px)": {
       display: "none",
