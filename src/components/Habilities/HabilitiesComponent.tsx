@@ -1,4 +1,8 @@
-import { Container } from "@/styles/styles.css";
+import React, { useState, ReactElement, useRef, useLayoutEffect } from "react";
+import ReactDOMServer from "react-dom/server";
+import Image from "next/image";
+import ProfilePhoto from "../../../public/profilephoto.jpg";
+
 import {
   HabilitiesStyle,
   HabilitiesHeaders,
@@ -6,12 +10,12 @@ import {
   HeaderSelected,
   HabilitiesBody,
   HabilitiesBody_About,
+  HabilitiesBody_AboutPhoto,
+  HabilitiesBody_AboutDesc,
   HabilitiesBody_Experience,
 } from "./Habilities.css";
-import React, { useState, ReactElement, useRef, useLayoutEffect } from "react";
-import ReactDOMServer from "react-dom/server";
-
-import { poppinsBold } from "../../styles/fonts";
+import { Container } from "@/styles/styles.css";
+import { poppinsBold, poppinsMedium } from "../../styles/fonts";
 
 export default function HabilitiesComponent() {
   const [aboutState, setAboutState] = useState<boolean>(true);
@@ -28,7 +32,25 @@ export default function HabilitiesComponent() {
   const HabilitiesBodyAbout = (): ReactElement => {
     return (
       <div className={`${HabilitiesBody_About}`}>
-        <h1 className={`${poppinsBold.className}`}>About</h1>
+        <Image
+          className={`${HabilitiesBody_AboutPhoto}`}
+          src={ProfilePhoto}
+          width={500}
+          alt="Foto de João Henrique"
+        />
+        <p className={`${HabilitiesBody_AboutDesc} ${poppinsMedium.className}`}>
+          Olá visitante! Eu me chamo João Henrique , e sou um desenvolvedor Full
+          Stack JÚnior com uma paixão por tecnologia e programação desde os meus
+          16 anos. Nessa época, comecei a explorar as linguagens HTML, CSS,
+          JavaScript e desde então venho aprimorando minhas habilidades nessa
+          área. Atualmente, trabalho como freelancer , e isso me permite a
+          flexibilidade e liberdade para assumir projetos empolgantes e
+          desafiadores enquanto construo meu portfólio de desenvolvimento de
+          software. Mas não é só trabalho e desenvolvimento de software que me
+          animam. Eu também sou um grande fã de tecnologia e gadgets , e sempre
+          estou buscando as últimas tendências em tecnologia para me manter
+          atualizado.
+        </p>
       </div>
     );
   };

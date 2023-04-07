@@ -13,6 +13,11 @@ export const HabilitiesStyle = style({
   alignItems: "center",
   justifyContent: "center",
   flexDirection: "column",
+  gap: 100,
+
+  height: 700,
+
+  position: "relative",
 });
 
 export const HabilitiesHeaders = style({
@@ -20,6 +25,9 @@ export const HabilitiesHeaders = style({
   alignItems: "center",
   justifyContent: "center",
   gap: 40,
+  position: "absolute",
+  height: 150,
+  top: 0,
 });
 
 export const HabilitiesHeader = style({
@@ -38,4 +46,28 @@ export const HeaderSelected = style({
 
   backgroundColor: vars.color.purpleLight,
   borderRadius: 10,
+});
+
+export const HabilitiesBody = style({
+  width: "100%",
+  position: "absolute",
+  bottom: 0,
+  height: 600,
+});
+
+export const HabilitiesBody_About = style({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  maxWidth: 1200,
+  margin: "auto",
+});
+
+export const HabilitiesBody_AboutPhoto = style({
+  borderRadius: "50%",
+});
+
+export const HabilitiesBody_AboutDesc = style({
+  maxWidth: 600,
+  fontSize: 20
 });
