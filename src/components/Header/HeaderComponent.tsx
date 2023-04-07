@@ -11,20 +11,7 @@ import {
 } from "./Header.css";
 import { Container } from "../../styles/styles.css";
 import { Icon } from "@iconify/react";
-
-import { Poppins } from "next/font/google";
-
-const poppinsBold = Poppins({
-  weight: ["800"],
-  subsets: ["devanagari"],
-  display: "block",
-});
-
-const poppinsSemiBold = Poppins({
-  weight: ["600"],
-  subsets: ["devanagari"],
-  display: "block",
-});
+import { poppinsBold } from "../../styles/fonts";
 
 export default function HeaderComponent() {
   return (
@@ -40,9 +27,9 @@ export default function HeaderComponent() {
             <Icon icon="mdi:user" className={`${HeaderListItem_icon}`} />
             <a
               href="#About"
-              className={`${HeaderListItem_text} ${poppinsSemiBold.className}`}
+              className={`${HeaderListItem_text} ${poppinsBold.className}`}
             >
-              Sobre
+              SOBRE
             </a>
           </li>
           <li className={`${HeaderListItem}`}>
@@ -52,27 +39,27 @@ export default function HeaderComponent() {
             />
             <a
               href="#Habilities"
-              className={`${HeaderListItem_text} ${poppinsSemiBold.className}`}
+              className={`${HeaderListItem_text} ${poppinsBold.className}`}
             >
-              Habilidades
+              HABILIDADES
             </a>
           </li>
           <li className={`${HeaderListItem}`}>
             <Icon icon="ic:outline-work" className={`${HeaderListItem_icon}`} />
             <a
               href="#Expiriences"
-              className={`${HeaderListItem_text} ${poppinsSemiBold.className}`}
+              className={`${HeaderListItem_text} ${poppinsBold.className}`}
             >
-              Experiências
+              EXPERIÊNCIAS
             </a>
           </li>
           <li className={`${HeaderListItem}`}>
             <Icon icon="ph:code-bold" className={`${HeaderListItem_icon}`} />
             <a
               href="#Projects"
-              className={`${HeaderListItem_text} ${poppinsSemiBold.className}`}
+              className={`${HeaderListItem_text} ${poppinsBold.className}`}
             >
-              Projetos
+              PROJETOS
             </a>
           </li>
           <li className={`${HeaderListItem}`}>
@@ -82,9 +69,9 @@ export default function HeaderComponent() {
             />
             <a
               href="#Contact"
-              className={`${HeaderListItem_text} ${poppinsSemiBold.className}`}
+              className={`${HeaderListItem_text} ${poppinsBold.className}`}
             >
-              Contato
+              CONTATO
             </a>
           </li>
           <li>

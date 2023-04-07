@@ -3,11 +3,11 @@ import { vars } from "../../styles/global.css";
 
 export const StacksStyle = style({
   display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(100px, 350px))",
+  gridTemplateColumns: "repeat(auto-fit, minmax(100px, 400px))",
   justifyContent: "center",
   alignItems: 'center',
   gap: 50,
-  marginTop: 200,
+  marginTop: 300,
 });
 
 export const StackCard = style({
@@ -23,7 +23,7 @@ export const StackCard_Title = style({
   textAlign: "center",
   margin: 0,
 
-  fontSize: 24,
+  fontSize: 22,
 });
 
 export const StackCard_Desc = style({
@@ -31,5 +31,5 @@ export const StackCard_Desc = style({
   textAlign: "center",
   margin: 0,
 
-  fontSize: 20,
+  fontSize: 18,
 });

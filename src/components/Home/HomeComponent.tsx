@@ -8,13 +8,7 @@ import {
   HomeIconScroll,
 } from "./Home.css";
 import { Icon } from "@iconify/react";
-import { Poppins } from "next/font/google";
-
-const poppinsBold = Poppins({
-  weight: ["800"],
-  subsets: ["devanagari"],
-  display: "block",
-});
+import { poppinsBold } from "../../styles/fonts";
 
 export default function HomeComponent() {
   return (
@@ -26,10 +20,7 @@ export default function HomeComponent() {
       </p>
       <h2 className={`${HomeTitle} ${poppinsBold.className}`}>
         OLÁ , VISITANTE <br />
-        EU SOU O{" "}
-        <span className={`${Title_Gradient} ${poppinsBold.className}`}>
-          JOÃO
-        </span>
+        EU SOU O <span className={`${Title_Gradient}`}>JOÃO</span>
       </h2>
       <div className={`${HomeIcons}`}>
         <Icon

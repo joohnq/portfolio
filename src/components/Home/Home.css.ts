@@ -7,6 +7,7 @@ export const Title_Gradient = style({
   WebkitBackgroundClip: "text",
   MozBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
+  fontWeight: 900,
 });
 
 export const HomeStyle = style({
@@ -32,6 +33,7 @@ export const HomeStyle = style({
 export const HomeSubtitle = style({
   margin: 0,
   fontSize: "clamp(20px, calc(100vw - 96vw), 40px)",
+  fontWeight: 900,
 });
 
 export const HomeTitle = style({
@@ -41,6 +43,7 @@ export const HomeTitle = style({
   width: "100%",
   textAlign: "center",
   fontSize: "clamp(30px, calc(100vw - 90vw), 100px)",
+  fontWeight: 900,
 });
 
 export const HomeIcons = style({
@@ -53,19 +56,6 @@ export const HomeIcons = style({
 export const HomeIcon = style({
   fontSize: "clamp(30px, calc(100vw - 93vw), 40px)",
   maxWidth: 50,
-  // "@media": {
-  //   "screen and (min-width: 0px)": {
-  //     fontSize: "calc(100vw - 89vw)",
-  //   },
-  //   "screen and (min-width: 400px)": {
-  //   },
-  //   "screen and (min-width: 576px)": {
-  //     fontSize: "calc(100vw - 93vw)",
-  //   },
-  //   "screen and (min-width: 768px)": {
-  //     fontSize: 40,
-  //   },
-  // },
 });
 
 export const HomeIconScroll = style({
