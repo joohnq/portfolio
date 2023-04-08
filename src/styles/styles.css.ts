@@ -13,3 +13,18 @@ export const Container = style({
   maxWidth: 1420,
   margin: "auto",
 });
+
+export const customScrollbar = style({
+  scrollbarWidth: "auto",
+  scrollbarColor: vars.color.purpleLight,
+
+  "::-webkit-scrollbar": {
+    width: "5px",
+    height: "5px",
+  },
+
+  "::-webkit-scrollbar-thumb": {
+    backgroundColor: vars.color.purpleLight,
+  },
+  WebkitTapHighlightColor: 'transparent'
+});

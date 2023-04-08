@@ -19,7 +19,7 @@ export default function Home() {
         <HomeComponent />
         <StacksComponent />
         <HabilitiesComponent/>
-        <LightComponent />
+        {/* <LightComponent /> */}
       </main>
     </>
   );

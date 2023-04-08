@@ -2,17 +2,23 @@ import React, { useState, ReactElement, useRef, useLayoutEffect } from "react";
 import ReactDOMServer from "react-dom/server";
 import Image from "next/image";
 import ProfilePhoto from "../../../public/profilephoto.jpg";
+import TGAPhoto from "../../../public/tgaphoto.png";
 
 import {
   HabilitiesStyle,
   HabilitiesHeaders,
   HabilitiesHeader,
   HeaderSelected,
-  HabilitiesBody,
   HabilitiesBody_About,
   HabilitiesBody_AboutPhoto,
   HabilitiesBody_AboutDesc,
   HabilitiesBody_Experience,
+  HabilitiesBody_ExperienceJob,
+  HabilitiesBody_ExperienceJobImageText,
+  HabilitiesBody_ExperienceJobContent,
+  HabilitiesBody_ExperienceJobTitle,
+  HabilitiesBody_ExperienceJobDesc,
+  HabilitiesBody_ExperienceJobLanguages,
 } from "./Habilities.css";
 import { Container } from "@/styles/styles.css";
 import { poppinsBold, poppinsMedium } from "../../styles/fonts";
@@ -35,7 +41,6 @@ export default function HabilitiesComponent() {
         <Image
           className={`${HabilitiesBody_AboutPhoto}`}
           src={ProfilePhoto}
-          width={500}
           alt="Foto de João Henrique"
         />
         <p className={`${HabilitiesBody_AboutDesc} ${poppinsMedium.className}`}>
@@ -58,7 +63,57 @@ export default function HabilitiesComponent() {
   const HabilitiesBodyExperience = (): ReactElement => {
     return (
       <div className={`${HabilitiesBody_Experience}`}>
-        <h1 className={`${poppinsBold.className}`}>About</h1>
+        <div className={`${HabilitiesBody_ExperienceJob}`}>
+          <div>
+            <Image
+              src={TGAPhoto}
+              width={300}
+              alt="TGA MARKETING - MARCAS COM PERSONALIDADE"
+            />
+          </div>
+          <div className={`${HabilitiesBody_ExperienceJobContent}`}>
+            <h3
+              className={`${HabilitiesBody_ExperienceJobTitle} ${poppinsBold.className}`}
+            >
+              TGA MARKETING - FEVEREIRO / ATUAL
+            </h3>
+            <p
+              className={`${HabilitiesBody_ExperienceJobDesc} ${poppinsMedium.className}`}
+            >
+              Desenvolvimento de Langing Pages responsivas e eficazes,
+              utilizando boas práticas de código, de SEO, e acessibilidade.
+            </p>
+            <p
+              className={`${HabilitiesBody_ExperienceJobLanguages} ${poppinsBold.className}`}
+            >
+              HTML , CSS , JAVASCRIPT , BOOTSTRAP
+            </p>
+          </div>
+        </div>
+        <div className={`${HabilitiesBody_ExperienceJob}`}>
+          <h3
+            className={`${HabilitiesBody_ExperienceJobImageText} ${poppinsBold.className}`}
+          >
+            FREELANCE
+          </h3>
+          <div className={`${HabilitiesBody_ExperienceJobContent}`}>
+            <h3
+              className={`${HabilitiesBody_ExperienceJobTitle} ${poppinsBold.className}`}
+            >
+              99FRELAS - 1 MÊS
+            </h3>
+            <p
+              className={`${HabilitiesBody_ExperienceJobDesc} ${poppinsMedium.className}`}
+            >
+              Desenvolvimento de landing pages.
+            </p>
+            <p
+              className={`${HabilitiesBody_ExperienceJobLanguages} ${poppinsBold.className}`}
+            >
+              HTML , CSS , JAVASCRIPT , BOOTSTRAP
+            </p>
+          </div>
+        </div>
       </div>
     );
   };
@@ -99,10 +154,7 @@ export default function HabilitiesComponent() {
           </button>
         </div>
 
-        <div
-          className={`${HabilitiesBody} HabilitiesBody`}
-          ref={HabilitiesBodyRef}
-        ></div>
+        <div className="HabilitiesBody" ref={HabilitiesBodyRef}></div>
       </section>
     </div>
   );
