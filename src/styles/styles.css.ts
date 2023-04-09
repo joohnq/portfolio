@@ -14,7 +14,7 @@ export const Container = style({
   margin: "auto",
 });
 
-export const customScrollbar = style({
+export const HtmlStyle = style({
   scrollbarWidth: "auto",
   scrollbarColor: vars.color.purpleLight,
 
@@ -26,5 +26,7 @@ export const customScrollbar = style({
   "::-webkit-scrollbar-thumb": {
     backgroundColor: vars.color.purpleLight,
   },
-  WebkitTapHighlightColor: 'transparent'
+  WebkitTapHighlightColor: 'transparent',
+
+  scrollBehavior: 'smooth'
 });

@@ -2,10 +2,9 @@ import { style } from "@vanilla-extract/css";
 // import { vars } from './theme.css';
 
 export const LightStyle = style({
-  position: "absolute",
+  position: "relative",
   zIndex: -1,
   width: "100%",
-  top: 1500,
 });
 
 export const LightPink = style({

@@ -23,63 +23,64 @@ export default function HeaderComponent() {
       </h1>
       <nav>
         <ul className={HeaderList}>
-          <li className={`${HeaderListItem}`}>
-            <Icon icon="mdi:user" className={`${HeaderListItem_icon}`} />
-            <a
-              href="#About"
-              className={`${HeaderListItem_text} ${poppinsBold.className}`}
-            >
+          <a href="#Sobre&Experiencias" className={`${HeaderListItem}`}>
+            <Icon
+              icon="mdi:user"
+              className={`${HeaderListItem_icon}`}
+              color="#fff"
+            />
+            <li className={`${HeaderListItem_text} ${poppinsBold.className}`}>
               SOBRE
-            </a>
-          </li>
-          <li className={`${HeaderListItem}`}>
+            </li>
+          </a>
+
+          <a href="#Sobre&Experiencias" className={`${HeaderListItem}`}>
+            <Icon
+              icon="ic:outline-work"
+              className={`${HeaderListItem_icon}`}
+              color="#fff"
+            />
+            <li className={`${HeaderListItem_text} ${poppinsBold.className}`}>
+              EXPERIÊNCIAS
+            </li>
+          </a>
+          <a href="#Habilities" className={`${HeaderListItem}`}>
             <Icon
               icon="fluent:brain-circuit-20-filled"
               className={`${HeaderListItem_icon}`}
+              color="#fff"
             />
-            <a
-              href="#Habilities"
-              className={`${HeaderListItem_text} ${poppinsBold.className}`}
-            >
+            <li className={`${HeaderListItem_text} ${poppinsBold.className}`}>
               HABILIDADES
-            </a>
-          </li>
-          <li className={`${HeaderListItem}`}>
-            <Icon icon="ic:outline-work" className={`${HeaderListItem_icon}`} />
-            <a
-              href="#Expiriences"
-              className={`${HeaderListItem_text} ${poppinsBold.className}`}
-            >
-              EXPERIÊNCIAS
-            </a>
-          </li>
-          <li className={`${HeaderListItem}`}>
-            <Icon icon="ph:code-bold" className={`${HeaderListItem_icon}`} />
-            <a
-              href="#Projects"
-              className={`${HeaderListItem_text} ${poppinsBold.className}`}
-            >
+            </li>
+          </a>
+          <a href="#Projects" className={`${HeaderListItem}`}>
+            <Icon
+              icon="ph:code-bold"
+              className={`${HeaderListItem_icon}`}
+              color="#fff"
+            />
+            <li className={`${HeaderListItem_text} ${poppinsBold.className}`}>
               PROJETOS
-            </a>
-          </li>
-          <li className={`${HeaderListItem}`}>
+            </li>
+          </a>
+          <a href="#Contact" className={`${HeaderListItem}`}>
             <Icon
               icon="material-symbols:chat"
               className={`${HeaderListItem_icon}`}
+              color="#fff"
             />
-            <a
-              href="#Contact"
-              className={`${HeaderListItem_text} ${poppinsBold.className}`}
-            >
+            <li className={`${HeaderListItem_text} ${poppinsBold.className}`}>
               CONTATO
-            </a>
-          </li>
-          <li>
+            </li>
+          </a>
+          <a>
             <Icon
               icon="material-symbols:menu-rounded"
               className={`${HeaderListMenu}`}
+              color="#fff"
             />
-          </li>
+          </a>
         </ul>
       </nav>
     </header>

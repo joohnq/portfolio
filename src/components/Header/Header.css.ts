@@ -51,6 +51,8 @@ export const HeaderListItem = style({
   alignItems: "center",
   justifyContent: "center",
 
+  textDecoration: "none",
+
   "@media": {
     "screen and (max-width:768px)": {
       display: "none",

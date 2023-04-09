@@ -3,8 +3,9 @@ import "../styles/styles.css";
 import HeaderComponent from "@/components/Header/HeaderComponent";
 import HomeComponent from "@/components/Home/HomeComponent";
 import StacksComponent from "@/components/Stacks/StacksComponent";
-import HabilitiesComponent from "@/components/Habilities/HabilitiesComponent";
+import AboutExperience from "@/components/AboutExperience/AboutExperience";
 import LightComponent from "@/components/Lights/Lights";
+import HabilitiesComponent from "@/components/Habilities/HabilitiesComponent";
 
 export default function Home() {
   return (
@@ -18,8 +19,9 @@ export default function Home() {
       <main>
         <HomeComponent />
         <StacksComponent />
-        <HabilitiesComponent/>
+        <AboutExperience />
         {/* <LightComponent /> */}
+        <HabilitiesComponent />
       </main>
     </>
   );

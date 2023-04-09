@@ -1,9 +1,9 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { customScrollbar } from "@/styles/styles.css";
+import { HtmlStyle } from "@/styles/styles.css";
 
 export default function Document() {
   return (
-    <Html lang="pt-br" className={customScrollbar}>
+    <Html lang="pt-br" className={HtmlStyle}>
       <Head />
       <body>
         <Main />
