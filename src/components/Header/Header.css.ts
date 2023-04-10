@@ -1,20 +1,30 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/global.css";
 
+export const DisNone = style({
+  display: "none",
+})
+
 export const HeaderStyle = style({
   color: vars.color.white,
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingLeft: 50,
-  paddingRight: 50,
+  
   borderBottomLeftRadius: 10,
   borderBottomRightRadius: 10,
-  position: "relative",
-  zIndex: 10,
-});
 
-export const Logo = style({});
+  '@media': {
+    'screen and (min-width: 0px)':{
+      paddingLeft: 20,
+      paddingRight: 20,
+    },
+    'screen and (min-width: 500px)':{
+      paddingLeft: 50,
+      paddingRight: 50,
+    }
+  }
+});
 
 export const LogoMobile = style({
   fontSize: 34,
@@ -98,4 +108,42 @@ export const HeaderListMenu = style({
       fontSize: 50,
     },
   },
+});
+
+export const MenuMobile = style({
+  position: "absolute",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  zIndex: 20,
+  background: vars.color.blueDark,
+});
+
+export const MenuMobileIconClose = style({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "flex-end",
+  padding: 20,
+})
+
+export const MenuMobileList = style({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  flexDirection: "column",
+  listStyle: "none",
+  gap: 30,
+  padding: 0,
+  marginTop: 100
+});
+
+export const MenuMobileListItem = style({
+  textDecoration: "none",
+});
+
+export const MenuMobileListItem_text = style({
+  textDecoration: "none",
+  color: vars.color.white,
+  fontSize: 24,
 });

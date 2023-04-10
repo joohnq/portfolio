@@ -6,6 +6,7 @@ import StacksComponent from "@/components/Stacks/StacksComponent";
 import AboutExperience from "@/components/AboutExperience/AboutExperience";
 import LightComponent from "@/components/Lights/Lights";
 import HabilitiesComponent from "@/components/Habilities/HabilitiesComponent";
+import ProjectsComponent from "@/components/Projects/ProjectsComponent";
 
 export default function Home() {
   return (
@@ -17,11 +18,12 @@ export default function Home() {
       </Head>
       <HeaderComponent />
       <main>
+        {/* <LightComponent /> */}
         <HomeComponent />
         <StacksComponent />
         <AboutExperience />
-        {/* <LightComponent /> */}
         <HabilitiesComponent />
+        <ProjectsComponent />
       </main>
     </>
   );

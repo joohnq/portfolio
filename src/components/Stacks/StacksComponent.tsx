@@ -12,12 +12,12 @@ export default function StacksComponent() {
   return (
     <section className={`${StacksStyle} ${Container}`}>
       <div className={`${StackCard}`}>
-        {/* <Icon
+        <Icon
           icon="material-symbols:web"
           width={100}
           height={100}
-          color="#8474EE"
-        /> */}
+          color="#ffffff"
+        />
         <h3 className={`${StackCard_Title} ${poppinsBold.className}`}>
           DESENVOLVIMENTO <br /> WEB
         </h3>
@@ -27,7 +27,7 @@ export default function StacksComponent() {
         </p>
       </div>
       <div className={`${StackCard}`}>
-        {/* <Icon icon="bx:server" width={100} height={100} color="#8474EE" /> */}
+        <Icon icon="bx:server" width={100} height={100} color="#ffffff" />
         <h3 className={`${StackCard_Title} ${poppinsBold.className}`}>
           DESENVOLVIMENTO <br /> BACK-END
         </h3>
@@ -37,12 +37,12 @@ export default function StacksComponent() {
         </p>
       </div>
       <div className={`${StackCard}`}>
-        {/* <Icon
+        <Icon
           icon="ph:device-mobile-camera-bold"
           width={100}
           height={100}
-          color="#8474EE"
-        /> */}
+          color="#ffffff"
+        />
         <h3 className={`${StackCard_Title} ${poppinsBold.className}`}>
           DESENVOLVIMENTO <br /> MOBILE
         </h3>

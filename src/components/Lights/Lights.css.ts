@@ -5,6 +5,7 @@ export const LightStyle = style({
   position: "relative",
   zIndex: -1,
   width: "100%",
+  top: 1200,
 });
 
 export const LightPink = style({

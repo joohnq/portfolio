@@ -1,4 +1,6 @@
+import { useState } from "react";
 import {
+  DisNone,
   HeaderStyle,
   Logo,
   LogoMobile,
@@ -8,12 +10,23 @@ import {
   HeaderListMenu,
   HeaderListItem_icon,
   HeaderListItem_text,
+  MenuMobile,
+  MenuMobileIconClose,
+  MenuMobileList,
+  MenuMobileListItem,
+  MenuMobileListItem_text,
 } from "./Header.css";
 import { Container } from "../../styles/styles.css";
 import { Icon } from "@iconify/react";
 import { poppinsBold } from "../../styles/fonts";
 
 export default function HeaderComponent() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  function handleMenu() {
+    setMenuOpen(!menuOpen);
+  }
+
   return (
     <header className={`${HeaderStyle} ${Container}`}>
       <h1 className={`${Logo} ${poppinsBold.className}`}>
@@ -74,15 +87,83 @@ export default function HeaderComponent() {
               CONTATO
             </li>
           </a>
-          <a>
-            <Icon
-              icon="material-symbols:menu-rounded"
-              className={`${HeaderListMenu}`}
-              color="#fff"
-            />
-          </a>
+          <Icon
+            icon="material-symbols:menu-rounded"
+            className={`${HeaderListMenu}`}
+            color="#fff"
+            onClick={handleMenu}
+          />
         </ul>
       </nav>
+      <div className={`${MenuMobile} ${menuOpen ? "" : `${DisNone}`}`}>
+        <div className={MenuMobileIconClose}>
+          <Icon
+            icon="material-symbols:close-rounded"
+            color="white"
+            width="50"
+            height="50"
+            onClick={handleMenu}
+          />
+        </div>
+        <ul className={MenuMobileList}>
+          <a
+            href="#Sobre&Experiencias"
+            className={`${MenuMobileListItem}`}
+            onClick={handleMenu}
+          >
+            <li
+              className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
+            >
+              SOBRE
+            </li>
+          </a>
+
+          <a
+            href="#Sobre&Experiencias"
+            className={`${MenuMobileListItem}`}
+            onClick={handleMenu}
+          >
+            <li
+              className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
+            >
+              EXPERIÊNCIAS
+            </li>
+          </a>
+          <a
+            href="#Habilities"
+            className={`${MenuMobileListItem}`}
+            onClick={handleMenu}
+          >
+            <li
+              className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
+            >
+              HABILIDADES
+            </li>
+          </a>
+          <a
+            href="#Projects"
+            className={`${MenuMobileListItem}`}
+            onClick={handleMenu}
+          >
+            <li
+              className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
+            >
+              PROJETOS
+            </li>
+          </a>
+          <a
+            href="#Contact"
+            className={`${MenuMobileListItem}`}
+            onClick={handleMenu}
+          >
+            <li
+              className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
+            >
+              CONTATO
+            </li>
+          </a>
+        </ul>
+      </div>
     </header>
   );
 }

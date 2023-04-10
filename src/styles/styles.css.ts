@@ -30,3 +30,8 @@ export const HtmlStyle = style({
 
   scrollBehavior: 'smooth'
 });
+
+export const MainTitle = style({
+  color: vars.color.white,
+  fontSize: "clamp(40px, calc(100vw - 94vw), 60px)"
+})
