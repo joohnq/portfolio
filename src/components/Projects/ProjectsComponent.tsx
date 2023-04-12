@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, MainTitle } from "@/styles/styles.css";
+import { Container, MainTitle, MainSubtitle } from "@/styles/styles.css";
 import {
   ProjectsStyle,
   ProjectCard,
@@ -135,6 +135,7 @@ export default function ProjectsComponent() {
           </p>
         </div>
       </div>
+      <a href="https://github.com/joohnq?tab=repositories" target="__blank" className={`${MainSubtitle} ${poppinsBold.className}`}>VEJA MAIS NO MEU GITHUB...</a>
     </section>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState, ReactElement, useRef, useLayoutEffect } from "react";
+import React, { useState, ReactElement, useRef, useEffect } from "react";
 import ReactDOMServer from "react-dom/server";
 import Image from "next/image";
 import ProfilePhoto from "../../../public/profilephoto.jpg";
@@ -118,7 +118,7 @@ export default function AboutExperienceComponent() {
     );
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (aboutState) {
       const element = HabilitiesBodyAbout();
       const html = ReactDOMServer.renderToStaticMarkup(element);

@@ -7,6 +7,7 @@ import AboutExperience from "@/components/AboutExperience/AboutExperience";
 import LightComponent from "@/components/Lights/Lights";
 import HabilitiesComponent from "@/components/Habilities/HabilitiesComponent";
 import ProjectsComponent from "@/components/Projects/ProjectsComponent";
+import ContactComponent from "@/components/Contact/ContactComponent";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <AboutExperience />
         <HabilitiesComponent />
         <ProjectsComponent />
+        <ContactComponent />
       </main>
     </>
   );
