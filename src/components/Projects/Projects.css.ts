@@ -46,11 +46,25 @@ export const ProjectRight = style({
 });
 
 export const TextStart = style({
-  textAlign: "start",
+  "@media": {
+    "screen and (min-width:0px)": {
+      textAlign: "center",
+    },
+    "screen and (min-width: 768px)": {
+      textAlign: "start",
+    },
+  },
 });
 
 export const TextEnd = style({
-  textAlign: "end",
+  "@media": {
+    "screen and (min-width:0px)": {
+      textAlign: "center",
+    },
+    "screen and (min-width: 768px)": {
+      textAlign: "end",
+    },
+  },
 });
 
 export const ProjectCard_Content = style({
@@ -63,10 +77,12 @@ export const ProjectCard_Content = style({
   "@media": {
     "screen and (min-width:0px)": {
       width: "100%",
+      alignItems: "center",
       paddingTop: 40,
       paddingBottom: 40,
     },
     "screen and (min-width: 768px)": {
+      alignItems: "center",
       width: "50%",
       padding: 40,
     },
@@ -99,6 +115,11 @@ export const ProjectCard_Image = style({
   "@media": {
     "screen and (min-width:0px)": {
       width: "100%",
+      margin: "0 auto",
+    },
+    "screen and (min-width: 576px)": {
+      width: "80%",
+      margin: "0 auto",
     },
     "screen and (min-width: 768px)": {
       width: "50%",

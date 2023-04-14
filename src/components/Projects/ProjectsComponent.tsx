@@ -12,12 +12,15 @@ import {
   ProjectCard_ContentTitle,
   ProjectCard_ContentDesc,
   ProjectCard_Image,
-  ProjectCard_Img
+  ProjectCard_Img,
 } from "./Projects.css";
 import { poppinsBold, poppinsMedium } from "@/styles/fonts";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import ProjectExample from "../../../public/project-example.jpg";
+import rdvProjects from "../../../public/rdvProject/rdvOverview.png";
+
+import pokedexProjects from "../../../public/pokedexProject/pokedexMain.jpeg";
 
 export default function ProjectsComponent() {
   return (
@@ -48,12 +51,21 @@ export default function ProjectsComponent() {
           </p>
         </div>
         <div className={`${ProjectCard_Image}`}>
-          <Image src={ProjectExample} className={`${ProjectCard_Img}`}  alt="Image do projetos" />
+          <Image
+            src={rdvProjects}
+            className={`${ProjectCard_Img}`}
+            alt="Image do projetos"
+          />
         </div>
       </div>
       <div className={`${ProjectCard}`}>
         <div className={`${ProjectCard_Image}`}>
-          <Image className={`${ProjectCard_Img}`} src={ProjectExample} alt="Image do projetos" />
+          <Image
+            className={`${ProjectCard_Img}`}
+            height={500}
+            src={pokedexProjects}
+            alt="Image do projetos"
+          />
         </div>
         <div className={`${ProjectCard_Content} ${ProjectRight}`}>
           <div className={`${ProjectCard_ContentAbove}`}>
@@ -82,60 +94,48 @@ export default function ProjectsComponent() {
       <div className={`${ProjectCard}`}>
         <div className={`${ProjectCard_Content} ${ProjectLeft}`}>
           <div className={`${ProjectCard_ContentAbove}`}>
-            <Icon
-              icon="akar-icons:link-chain"
-              color="white"
-              width="30"
-              height="30"
-            />
             <h3
               className={`${ProjectCard_ContentTitle} ${poppinsBold.className}`}
             >
-              TITLE PROJECT
+              Em breve
             </h3>
           </div>
-          <p
-            className={`${ProjectCard_ContentDesc} ${TextEnd} ${poppinsMedium.className}`}
-          >
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque,
-            dicta reprehenderit. Beatae accusamus, blanditiis aut animi eligendi
-            eum suscipit amet asperiores dignissimos veniam quibusdam aliquam.
-            Aut quibusdam doloremque tempore? Eveniet?
-          </p>
         </div>
         <div className={`${ProjectCard_Image}`}>
-          <Image src={ProjectExample} className={`${ProjectCard_Img}`}  alt="Image do projetos" />
+          <Icon
+            icon="ant-design:stop-twotone"
+            color="#fff"
+            width="150"
+            height="150"
+          />
         </div>
       </div>
       <div className={`${ProjectCard}`}>
-        <div className={`${ProjectCard_Image}`}>
-          <Image src={ProjectExample} className={`${ProjectCard_Img}`}  alt="Image do projetos" />
-        </div>
-        <div className={`${ProjectCard_Content} ${ProjectRight}`}>
+        <div className={`${ProjectCard_Content} ${ProjectLeft}`}>
           <div className={`${ProjectCard_ContentAbove}`}>
             <h3
               className={`${ProjectCard_ContentTitle} ${poppinsBold.className}`}
             >
-              TITLE PROJECT
+              Em breve
             </h3>
-            <Icon
-              icon="akar-icons:link-chain"
-              color="white"
-              width="30"
-              height="30"
-            />
           </div>
-          <p
-            className={`${ProjectCard_ContentDesc} ${TextStart} ${poppinsMedium.className}`}
-          >
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque,
-            dicta reprehenderit. Beatae accusamus, blanditiis aut animi eligendi
-            eum suscipit amet asperiores dignissimos veniam quibusdam aliquam.
-            Aut quibusdam doloremque tempore? Eveniet?
-          </p>
+        </div>
+        <div className={`${ProjectCard_Image}`}>
+          <Icon
+            icon="ant-design:stop-twotone"
+            color="#fff"
+            width="150"
+            height="150"
+          />
         </div>
       </div>
-      <a href="https://github.com/joohnq?tab=repositories" target="__blank" className={`${MainSubtitle} ${poppinsBold.className}`}>VEJA MAIS NO MEU GITHUB...</a>
+      <a
+        href="https://github.com/joohnq?tab=repositories"
+        target="__blank"
+        className={`${MainSubtitle} ${poppinsBold.className}`}
+      >
+        VEJA MAIS NO MEU GITHUB...
+      </a>
     </section>
   );
 }

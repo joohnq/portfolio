@@ -4,15 +4,17 @@ import { vars } from "@/styles/global.css";
 export const ContactStyle = style({
   display: "flex",
   alignItems: "center",
-  justifyContent: "flex-start",
-  gap: 50,
+  justifyContent: "space-between",
+  gap: 100,
 
   "@media": {
     "screen and (min-width: 0px)": {
-      flexDirection: "column-reverse",
+      flexDirection: "column",
+      width: "90%",
     },
     "screen and (min-width: 768px)": {
       flexDirection: "row",
+      width: "100%",
     },
   },
 });
@@ -57,12 +59,21 @@ export const ContactSocialMedia_Icon = style({
 export const ContactSocialMedia_Name = style({
   textDecoration: "none",
   color: vars.color.white,
+  fontSize: "clamp(16px, calc(100vw - 98vw),20px)",
 });
 
 export const ContactNotebookIlustration = style({
   width: "100%",
   height: "100%",
   maxWidth: 500,
+  "@media": {
+    "screen and (min-width: 0px)": {
+      display: "none",
+    },
+    "screen and (min-width: 768px)": {
+      display: "block",
+    },
+  },
 });
 
 export const ContactRight = style({
@@ -70,12 +81,24 @@ export const ContactRight = style({
   alignItems: "center",
   justifyContent: "center",
   flexDirection: "column",
-  maxWidth: 600,
+  gap: 15,
+
+  "@media": {
+    "screen and (min-width: 0px)": {
+      width: "100%",
+      padding: 20,
+      maxWidth: 500,
+    },
+
+    "screen and (min-width: 768px)": {
+      padding: 50,
+    },
+  },
 });
 
 export const ContactRightField = style({
   display: "flex",
-  alignItems: "flex-start",
+  alignItems: "stretch",
   justifyContent: "center",
   flexDirection: "column",
   width: "100%",
@@ -83,12 +106,45 @@ export const ContactRightField = style({
 
 export const ContactRight_Label = style({
   color: vars.color.white,
+  marginBottom: 5,
+  fontSize: "clamp(16px, calc(100vw - 98vw),20px)",
 });
 
 export const ContactRight_Input = style({
-  width: "100%",
+  background: vars.color.white,
+  height: 40,
+  border: 0,
+  borderRadius: 5,
+  fontSize: 16,
+  padding: "0px 10px",
+
+  ":focus": {
+    border: 0,
+    outline: "none",
+  },
 });
 
 export const ContactRight_TextArea = style({
+  background: vars.color.white,
+  border: 0,
+  height: 150,
+  borderRadius: 5,
+  fontSize: 16,
+  padding: 10,
+  resize: "none",
+  ":focus": {
+    border: 0,
+    outline: "none",
+  },
+});
+
+export const ContactRightButton = style({
   width: "100%",
+  background: vars.color.purpleLight,
+  color: vars.color.white,
+  border: 0,
+  padding: "15px",
+  fontSize: 20,
+  borderRadius: 40,
+  cursor: "pointer",
 });
