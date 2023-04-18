@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, FormEvent } from "react";
 import { Container, MainTitle } from "@/styles/styles.css";
 import {
   ContactStyle,
@@ -13,7 +13,7 @@ import {
   ContactRight_Input,
   ContactRight_Label,
   ContactRight_TextArea,
-  ContactRightButton
+  ContactRightButton,
 } from "./Contact.css";
 import { poppinsBold, poppinsMedium } from "@/styles/fonts";
 import { Icon } from "@iconify/react";
@@ -131,7 +131,12 @@ export default function ContactComponent() {
             id="message"
           ></textarea>
         </div>
-        <button className={`${ContactRightButton} ${poppinsBold.className}`} type="submit">Enviar</button>
+        <button
+          className={`${ContactRightButton} ${poppinsBold.className}`}
+          type="submit"
+        >
+          Enviar
+        </button>
       </form>
     </section>
   );

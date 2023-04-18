@@ -22,8 +22,8 @@ export default function StacksComponent() {
           DESENVOLVIMENTO <br /> WEB
         </h3>
         <p className={`${StackCard_Desc} ${poppinsMedium.className}`}>
-          Desenvolvimento, de telas responsivas com boa harmonia, elegância e
-          principalmente velocidade.
+          Desenvolvimento de interfaces responsivas, que primam pela harmonia
+          estética, elegância e, sobretudo, velocidade de carregamento.
         </p>
       </div>
       <div className={`${StackCard}`}>
@@ -32,8 +32,9 @@ export default function StacksComponent() {
           DESENVOLVIMENTO <br /> BACK-END
         </h3>
         <p className={`${StackCard_Desc} ${poppinsMedium.className}`}>
-          Desenvolvimento agil do back-end utilizando node js, baixo
-          conhecimento, porém em constate evolução.
+          Foco em manter a organização e escalabilidade do código do backend,
+          utilizando as melhores práticas de desenvolvimento para garantir a
+          qualidade e eficiência da aplicação.
         </p>
       </div>
       <div className={`${StackCard}`}>
@@ -47,8 +48,10 @@ export default function StacksComponent() {
           DESENVOLVIMENTO <br /> MOBILE
         </h3>
         <p className={`${StackCard_Desc} ${poppinsMedium.className}`}>
-          Conhecimento em desenvolvimento utilizando react native, conhecimentos
-          básicos da stack.
+          Conhecimento de habilidades básicas em desenvolvimento mobile
+          utilizando React Native, mas busco constantemente expandir meus
+          conhecimentos para criar produtos de alta qualidade para os usuários
+          finais.
         </p>
       </div>
     </section>

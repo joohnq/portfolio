@@ -17,78 +17,93 @@ import {
 import { poppinsBold, poppinsMedium } from "@/styles/fonts";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
-import ProjectExample from "../../../public/project-example.jpg";
-import rdvProjects from "../../../public/rdvProject/rdvOverview.png";
-
-import pokedexProjects from "../../../public/pokedexProject/pokedexMain.jpeg";
+import pokedex from "../../../public/pokedex.png";
+import weather from "../../../public/weather-app.png";
 
 export default function ProjectsComponent() {
   return (
     <section className={`${ProjectsStyle} ${Container}`} id="Projects">
       <h2 className={`${MainTitle} ${poppinsBold.className}`}>PROJETOS</h2>
       <div className={`${ProjectCard}`}>
-        <div className={`${ProjectCard_Content} ${ProjectLeft}`}>
-          <div className={`${ProjectCard_ContentAbove}`}>
-            <Icon
-              icon="akar-icons:link-chain"
-              color="white"
-              width="30"
-              height="30"
-            />
-            <h3
-              className={`${ProjectCard_ContentTitle} ${poppinsBold.className}`}
-            >
-              TITLE PROJECT
-            </h3>
-          </div>
-          <p
-            className={`${ProjectCard_ContentDesc} ${TextEnd} ${poppinsMedium.className}`}
-          >
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque,
-            dicta reprehenderit. Beatae accusamus, blanditiis aut animi eligendi
-            eum suscipit amet asperiores dignissimos veniam quibusdam aliquam.
-            Aut quibusdam doloremque tempore? Eveniet?
-          </p>
-        </div>
-        <div className={`${ProjectCard_Image}`}>
-          <Image
-            src={rdvProjects}
-            className={`${ProjectCard_Img}`}
-            alt="Image do projetos"
-          />
-        </div>
-      </div>
-      <div className={`${ProjectCard}`}>
         <div className={`${ProjectCard_Image}`}>
           <Image
             className={`${ProjectCard_Img}`}
             height={500}
-            src={pokedexProjects}
+            src={pokedex}
+            quality={100}
             alt="Image do projetos"
           />
         </div>
         <div className={`${ProjectCard_Content} ${ProjectRight}`}>
-          <div className={`${ProjectCard_ContentAbove}`}>
+          <a
+            href="https://github.com/joohnq/app-pokedex"
+            target="_blank"
+            className={`${ProjectCard_ContentAbove}`}
+          >
             <h3
               className={`${ProjectCard_ContentTitle} ${poppinsBold.className}`}
             >
-              TITLE PROJECT
+              Pokedex App
             </h3>
+
             <Icon
               icon="akar-icons:link-chain"
               color="white"
               width="30"
               height="30"
             />
-          </div>
+          </a>
           <p
             className={`${ProjectCard_ContentDesc} ${TextStart} ${poppinsMedium.className}`}
           >
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque,
-            dicta reprehenderit. Beatae accusamus, blanditiis aut animi eligendi
-            eum suscipit amet asperiores dignissimos veniam quibusdam aliquam.
-            Aut quibusdam doloremque tempore? Eveniet?
+            Este aplicativo foi criado utilizando o REACT NATIVE e a PokeAPI. Em
+            resumo, ele apresenta uma lista de 20 pokemons ordenados conforme a
+            API. Com a Pokedex, é possível procurar qualquer pokemon
+            simplesmente digitando seu nome. Ao selecionar um card, é possível
+            acessar mais informações sobre o pokemon, como uma breve descrição e
+            algumas de suas estatísticas.
           </p>
+        </div>
+      </div>
+      <div className={`${ProjectCard}`}>
+        <div className={`${ProjectCard_Content} ${ProjectRight}`}>
+          <a
+            href="https://github.com/joohnq/app-pokedex"
+            target="_blank"
+            className={`${ProjectCard_ContentAbove}`}
+          >
+            <h3
+              className={`${ProjectCard_ContentTitle} ${poppinsBold.className}`}
+            >
+              Pokedex App
+            </h3>
+
+            <Icon
+              icon="akar-icons:link-chain"
+              color="white"
+              width="30"
+              height="30"
+            />
+          </a>
+          <p
+            className={`${ProjectCard_ContentDesc} ${TextStart} ${poppinsMedium.className}`}
+          >
+            Este aplicativo foi criado utilizando o REACT NATIVE e a PokeAPI. Em
+            resumo, ele apresenta uma lista de 20 pokemons ordenados conforme a
+            API. Com a Pokedex, é possível procurar qualquer pokemon
+            simplesmente digitando seu nome. Ao selecionar um card, é possível
+            acessar mais informações sobre o pokemon, como uma breve descrição e
+            algumas de suas estatísticas.
+          </p>
+        </div>
+        <div className={`${ProjectCard_Image}`}>
+          <Image
+            className={`${ProjectCard_Img}`}
+            height={500}
+            src={weather}
+            quality={100}
+            alt="Image do projetos"
+          />
         </div>
       </div>
       <div className={`${ProjectCard}`}>

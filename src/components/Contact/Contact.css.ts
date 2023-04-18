@@ -6,6 +6,7 @@ export const ContactStyle = style({
   alignItems: "center",
   justifyContent: "space-between",
   gap: 100,
+  marginTop: 150,
 
   "@media": {
     "screen and (min-width: 0px)": {
@@ -127,7 +128,7 @@ export const ContactRight_Input = style({
 export const ContactRight_TextArea = style({
   background: vars.color.white,
   border: 0,
-  height: 150,
+  height: 200,
   borderRadius: 5,
   fontSize: 16,
   padding: 10,

@@ -93,6 +93,7 @@ export const ProjectCard_ContentAbove = style({
   display: "flex",
   alignItems: "center",
   gap: 20,
+  textDecoration: "none",
 });
 
 export const ProjectCard_ContentTitle = style({
@@ -130,4 +131,5 @@ export const ProjectCard_Image = style({
 export const ProjectCard_Img = style({
   width: "100%",
   height: "100%",
+  borderRadius: 20
 });
