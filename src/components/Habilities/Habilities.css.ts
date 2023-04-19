@@ -24,10 +24,11 @@ export const HabilitiesGridCards = style({
 export const HabilitiesCard = style({
   display: "flex",
   alignItems: "center",
-  justifyContent: "center",
+  justifyContent: "stretch",
   gap: 10,
 
   padding: 5,
+  cursor: "pointer",
 });
 
 export const HabilitiesCard_Title = style({

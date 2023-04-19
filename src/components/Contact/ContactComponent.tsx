@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from "react";
+import React from "react";
 import { Container, MainTitle } from "@/styles/styles.css";
 import {
   ContactStyle,
@@ -28,7 +28,7 @@ export default function ContactComponent() {
         <div className={`${ContactSocialMedias}`}>
           <a
             className={`${ContactSocialMedia}`}
-            href="https://www.instagram.com/https_henrique99/"
+            href="https://www.instagram.com/jhenrique.dev/"
             target="__blank"
           >
             <Icon
