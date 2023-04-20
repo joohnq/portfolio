@@ -131,8 +131,8 @@ export default function AboutExperienceComponent() {
   }, [aboutState]);
 
   return (
-    <div className={Container}>
-      <section className={`${AboutExperience}`} id="Sobre&Experiencias">
+    <div className={Container} id="Sobre&Experiencias">
+      <section className={`${AboutExperience}`} >
         <div className={`${AboutExperienceHeaders}`}>
           <button
             className={`${AboutExperienceHeader} ${
