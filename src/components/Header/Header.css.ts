@@ -16,7 +16,7 @@ export const HeaderStyle = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-
+  height: 80,
   borderBottomLeftRadius: 10,
   borderBottomRightRadius: 10,
 
@@ -30,6 +30,10 @@ export const HeaderStyle = style({
       paddingRight: 50,
     },
   },
+});
+
+export const Logo = style({
+  margin: 0,
 });
 
 export const LogoMobile = style({

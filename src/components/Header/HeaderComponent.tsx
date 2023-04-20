@@ -2,6 +2,7 @@ import { useState } from "react";
 import {
   DisNone,
   HeaderStyle,
+  Logo,
   LogoMobile,
   LogoTabletDesktop,
   HeaderList,
@@ -28,7 +29,7 @@ export default function HeaderComponent() {
 
   return (
     <header className={`${HeaderStyle} ${Container}`}>
-      <h1 className={`${poppinsBold.className}`}>
+      <h1 className={`${Logo} ${poppinsBold.className}`}>
         <span className={`${LogoMobile}`}>JH</span>{" "}
         <span className={`${LogoTabletDesktop}`}>JOOHNQ</span>
       </h1>
