@@ -3,27 +3,33 @@ import { vars } from "../../styles/global.css";
 
 export const DisNone = style({
   display: "none",
-})
+});
 
 export const HeaderStyle = style({
+  position: "sticky",
+  top: 0,
+  left: 0,
+  right: 0,
+  zIndex: 100,
+  backgroundColor: vars.color.blueDark,
   color: vars.color.white,
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  
+
   borderBottomLeftRadius: 10,
   borderBottomRightRadius: 10,
 
-  '@media': {
-    'screen and (min-width: 0px)':{
+  "@media": {
+    "screen and (min-width: 0px)": {
       paddingLeft: 20,
       paddingRight: 20,
     },
-    'screen and (min-width: 500px)':{
+    "screen and (min-width: 500px)": {
       paddingLeft: 50,
       paddingRight: 50,
-    }
-  }
+    },
+  },
 });
 
 export const LogoMobile = style({
@@ -125,7 +131,7 @@ export const MenuMobileIconClose = style({
   alignItems: "center",
   justifyContent: "flex-end",
   padding: 20,
-})
+});
 
 export const MenuMobileList = style({
   display: "flex",
@@ -135,7 +141,7 @@ export const MenuMobileList = style({
   listStyle: "none",
   gap: 30,
   padding: 0,
-  marginTop: 100
+  marginTop: 100,
 });
 
 export const MenuMobileListItem = style({

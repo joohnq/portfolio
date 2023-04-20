@@ -19,6 +19,7 @@ import Image from "next/image";
 import { Icon } from "@iconify/react";
 import pokedex from "../../../public/pokedex.png";
 import weather from "../../../public/weather-app.png";
+import timerCronometro from "../../../public/timar-cronometro.png";
 
 export default function ProjectsComponent() {
   return (
@@ -104,6 +105,47 @@ export default function ProjectsComponent() {
             quality={100}
             alt="Image do projetos"
           />
+        </div>
+      </div>
+      <div className={`${ProjectCard}`}>
+        <div className={`${ProjectCard_Image}`}>
+          <Image
+            className={`${ProjectCard_Img}`}
+            height={500}
+            src={timerCronometro}
+            quality={100}
+            alt="Image do projetos"
+          />
+        </div>
+        <div className={`${ProjectCard_Content} ${ProjectRight}`}>
+          <a
+            href="https://github.com/joohnq/app-pokedex"
+            target="_blank"
+            className={`${ProjectCard_ContentAbove}`}
+          >
+            <h3
+              className={`${ProjectCard_ContentTitle} ${poppinsBold.className}`}
+            >
+              Timer / Cronômetro
+            </h3>
+
+            <Icon
+              icon="akar-icons:link-chain"
+              color="white"
+              width="30"
+              height="30"
+            />
+          </a>
+          <p
+            className={`${ProjectCard_ContentDesc} ${TextStart} ${poppinsMedium.className}`}
+          >
+            Este aplicativo foi criado utilizando o REACT NATIVE e a PokeAPI. Em
+            resumo, ele apresenta uma lista de 20 pokemons ordenados conforme a
+            API. Com a Pokedex, é possível procurar qualquer pokemon
+            simplesmente digitando seu nome. Ao selecionar um card, é possível
+            acessar mais informações sobre o pokemon, como uma breve descrição e
+            algumas de suas estatísticas.
+          </p>
         </div>
       </div>
       <div className={`${ProjectCard}`}>
