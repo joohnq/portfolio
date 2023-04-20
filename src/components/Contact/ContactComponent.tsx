@@ -44,7 +44,7 @@ export default function ContactComponent() {
 
   const submitForm = (e: React.FormEvent) => {
     e.preventDefault();
-    axios.post('/api/contact', formContact).then(() => {
+    axios.post('https://joaohenriqueportfolio.vercel.app/api/contact', formContact).then(() => {
       return console.log('Sucess', formContact)
     }).catch(error => {
       return console.log('Error', error)
