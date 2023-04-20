@@ -3,6 +3,11 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { Client } from "@notionhq/client";
 import dotenv from "dotenv";
 dotenv.config();
+const Cors = require("cors");
+
+const cors = Cors({
+  origin: "https://joaohenrique.vercel.app",
+});
 
 const notion = new Client({
   auth: process.env.NOTION_API_KEY,
@@ -12,6 +17,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  await cors(req, res);
   const { name, email, message } = req.body;
   await notion.pages
     .create({
