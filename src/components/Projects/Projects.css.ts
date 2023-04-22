@@ -9,7 +9,7 @@ export const ProjectsStyle = style({
 
   padding: 30,
 
-  marginTop: 100,
+  marginTop: "clamp(80px, calc(100vw - 90vw), 200px)",
 });
 
 export const ProjectCard = style({
@@ -21,7 +21,6 @@ export const ProjectCard = style({
       "image"
       "content"
     `,
-      marginBottom: 100,
     },
     "screen and (min-width: 768px)": {
       display: "flex",
@@ -67,6 +66,10 @@ export const TextEnd = style({
   },
 });
 
+export const LinkExternal = style({
+  color: vars.color.white,
+});
+
 export const ProjectCard_Content = style({
   display: "flex",
   justifyContent: "center",
@@ -100,6 +103,8 @@ export const ProjectCard_ContentTitle = style({
   color: vars.color.white,
   display: "inline-block",
   margin: 0,
+
+  fontSize: "clamp(20px, calc(100vw - 97vw), 24px)",
 });
 
 export const ProjectCard_ContentDesc = style({
@@ -108,6 +113,8 @@ export const ProjectCard_ContentDesc = style({
   margin: 0,
 
   maxWidth: 600,
+
+  fontSize: "clamp(16px, calc(100vw - 97vw), 18px)",
 });
 
 export const ProjectCard_Image = style({
@@ -117,10 +124,10 @@ export const ProjectCard_Image = style({
     "screen and (min-width:0px)": {
       width: "100%",
       margin: "0 auto",
+      textAlign: "center",
     },
     "screen and (min-width: 576px)": {
       width: "80%",
-      margin: "0 auto",
     },
     "screen and (min-width: 768px)": {
       width: "50%",
@@ -131,5 +138,5 @@ export const ProjectCard_Image = style({
 export const ProjectCard_Img = style({
   width: "100%",
   height: "100%",
-  borderRadius: 20
+  borderRadius: 20,
 });

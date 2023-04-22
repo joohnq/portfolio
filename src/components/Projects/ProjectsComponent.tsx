@@ -7,6 +7,7 @@ import {
   ProjectRight,
   TextStart,
   TextEnd,
+  LinkExternal,
   ProjectCard_Content,
   ProjectCard_ContentAbove,
   ProjectCard_ContentTitle,
@@ -57,9 +58,12 @@ export default function ProjectsComponent() {
           <p
             className={`${ProjectCard_ContentDesc} ${TextStart} ${poppinsMedium.className}`}
           >
-            Este aplicativo foi criado utilizando o REACT NATIVE e a PokeAPI. Em
-            resumo, ele apresenta uma lista de 20 pokemons ordenados conforme a
-            API. Com a Pokedex, é possível procurar qualquer pokemon
+            Este aplicativo foi criado utilizando o REACT NATIVE e a{" "}
+            <a className={`${LinkExternal}`}  href="https://pokeapi.co/" target="__blank">
+              PokeAPI
+            </a>{" "}
+            . Em resumo, ele apresenta uma lista de 20 pokemons ordenados
+            conforme a API. Com a Pokedex, é possível procurar qualquer pokemon
             simplesmente digitando seu nome. Ao selecionar um card, é possível
             acessar mais informações sobre o pokemon, como uma breve descrição e
             algumas de suas estatísticas.
@@ -76,7 +80,7 @@ export default function ProjectsComponent() {
             <h3
               className={`${ProjectCard_ContentTitle} ${poppinsBold.className}`}
             >
-              Pokedex App
+              Weather APP
             </h3>
 
             <Icon
@@ -89,12 +93,16 @@ export default function ProjectsComponent() {
           <p
             className={`${ProjectCard_ContentDesc} ${TextStart} ${poppinsMedium.className}`}
           >
-            Este aplicativo foi criado utilizando o REACT NATIVE e a PokeAPI. Em
-            resumo, ele apresenta uma lista de 20 pokemons ordenados conforme a
-            API. Com a Pokedex, é possível procurar qualquer pokemon
-            simplesmente digitando seu nome. Ao selecionar um card, é possível
-            acessar mais informações sobre o pokemon, como uma breve descrição e
-            algumas de suas estatísticas.
+            Este website, desenvolvido em REACT, constitui um sistema que
+            oferece informações básicas sobre a previsão do tempo de qualquer
+            cidade. Para acessá-las, basta inserir o nome da cidade no campo
+            correspondente, e serão exibidas informações como temperatura,
+            sensação térmica, umidade e pressão. Destaca-se que essa aplicação
+            se conecta à API da{" "}
+            <a className={`${LinkExternal}`} href="https://openweathermap.org/" target="__blank">
+              OpenWeather
+            </a>{" "}
+            para obter dados precisos e atualizados.{" "}
           </p>
         </div>
         <div className={`${ProjectCard_Image}`}>
@@ -139,12 +147,8 @@ export default function ProjectsComponent() {
           <p
             className={`${ProjectCard_ContentDesc} ${TextStart} ${poppinsMedium.className}`}
           >
-            Este aplicativo foi criado utilizando o REACT NATIVE e a PokeAPI. Em
-            resumo, ele apresenta uma lista de 20 pokemons ordenados conforme a
-            API. Com a Pokedex, é possível procurar qualquer pokemon
-            simplesmente digitando seu nome. Ao selecionar um card, é possível
-            acessar mais informações sobre o pokemon, como uma breve descrição e
-            algumas de suas estatísticas.
+            Com esse projeto de cronômetro e timer feito em HTML, CSS e JavaScript, você terá uma ferramenta completa e personalizável para medir o tempo em diferentes situações.
+            O cronômetro conta com botões de início, pausa, reinício e volta, permitindo uma contagem precisa e flexível do tempo. Já o timer possibilita que você defina o tempo desejado para a contagem regressiva.A interface do projeto é moderna e responsiva, permitindo a sua utilização em diferentes dispositivos e tamanhos de tela.
           </p>
         </div>
       </div>

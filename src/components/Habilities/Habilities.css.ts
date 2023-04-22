@@ -4,13 +4,15 @@ import { vars } from "@/styles/global.css";
 export const HabilitiesStyle = style({
   display: "flex",
   flexDirection: "column",
-  marginTop: 200,
+  marginTop: "clamp(80px, calc(100vw - 90vw), 200px)",
 });
 
 export const HabilitiesGridCards = style({
   display: "grid",
   gap: 20,
+  rowGap: 30,
   justifyContent: "center",
+  justifyItems: "center ",
   "@media": {
     "screen and (min-width: 0px)": {
       gridTemplateColumns: " repeat(auto-fit, minmax(70px, 70px))",

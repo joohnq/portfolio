@@ -9,6 +9,11 @@ import {
 } from "./Home.css";
 import { Icon } from "@iconify/react";
 import { poppinsBold } from "../../styles/fonts";
+import {
+  socialMedia_github,
+  socialMedia_instagram,
+  socialMedia_linkedin,
+} from "../socialMedias";
 
 export default function HomeComponent() {
   return (
@@ -24,21 +29,29 @@ export default function HomeComponent() {
           EU SOU O <span className={`${Title_Gradient}`}>JOÃO</span>
         </h2>
         <div className={`${HomeIcons}`}>
-          <Icon
-            className={`${HomeIcon}`}
-            icon="line-md:github-loop"
-            color="#ffffff"
-          />
-          <Icon
-            className={`${HomeIcon}`}
-            icon="line-md:instagram"
-            color="#ffffff"
-          />
-          <Icon
-            className={`${HomeIcon}`}
-            icon="line-md:linkedin"
-            color="#ffffff"
-          />
+          <a href={socialMedia_github} target="__blank">
+            <Icon
+              className={`${HomeIcon}`}
+              icon="line-md:github-loop"
+              color="#ffffff"
+            />
+          </a>
+
+          <a href={socialMedia_instagram} target="__blank">
+            <Icon
+              className={`${HomeIcon}`}
+              icon="line-md:instagram"
+              color="#ffffff"
+            />
+          </a>
+
+          <a href={socialMedia_linkedin}>
+            <Icon
+              className={`${HomeIcon}`}
+              icon="line-md:linkedin"
+              color="#ffffff"
+            />
+          </a>
         </div>
         <Icon
           className={`${HomeIcon} ${HomeIconScroll}`}

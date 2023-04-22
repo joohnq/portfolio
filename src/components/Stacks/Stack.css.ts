@@ -7,7 +7,8 @@ export const StacksStyle = style({
   justifyContent: "center",
   alignItems: "center",
   gap: 50,
-  marginTop: 400,
+
+  marginTop: "clamp(80px, calc(100vw - 90vw), 200px)",
 });
 
 export const StackCard = style({
@@ -27,14 +28,24 @@ export const StackCard_Title = style({
   color: vars.color.white,
   textAlign: "center",
   margin: 0,
+  letterSpacing: 1,
 
-  fontSize: 22,
+  fontSize: "clamp(18px, calc(100vw - 95vw), 22px)",
 });
 
 export const StackCard_Desc = style({
   color: vars.color.white,
   textAlign: "center",
   margin: 0,
+  letterSpacing: 1,
 
-  fontSize: 18,
+  "@media": {
+    "screen and (min-width: 0px)": {
+      fontSize: 14,
+    },
+
+    "screen and (min-width: 350px)": {
+      fontSize: 16,
+    },
+  },
 });

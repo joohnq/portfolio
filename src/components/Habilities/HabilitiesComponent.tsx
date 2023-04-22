@@ -1,4 +1,4 @@
-import React, { MouseEvent, useState } from "react";
+import React from "react";
 import {
   HabilitiesStyle,
   HabilitiesGridCards,
@@ -11,43 +11,15 @@ import { Icon } from "@iconify/react";
 import { poppinsBold } from "@/styles/fonts";
 
 export default function HabilitiesComponent() {
-  const [icons, setIcons] = useState({
-    html: "ion:logo-html5",
-    css: "ion:logo-css3",
-    javascript: "devicon-plain:javascript",
-    git: "mdi:git",
-    bootstrap: "simple-icons:bootstrap",
-    react: "ion:logo-react",
-    nodejs: "simple-icons:nodedotjs",
-    nextjs: "simple-icons:nextdotjs",
-    vanillaExtract: "game-icons:cupcake",
-    styledComponents: "file-icons:styledcomponents",
-    windows: "ion:logo-windows",
-    postman: "simple-icons:postman",
-    insomnia: "simple-icons:insomnia",
-    vscode: "akar-icons:vscode-fill",
-    figma: "ion:logo-figma",
-  });
-
-  function changeIcon(icon: string, type: string): void {
-    setIcons({
-      ...icons,
-      [type]: icon,
-    });
-  }
   return (
-    <div className={`${Container} ${HabilitiesStyle}`}>
-      <div className={`${HabilitiesGridCards}`} id="Habilities">
+    <div className={`${Container} ${HabilitiesStyle}`} id="Habilities">
+      <div className={`${HabilitiesGridCards}`}>
         <div className={`${HabilitiesCard}`}>
           <Icon
-            icon={icons.html}
+            icon="vscode-icons:file-type-html"
             color="#fff"
             width={50}
             height={50}
-            onMouseOver={() =>
-              changeIcon("vscode-icons:file-type-html", "html")
-            }
-            onMouseOut={() => changeIcon("ion:logo-html5", "html")}
           />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
             HTML
@@ -55,40 +27,27 @@ export default function HabilitiesComponent() {
         </div>
         <div className={`${HabilitiesCard}`}>
           <Icon
-            icon={icons.css}
+            icon="vscode-icons:file-type-css"
             color="#fff"
             width={50}
             height={50}
-            onMouseOver={() => changeIcon("vscode-icons:file-type-css", "css")}
-            onMouseOut={() => changeIcon("ion:logo-css3", "css")}
           />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
             CSS
           </p>
         </div>
         <div className={`${HabilitiesCard}`}>
-          <Icon
-            icon={icons.javascript}
-            color="white"
-            width="50"
-            height="50"
-            onMouseOver={() => changeIcon("logos:javascript", "javascript")}
-            onMouseOut={() =>
-              changeIcon("devicon-plain:javascript", "javascript")
-            }
-          />
+          <Icon icon="logos:javascript" color="white" width="50" height="50" />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
             JAVASCRIPT
           </p>
         </div>
         <div className={`${HabilitiesCard}`}>
           <Icon
-            icon={icons.git}
+            icon="vscode-icons:file-type-git"
             color="white"
             width="50"
             height="50"
-            onMouseOver={() => changeIcon("vscode-icons:file-type-git", "git")}
-            onMouseOut={() => changeIcon("mdi:git", "git")}
           />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
             GIT
@@ -96,74 +55,35 @@ export default function HabilitiesComponent() {
         </div>
 
         <div className={`${HabilitiesCard}`}>
-          <Icon
-            icon={icons.bootstrap}
-            color="white"
-            width="50"
-            height="50"
-            onMouseOver={() => changeIcon("devicon:bootstrap", "bootstrap")}
-            onMouseOut={() =>
-              changeIcon("simple-icons:bootstrap", "bootstrap")
-            }
-          />
+          <Icon icon="devicon:bootstrap" color="white" width="50" height="50" />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
             BOOTSTRAP
           </p>
         </div>
         <div className={`${HabilitiesCard}`}>
-          <Icon
-            icon={icons.react}
-            color="white"
-            width="50"
-            height="50"
-            onMouseOver={() => changeIcon("devicon:react", "react")}
-            onMouseOut={() => changeIcon("ion:logo-react", "react")}
-          />
+          <Icon icon="devicon:react" color="white" width="50" height="50" />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
             REACT JS <br /> REACT NATIVE
           </p>
         </div>
         <div className={`${HabilitiesCard}`}>
-          <Icon
-            icon={icons.nodejs}
-            color="white"
-            width="50"
-            height="50"
-            onMouseOver={() => changeIcon("logos:nodejs-icon", "nodejs")}
-            onMouseOut={() => changeIcon("simple-icons:nodedotjs", "nodejs")}
-          />
+          <Icon icon="logos:nodejs-icon" color="white" width="50" height="50" />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
             NODE JS
           </p>
         </div>
         <div className={`${HabilitiesCard}`}>
-          <Icon
-            icon={icons.nextjs}
-            color="white"
-            width="50"
-            height="50"
-            onMouseOver={() => changeIcon("logos:nextjs-icon", "nextjs")}
-            onMouseOut={() => changeIcon("simple-icons:nextdotjs", "nextjs")}
-          />
+          <Icon icon="logos:nextjs-icon" color="white" width="50" height="50" />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
             NEXT JS
           </p>
         </div>
         <div className={`${HabilitiesCard}`}>
           <Icon
-            icon={icons.vanillaExtract}
+            icon="vscode-icons:file-type-vanilla-extract"
             color="white"
             width="50"
             height="50"
-            onMouseOver={() =>
-              changeIcon(
-                "vscode-icons:file-type-vanilla-extract",
-                "vanillaExtract"
-              )
-            }
-            onMouseOut={() =>
-              changeIcon("game-icons:cupcake", "vanillaExtract")
-            }
           />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
             VANILLA <br /> EXTRACT
@@ -171,16 +91,10 @@ export default function HabilitiesComponent() {
         </div>
         <div className={`${HabilitiesCard}`}>
           <Icon
-            icon={icons.styledComponents}
+            icon="vscode-icons:file-type-styled"
             color="white"
             width="50"
             height="50"
-            onMouseOver={() =>
-              changeIcon("vscode-icons:file-type-styled", "styledComponents")
-            }
-            onMouseOut={() =>
-              changeIcon("file-icons:styledcomponents", "styledComponents")
-            }
           />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
             STYLED <br /> COMPONENT
@@ -192,66 +106,36 @@ export default function HabilitiesComponent() {
       </h4>
       <div className={`${HabilitiesGridCards}`}>
         <div className={`${HabilitiesCard}`}>
-          <Icon
-            icon={icons.windows}
-            color="white"
-            width="50"
-            height="50"
-            onMouseOver={() => changeIcon("devicon:windows8", "windows")}
-            onMouseOut={() => changeIcon("ion:logo-windows", "windows")}
-          />
+          <Icon icon="devicon:windows8" color="white" width="50" height="50" />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
             WINDOWS
           </p>
         </div>
         <div className={`${HabilitiesCard}`}>
           <Icon
-            icon={icons.postman}
+            icon="logos:postman-icon"
             color="white"
             width="50"
             height="50"
-            onMouseOver={() => changeIcon("logos:postman-icon", "postman")}
-            onMouseOut={() => changeIcon("simple-icons:postman", "postman")}
           />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
             POSTMAN
           </p>
         </div>
         <div className={`${HabilitiesCard}`}>
-          <Icon
-            icon={icons.insomnia}
-            color="white"
-            width="50"
-            height="50"
-            onMouseOver={() => changeIcon("logos:insomnia", "insomnia")}
-            onMouseOut={() => changeIcon("simple-icons:insomnia", "insomnia")}
-          />
+          <Icon icon="logos:insomnia" color="white" width="50" height="50" />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
             INSOMNIA
           </p>
         </div>
         <div className={`${HabilitiesCard}`}>
-          <Icon
-            icon={icons.vscode}
-            color="white"
-            width="50"
-            height="50"
-            onMouseOver={() => changeIcon("devicon:vscode", "vscode")}
-            onMouseOut={() => changeIcon("akar-icons:vscode-fill", "vscode")}
-          />
+          <Icon icon="devicon:vscode" color="white" width="50" height="50" />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
             VS CODE
           </p>
         </div>
         <div className={`${HabilitiesCard}`}>
-          <Icon
-            icon={icons.figma}
-            color="white"
-            width="50"
-            height="50"
-            onMouseOver={() => changeIcon("devicon:figma", "figma")}
-            onMouseOut={() => changeIcon("ion:logo-figma", "figma")}
-          />
+          <Icon icon="devicon:figma" color="white" width="50" height="50" />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
             FIGMA
           </p>

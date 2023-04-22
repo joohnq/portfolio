@@ -6,7 +6,7 @@ export const DisNone = style({
 });
 
 export const HeaderStyle = style({
-  position: "sticky",
+  position: "fixed",
   top: 0,
   left: 0,
   right: 0,
@@ -99,6 +99,8 @@ export const HeaderListItem_text = style({
 
   ":hover": {
     color: vars.color.purpleLight,
+    fontSize: 26,
+    transition: '0.1s linear',
   },
 
   "@media": {
@@ -110,6 +112,7 @@ export const HeaderListItem_text = style({
 
 export const HeaderListMenu = style({
   fontSize: 50,
+  cursor: "pointer",
   "@media": {
     "screen and (min-width:768px)": {
       display: "none",
@@ -126,8 +129,10 @@ export const MenuMobile = style({
   left: 0,
   right: 0,
   bottom: 0,
+  height: "100vh",
   zIndex: 20,
   background: vars.color.blueDark,
+  overflow: "hidden",
 });
 
 export const MenuMobileIconClose = style({
@@ -135,6 +140,7 @@ export const MenuMobileIconClose = style({
   alignItems: "center",
   justifyContent: "flex-end",
   padding: 20,
+  cursor: "pointer",
 });
 
 export const MenuMobileList = style({
@@ -155,5 +161,5 @@ export const MenuMobileListItem = style({
 export const MenuMobileListItem_text = style({
   textDecoration: "none",
   color: vars.color.white,
-  fontSize: 24,
+  fontSize: 34,
 });

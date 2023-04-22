@@ -20,6 +20,7 @@ import { Icon } from "@iconify/react";
 import NotebookIlustration from "../../../public/notebook-ilustration.png";
 import Image from "next/image";
 import axios from "axios";
+import { socialMedia_github, socialMedia_instagram, socialMedia_linkedin } from "../socialMedias";
 
 interface Data {
   name: string;
@@ -44,7 +45,7 @@ export default function ContactComponent() {
 
   const submitForm = (e: React.FormEvent) => {
     e.preventDefault();
-    axios.post('https://joaohenrique.vercel.app/api/contact', formContact).then(() => {
+    axios.post('/api/contact', formContact).then(() => {
       return console.log('Sucess', formContact)
     }).catch(error => {
       return console.log('Error', error)
@@ -58,7 +59,7 @@ export default function ContactComponent() {
         <div className={`${ContactSocialMedias}`}>
           <a
             className={`${ContactSocialMedia}`}
-            href="https://www.instagram.com/jhenrique.dev/"
+            href={socialMedia_instagram}
             target="__blank"
           >
             <Icon
@@ -76,7 +77,7 @@ export default function ContactComponent() {
           </a>
           <a
             className={`${ContactSocialMedia}`}
-            href="https://github.com/joohnq"
+            href={socialMedia_github}
             target="__blank"
           >
             <Icon
@@ -94,7 +95,7 @@ export default function ContactComponent() {
           </a>
           <a
             className={`${ContactSocialMedia}`}
-            href="https://www.linkedin.com/in/joao-henrique-de-souza-silva-b43921196/"
+            href={socialMedia_linkedin}
             target="__blank"
           >
             <Icon

@@ -38,8 +38,6 @@ export const MainTitle = style({
 
 export const MainSubtitle = style({
   color: vars.color.white,
-  fontSize: "clamp(16px, calc(100vw - 98vw), 24px)",
-  textDecoration: "none",
-  marginTop: 50,
+  fontSize: "clamp(14px, calc(100vw - 98vw), 16px)",
   textAlign: "center",
 });

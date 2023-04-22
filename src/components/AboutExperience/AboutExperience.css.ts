@@ -3,7 +3,6 @@ import { vars } from "../../styles/global.css";
 
 export const AboutExperience = style({
   backgroundColor: vars.color.blueDarkTransparent,
-  marginTop: 200,
   borderRadius: 50,
   color: "#fff",
 
@@ -14,13 +13,14 @@ export const AboutExperience = style({
   gap: 50,
 
   position: "relative",
+  marginTop: "clamp(80px, calc(100vw - 90vw), 200px)",
 
   "@media": {
     "screen and (min-width: 0px)": {
       padding: 20,
     },
 
-    "screen and (min-width: 576px)": {
+    "screen and (min-width: 768px)": {
       padding: 40,
     },
   },
@@ -37,7 +37,7 @@ export const AboutExperienceHeaders = style({
       flexDirection: "column",
     },
 
-    "screen and (min-width: 350px)": {
+    "screen and (min-width: 330px)": {
       flexDirection: "row",
     },
   },
@@ -51,7 +51,7 @@ export const AboutExperienceHeader = style({
 
   "@media": {
     "screen and (min-width: 0px)": {
-      fontSize: 20,
+      fontSize: 16,
     },
 
     "screen and (min-width: 350px)": {
@@ -91,13 +91,14 @@ export const AboutBody = style({
 
 export const AboutBodyPhoto = style({
   borderRadius: "50%",
-  maxWidth: 500,
+  maxWidth: 450,
   width: "100%",
   height: "100%",
 });
 
 export const AboutBodyDesc = style({
-  fontSize: "clamp(16px, calc(100vw - 97vw), 20px)",
+  fontSize: "clamp(16px, calc(100vw - 98vw), 18px)",
+  letterSpacing: 2,
 
   "@media": {
     "screen and (min-width: 0px)": {
@@ -179,12 +180,16 @@ export const ExperienceBodyJobContent = style({
 
 export const ExperienceBodyJobTitle = style({
   margin: 0,
-  marginBottom: 0,
+
+  fontSize: "clamp(16px, calc(100vw - 96vw), 20px)",
 });
 
 export const ExperienceBodyJobDesc = style({
   marginTop: 10,
   marginBottom: 0,
+
+  fontSize: "clamp(14px, calc(100vw - 96vw), 16px)",
+
   "@media": {
     "screen and (min-width: 0px)": {
       maxWidth: 400,
@@ -196,4 +201,5 @@ export const ExperienceBodyJobLanguages = style({
   marginTop: 20,
   marginBottom: 0,
   color: vars.color.purpleLight,
+  fontSize: "clamp(14px, calc(100vw - 98vw), 16px)",
 });

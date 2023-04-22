@@ -6,7 +6,7 @@ import {
 } from "./Stack.css";
 import { Container } from "../../styles/styles.css";
 import { Icon } from "@iconify/react";
-import { poppinsBold, poppinsMedium } from "../../styles/fonts";
+import { poppinsBold, poppinsRegular } from "../../styles/fonts";
 
 export default function StacksComponent() {
   return (
@@ -21,7 +21,7 @@ export default function StacksComponent() {
         <h3 className={`${StackCard_Title} ${poppinsBold.className}`}>
           DESENVOLVIMENTO <br /> WEB
         </h3>
-        <p className={`${StackCard_Desc} ${poppinsMedium.className}`}>
+        <p className={`${StackCard_Desc} ${poppinsRegular.className}`}>
           Desenvolvimento de interfaces responsivas, que primam pela harmonia
           estética, elegância e, sobretudo, velocidade de carregamento.
         </p>
@@ -31,7 +31,7 @@ export default function StacksComponent() {
         <h3 className={`${StackCard_Title} ${poppinsBold.className}`}>
           DESENVOLVIMENTO <br /> BACK-END
         </h3>
-        <p className={`${StackCard_Desc} ${poppinsMedium.className}`}>
+        <p className={`${StackCard_Desc} ${poppinsRegular.className}`}>
           Foco em manter a organização e escalabilidade do código do backend,
           utilizando as melhores práticas de desenvolvimento para garantir a
           qualidade e eficiência da aplicação.
@@ -47,7 +47,7 @@ export default function StacksComponent() {
         <h3 className={`${StackCard_Title} ${poppinsBold.className}`}>
           DESENVOLVIMENTO <br /> MOBILE
         </h3>
-        <p className={`${StackCard_Desc} ${poppinsMedium.className}`}>
+        <p className={`${StackCard_Desc} ${poppinsRegular.className}`}>
           Conhecimento de habilidades básicas em desenvolvimento mobile
           utilizando React Native, mas busco constantemente expandir meus
           conhecimentos para criar produtos de alta qualidade para os usuários

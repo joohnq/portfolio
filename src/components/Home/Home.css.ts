@@ -21,11 +21,11 @@ export const HomeStyle = style({
   "@media": {
     "screen and (min-height: 0px)": {
       height: "100%",
-      marginTop: 50,
+      marginTop: "clamp(80px, calc(100vw - 90vw), 200px)",
     },
     "screen and (min-height: 768px)": {
       height: "calc(100vh - 100px)",
-      marginTop: -100,
+      marginTop: 0,
     },
   },
 });

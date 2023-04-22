@@ -6,8 +6,8 @@ export const ContactStyle = style({
   alignItems: "center",
   justifyContent: "space-between",
   gap: 100,
-  marginTop: 150,
-
+  marginTop: "clamp(80px, calc(100vw - 90vw), 200px)",
+  marginBottom: 50,
   "@media": {
     "screen and (min-width: 0px)": {
       flexDirection: "column",

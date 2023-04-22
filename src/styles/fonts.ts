@@ -23,3 +23,10 @@ export const poppinsMedium = Poppins({
   subsets: ["devanagari"],
   display: "block",
 });
+
+export const poppinsRegular = Poppins({
+  weight: ["400"],
+  subsets: ["devanagari"],
+  display: "block",
+});
+

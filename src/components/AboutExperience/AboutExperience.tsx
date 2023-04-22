@@ -27,13 +27,13 @@ export default function AboutExperienceComponent() {
   const [aboutState, setAboutState] = useState<boolean>(true);
   const AboutExperienceBodyRef = useRef<HTMLDivElement>(null);
 
-  function handleHeader(e: any) {
+  const handleHeader = (e: any) => {
     if (!e.target.classList.contains("AboutExperienceSelected")) {
       setAboutState(!aboutState);
     } else {
       return "";
     }
-  }
+  };
 
   const HabilitiesBodyAbout = (): ReactElement => {
     return (
@@ -44,17 +44,21 @@ export default function AboutExperienceComponent() {
           alt="Foto de João Henrique"
         />
         <p className={`${AboutBodyDesc} ${poppinsMedium.className}`}>
-          Olá visitante! Eu me chamo João Henrique , e sou um desenvolvedor Full
-          Stack JÚnior com uma paixão por tecnologia e programação desde os meus
-          16 anos. Nessa época, comecei a explorar as linguagens HTML, CSS,
-          JavaScript e desde então venho aprimorando minhas habilidades nessa
-          área. Atualmente, trabalho como freelancer , e isso me permite a
-          flexibilidade e liberdade para assumir projetos empolgantes e
-          desafiadores enquanto construo meu portfólio de desenvolvimento de
-          software. Mas não é só trabalho e desenvolvimento de software que me
-          animam. Eu também sou um grande fã de tecnologia e gadgets , e sempre
-          estou buscando as últimas tendências em tecnologia para me manter
-          atualizado.
+          Olá caro visitante, meu nome é João e sou um jovem entusiasta da
+          programação. Há alguns anos, descobri minha paixão pela área e desde
+          então venho me dedicando intensamente aos estudos das linguagens
+          necessárias para me tornar um desenvolvedor de front-end. Em
+          particular, tenho dedicado bastante tempo ao HTML, CSS e JavaScript,
+          que são tecnologias essenciais para a criação de websites e aplicações
+          web modernas.
+          {/* <br /> Atualmente, estou passando por um processo de mudança do
+          front-end para o mobile. Estou estudando e me preparando para as novas
+          tecnologias envolvidas no desenvolvimento de aplicativos móveis, como
+          o Flutter. Apesar das dificuldades que surgem durante esse processo de
+          mudança, estou bastante animado com as novas possibilidades que estão
+          surgindo. Acredito que o desenvolvimento móvel será uma área muito
+          promissora nos próximos anos e quero estar preparado para aproveitar
+          todas as oportunidades. */}
         </p>
       </div>
     );
@@ -131,12 +135,14 @@ export default function AboutExperienceComponent() {
   }, [aboutState]);
 
   return (
-    <div className={Container} id="Sobre&Experiencias">
-      <section className={`${AboutExperience}`} >
+    <div className={Container} id="AboutExperience">
+      <section className={`${AboutExperience}`}>
         <div className={`${AboutExperienceHeaders}`}>
           <button
             className={`${AboutExperienceHeader} ${
-              aboutState ? `${AboutExperienceSelected} AboutExperienceSelected` : ""
+              aboutState
+                ? `${AboutExperienceSelected} AboutExperienceSelected`
+                : ""
             }  ${poppinsBold.className}`}
             onClick={(e) => handleHeader(e)}
           >
@@ -146,7 +152,9 @@ export default function AboutExperienceComponent() {
 
           <button
             className={`${AboutExperienceHeader} ${
-              !aboutState ? `${AboutExperienceSelected} AboutExperienceSelected` : ""
+              !aboutState
+                ? `${AboutExperienceSelected} AboutExperienceSelected`
+                : ""
             }  ${poppinsBold.className}`}
             onClick={(e) => handleHeader(e)}
           >
