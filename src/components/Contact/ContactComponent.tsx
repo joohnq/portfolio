@@ -1,5 +1,5 @@
 import React, { useState, FormEvent, ChangeEvent } from "react";
-import { Container, MainTitle } from "@/styles/styles.css";
+import { Container, MainSubtitle, MainTitle } from "@/styles/styles.css";
 import {
   ContactStyle,
   ContactLeft,
@@ -15,7 +15,7 @@ import {
   ContactRight_TextArea,
   ContactRightButton,
 } from "./Contact.css";
-import { poppinsBold, poppinsMedium } from "@/styles/fonts";
+import { poppinsBold, poppinsMedium, poppinsRegular } from "@/styles/fonts";
 import { Icon } from "@iconify/react";
 import NotebookIlustration from "../../../public/notebook-ilustration.png";
 import Image from "next/image";
@@ -43,6 +43,7 @@ export default function ContactComponent() {
     email: "",
     message: "",
   });
+  const [formMessage, setFormMessage] = useState<string>("");
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
@@ -51,8 +52,17 @@ export default function ContactComponent() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formState }),
     })
-      .then(() => alert("Success!"))
-      .catch((error) => alert(error));
+      .then(() => {
+        setFormMessage("Sucesso");
+        setTimeout(() => {
+          setFormMessage("");
+        }, 3000);
+        setFormState({ name: "", email: "", message: "" });
+      })
+      .catch((error) => {
+        setFormMessage("Ocorreu um erro");
+        console.error(error);
+      });
   };
 
   const handleChange = (
@@ -129,6 +139,9 @@ export default function ContactComponent() {
       </div>
       <form className={`${ContactRight}`} onSubmit={handleSubmit}>
         <input type="hidden" name="form-name" value="contact" />
+        <h3 className={`${MainSubtitle} ${poppinsRegular.className}`}>
+          {formMessage}
+        </h3>
         <div className={`${ContactRightField}`}>
           <label
             className={`${ContactRight_Label} ${poppinsBold.className}`}
