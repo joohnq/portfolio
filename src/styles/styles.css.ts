@@ -41,3 +41,7 @@ export const MainSubtitle = style({
   fontSize: "clamp(14px, calc(100vw - 98vw), 16px)",
   textAlign: "center",
 });
+
+export const DisNone = style({
+  display: "none",
+});

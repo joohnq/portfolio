@@ -15,6 +15,7 @@ import {
   ContactRight_TextArea,
   ContactRightButton,
 } from "./Contact.css";
+import { DisNone } from "@/styles/styles.css";
 import { poppinsBold, poppinsMedium, poppinsRegular } from "@/styles/fonts";
 import { Icon } from "@iconify/react";
 import NotebookIlustration from "../../../public/notebook-ilustration.png";
@@ -137,7 +138,7 @@ export default function ContactComponent() {
           alt="IMAGEM NOTEBOOK | ILUSTRATION"
         />
       </div>
-      <form className={`${ContactRight}`} onSubmit={handleSubmit}>
+      <form className={`${ContactRight}`} onSubmit={handleSubmit} data-netlify-recaptcha="true">
         <input type="hidden" name="form-name" value="contact" />
         <h3 className={`${MainSubtitle} ${poppinsRegular.className}`}>
           {formMessage}
@@ -188,6 +189,7 @@ export default function ContactComponent() {
             onChange={handleChange}
           ></textarea>
         </div>
+        <div data-netlify-recaptcha="true"></div>
         <button
           className={`${ContactRightButton} ${poppinsBold.className}`}
           type="submit"

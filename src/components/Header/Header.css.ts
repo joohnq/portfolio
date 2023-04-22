@@ -1,10 +1,6 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/global.css";
 
-export const DisNone = style({
-  display: "none",
-});
-
 export const HeaderStyle = style({
   position: "fixed",
   top: 0,

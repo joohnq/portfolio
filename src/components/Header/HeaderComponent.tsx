@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-  DisNone,
   HeaderStyle,
   Logo,
   LogoMobile,
@@ -16,6 +15,7 @@ import {
   MenuMobileListItem,
   MenuMobileListItem_text,
 } from "./Header.css";
+import { DisNone } from "../../styles/styles.css";
 import { Container } from "../../styles/styles.css";
 import { Icon } from "@iconify/react";
 import { poppinsBold } from "../../styles/fonts";
