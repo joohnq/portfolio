@@ -98,7 +98,7 @@ export default function ContactComponent() {
         name="contact"
         className={`${ContactRight}`}
         method="POST"
-        data-netlify={true}
+        data-netlify="true"
       >
         <input type="hidden" name="form-name" value="contact" />
         <div className={`${ContactRightField}`}>
