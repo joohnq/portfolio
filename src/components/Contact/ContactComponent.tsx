@@ -138,7 +138,7 @@ export default function ContactComponent() {
           alt="IMAGEM NOTEBOOK | ILUSTRATION"
         />
       </div>
-      <form className={`${ContactRight}`} onSubmit={handleSubmit} data-netlify-recaptcha="true">
+      <form className={`${ContactRight}`} onSubmit={handleSubmit} data-netlify-recaptcha="true" data-netlify="true">
         <input type="hidden" name="form-name" value="contact" />
         <h3 className={`${MainSubtitle} ${poppinsRegular.className}`}>
           {formMessage}
