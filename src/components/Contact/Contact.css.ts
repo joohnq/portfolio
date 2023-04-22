@@ -7,7 +7,7 @@ export const ContactStyle = style({
   justifyContent: "space-between",
   gap: 100,
   marginTop: "clamp(80px, calc(100vw - 90vw), 200px)",
-  marginBottom: 50,
+  marginBottom: 100,
   "@media": {
     "screen and (min-width: 0px)": {
       flexDirection: "column",
@@ -144,7 +144,7 @@ export const ContactRightButton = style({
   background: vars.color.purpleLight,
   color: vars.color.white,
   border: 0,
-  padding: "15px",
+  padding: "10px 15px",
   fontSize: 20,
   borderRadius: 40,
   cursor: "pointer",

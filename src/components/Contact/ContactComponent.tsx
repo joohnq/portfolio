@@ -20,7 +20,11 @@ import { Icon } from "@iconify/react";
 import NotebookIlustration from "../../../public/notebook-ilustration.png";
 import Image from "next/image";
 import axios from "axios";
-import { socialMedia_github, socialMedia_instagram, socialMedia_linkedin } from "../socialMedias";
+import {
+  socialMedia_github,
+  socialMedia_instagram,
+  socialMedia_linkedin,
+} from "../socialMedias";
 
 interface Data {
   name: string;
@@ -45,12 +49,15 @@ export default function ContactComponent() {
 
   const submitForm = (e: React.FormEvent) => {
     e.preventDefault();
-    axios.post('/api/contact', formContact).then(() => {
-      return console.log('Sucess', formContact)
-    }).catch(error => {
-      return console.log('Error', error)
-    })
-  }
+    axios
+      .post("/api/contact", formContact)
+      .then(() => {
+        return console.log("Sucess", formContact);
+      })
+      .catch((error) => {
+        return console.log("Error", error);
+      });
+  };
 
   return (
     <section className={`${ContactStyle} ${Container}`} id="Contact">
@@ -120,7 +127,12 @@ export default function ContactComponent() {
           alt="IMAGEM NOTEBOOK | ILUSTRATION"
         />
       </div>
-      <form className={`${ContactRight}`} onSubmit={submitForm}>
+      <form
+        className={`${ContactRight}`}
+        method="POST"
+        data-netlify={true}
+        onSubmit={submitForm}
+      >
         <div className={`${ContactRightField}`}>
           <label
             className={`${ContactRight_Label} ${poppinsBold.className}`}
