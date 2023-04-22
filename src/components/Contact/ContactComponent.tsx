@@ -26,6 +26,34 @@ import {
 } from "../socialMedias";
 
 export default function ContactComponent() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const requestBody: Record<string, string> = {};
+
+    formData.forEach((value, key) => {
+      requestBody[key] = value.toString();
+    });
+
+    await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: JSON.stringify(requestBody),
+    })
+      .then(() => alert("Thank you for your message!"))
+      .catch((error) => {
+        alert(
+          "There was a problem sending your message. Please try again later."
+        );
+        console.log(error);
+      });
+  };
+
   return (
     <section className={`${ContactStyle} ${Container}`} id="Contact">
       <div className={`${ContactLeft}`}>
@@ -94,7 +122,13 @@ export default function ContactComponent() {
           alt="IMAGEM NOTEBOOK | ILUSTRATION"
         />
       </div>
-      <form name="contact" className={`${ContactRight}`} method="POST" data-netlify={true}>
+      <form
+        name="contact"
+        className={`${ContactRight}`}
+        method="POST"
+        data-netlify={true}
+        onSubmit={handleSubmit}
+      >
         <input type="hidden" name="form-name" value="contact" />
         <div className={`${ContactRightField}`}>
           <label
@@ -108,6 +142,8 @@ export default function ContactComponent() {
             type="text"
             name="name"
             id="name"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
           />
         </div>
         <div className={`${ContactRightField}`}>
@@ -121,6 +157,8 @@ export default function ContactComponent() {
             className={`${ContactRight_Input} ${poppinsMedium.className}`}
             type="text"
             name="email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
           />
         </div>
         <div className={`${ContactRightField}`}>
@@ -134,6 +172,8 @@ export default function ContactComponent() {
             className={`${ContactRight_TextArea} ${poppinsMedium.className}`}
             name="message"
             id="message"
+            value={message}
+            onChange={(event) => setMessage(event.target.value)}
           ></textarea>
         </div>
         <button
