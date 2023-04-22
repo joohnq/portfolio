@@ -94,7 +94,8 @@ export default function ContactComponent() {
           alt="IMAGEM NOTEBOOK | ILUSTRATION"
         />
       </div>
-      <form className={`${ContactRight}`} method="POST" data-netlify={true}>
+      <form name="contact" className={`${ContactRight}`} method="POST" data-netlify={true}>
+        <input type="hidden" name="form-name" value="contact" />
         <div className={`${ContactRightField}`}>
           <label
             className={`${ContactRight_Label} ${poppinsBold.className}`}
