@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, FormEvent, ChangeEvent } from "react";
 import { Container, MainTitle } from "@/styles/styles.css";
 import {
   ContactStyle,
@@ -25,7 +25,40 @@ import {
   socialMedia_linkedin,
 } from "../socialMedias";
 
+interface FormState {
+  name: string;
+  email: string;
+  message: string;
+}
+
+function encode(data: any): string {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 export default function ContactComponent() {
+  const [formState, setFormState] = useState<FormState>({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
+    e.preventDefault();
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...formState }),
+    })
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
+  };
+
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ): void => setFormState({ ...formState, [e.target.name]: e.target.value });
+
   return (
     <section className={`${ContactStyle} ${Container}`} id="Contact">
       <div className={`${ContactLeft}`}>
@@ -94,12 +127,7 @@ export default function ContactComponent() {
           alt="IMAGEM NOTEBOOK | ILUSTRATION"
         />
       </div>
-      <form
-        name="contact"
-        className={`${ContactRight}`}
-        method="POST"
-        data-netlify="true"
-      >
+      <form className={`${ContactRight}`} onSubmit={handleSubmit}>
         <input type="hidden" name="form-name" value="contact" />
         <div className={`${ContactRightField}`}>
           <label
@@ -113,6 +141,8 @@ export default function ContactComponent() {
             type="text"
             name="name"
             id="name"
+            value={formState.name}
+            onChange={handleChange}
           />
         </div>
         <div className={`${ContactRightField}`}>
@@ -126,6 +156,8 @@ export default function ContactComponent() {
             className={`${ContactRight_Input} ${poppinsMedium.className}`}
             type="text"
             name="email"
+            value={formState.email}
+            onChange={handleChange}
           />
         </div>
         <div className={`${ContactRightField}`}>
@@ -139,6 +171,8 @@ export default function ContactComponent() {
             className={`${ContactRight_TextArea} ${poppinsMedium.className}`}
             name="message"
             id="message"
+            value={formState.message}
+            onChange={handleChange}
           ></textarea>
         </div>
         <button
