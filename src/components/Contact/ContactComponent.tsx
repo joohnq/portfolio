@@ -19,46 +19,13 @@ import { poppinsBold, poppinsMedium } from "@/styles/fonts";
 import { Icon } from "@iconify/react";
 import NotebookIlustration from "../../../public/notebook-ilustration.png";
 import Image from "next/image";
-import axios from "axios";
 import {
   socialMedia_github,
   socialMedia_instagram,
   socialMedia_linkedin,
 } from "../socialMedias";
 
-interface Data {
-  name: string;
-  email: string;
-  message: string;
-}
-
 export default function ContactComponent() {
-  const [formContact, setFormContact] = useState<Data>({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-
-    setFormContact((oldData) => ({ ...oldData, [name]: value }));
-  };
-
-  const submitForm = (e: React.FormEvent) => {
-    e.preventDefault();
-    axios
-      .post("/api/contact", formContact)
-      .then(() => {
-        return console.log("Sucess", formContact);
-      })
-      .catch((error) => {
-        return console.log("Error", error);
-      });
-  };
-
   return (
     <section className={`${ContactStyle} ${Container}`} id="Contact">
       <div className={`${ContactLeft}`}>
@@ -127,12 +94,7 @@ export default function ContactComponent() {
           alt="IMAGEM NOTEBOOK | ILUSTRATION"
         />
       </div>
-      <form
-        className={`${ContactRight}`}
-        method="POST"
-        data-netlify={true}
-        onSubmit={submitForm}
-      >
+      <form className={`${ContactRight}`} method="POST" data-netlify={true}>
         <div className={`${ContactRightField}`}>
           <label
             className={`${ContactRight_Label} ${poppinsBold.className}`}
@@ -145,8 +107,6 @@ export default function ContactComponent() {
             type="text"
             name="name"
             id="name"
-            value={formContact.name}
-            onChange={handleChange}
           />
         </div>
         <div className={`${ContactRightField}`}>
@@ -160,8 +120,6 @@ export default function ContactComponent() {
             className={`${ContactRight_Input} ${poppinsMedium.className}`}
             type="text"
             name="email"
-            value={formContact.email}
-            onChange={handleChange}
           />
         </div>
         <div className={`${ContactRightField}`}>
@@ -175,8 +133,6 @@ export default function ContactComponent() {
             className={`${ContactRight_TextArea} ${poppinsMedium.className}`}
             name="message"
             id="message"
-            value={formContact.message}
-            onChange={handleChange}
           ></textarea>
         </div>
         <button
