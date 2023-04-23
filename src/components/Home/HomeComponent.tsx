@@ -18,7 +18,7 @@ import {
 export default function HomeComponent() {
   return (
     <>
-      <section className={`${HomeStyle}`}>
+      <section className={`${HomeStyle}`} id="Home">
         <p
           className={`${Title_Gradient} ${HomeSubtitle} ${poppinsBold.className}`}
         >

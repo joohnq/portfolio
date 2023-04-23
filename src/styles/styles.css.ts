@@ -9,6 +9,12 @@ globalStyle("body", {
   backgroundColor: vars.color.blueDark,
 });
 
+export const Hover = style({
+  color: `${vars.color.purpleLight} !important`,
+  fontSize: "26px !important",
+  transition: "0.1s linear !important",
+});
+
 export const Container = style({
   maxWidth: 1420,
   margin: "auto",

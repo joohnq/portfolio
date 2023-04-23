@@ -82,7 +82,7 @@ export const AboutBody = style({
     "screen and (min-width: 0px)": {
       flexDirection: "column",
     },
-    "screen and (min-width: 1040px)": {
+    "screen and (min-width: 992px)": {
       flexDirection: "row",
       maxWidth: 1200,
     },
@@ -91,14 +91,32 @@ export const AboutBody = style({
 
 export const AboutBodyPhoto = style({
   borderRadius: "50%",
-  maxWidth: 450,
   width: "100%",
   height: "100%",
+
+  "@media": {
+    "screen and (min-width: 0px)": {
+      textAlign: "center",
+      maxWidth: 400,
+    },
+    "screen and (min-width: 768px)": {
+      textAlign: "start",
+      width: "80%",
+      maxWidth: 450,
+    },
+    "screen and (min-width:992px)": {
+      width: "60%",
+      maxWidth: 450,
+    },
+    "screen and (min-width: 1280px)": {
+      maxWidth: 550,
+    },
+  },
 });
 
 export const AboutBodyDesc = style({
   fontSize: "clamp(16px, calc(100vw - 98vw), 18px)",
-  letterSpacing: 2,
+  letterSpacing: 1,
 
   "@media": {
     "screen and (min-width: 0px)": {

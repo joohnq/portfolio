@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   HeaderStyle,
   Logo,
@@ -15,13 +15,45 @@ import {
   MenuMobileListItem,
   MenuMobileListItem_text,
 } from "./Header.css";
-import { DisNone } from "../../styles/styles.css";
+import { DisNone, Hover } from "../../styles/styles.css";
 import { Container } from "../../styles/styles.css";
 import { Icon } from "@iconify/react";
 import { poppinsBold } from "../../styles/fonts";
 
 export default function HeaderComponent() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrollY, setScrollY] = useState<number>(0);
+
+  useEffect(() => {
+    function handleScroll() {
+      setScrollY(window.scrollY);
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const hoverLimits = {
+      Home: { start: 0, end: 1200 },
+      AboutExperience: { start: 1200, end: 2000 },
+      Habilities: { start: 2000, end: 3000 },
+      Projects: { start: 3000, end: 5000 },
+      Contact: { start: 5000, end: 6000 },
+    };
+
+    for (const [id, { start, end }] of Object.entries(hoverLimits)) {
+      const element = document.querySelector(`a[href="#${id}"]`)?.children[1];
+      if (element) {
+        if (scrollY >= start && scrollY < end) {
+          element.classList.add(Hover);
+        } else {
+          element.classList.remove(Hover);
+        }
+      }
+    }
+  }, [scrollY]);
 
   function handleMenu() {
     setMenuOpen(!menuOpen);
@@ -31,18 +63,18 @@ export default function HeaderComponent() {
     event.preventDefault();
     const targetId = event.currentTarget.getAttribute("href") ?? "";
     const targetElement = document.querySelector(targetId);
+
+    const scrollOptions: Record<string, ScrollIntoViewOptions> = {
+      Home: { behavior: "smooth", block: "start" },
+      AboutExperience: { behavior: "smooth", block: "center" },
+      Habilities: { behavior: "smooth", block: "center" },
+      Projects: { behavior: "smooth", block: "start" },
+      Contact: { behavior: "smooth", block: "start" },
+    };
+
     if (targetElement) {
-      if (targetElement.id == "Projects") {
-        targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-      } else if (targetElement.id == "Contact") {
-        targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-      } else if (targetElement.id == "Habilities") {
-        targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
-      } else if (targetElement.id == "AboutExperience") {
-        targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
-        targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+      const scrollOption = scrollOptions[targetElement.id];
+      targetElement.scrollIntoView(scrollOption);
     }
   };
 
