@@ -92,7 +92,7 @@ export default function HeaderComponent() {
             onClick={handleMenuItemClick}
           >
             <Icon
-              icon="ic:round-home"
+              icon="fluent-emoji:house"
               className={`${HeaderListItem_icon}`}
               color="#fff"
             />
@@ -106,7 +106,7 @@ export default function HeaderComponent() {
             onClick={handleMenuItemClick}
           >
             <Icon
-              icon="mdi:user"
+              icon="fluent-emoji:person-in-steamy-room-medium-dark"
               className={`${HeaderListItem_icon}`}
               color="#fff"
             />
@@ -120,7 +120,7 @@ export default function HeaderComponent() {
             onClick={handleMenuItemClick}
           >
             <Icon
-              icon="fluent:brain-circuit-20-filled"
+              icon="fluent-emoji:brain"
               className={`${HeaderListItem_icon}`}
               color="#fff"
             />
@@ -134,7 +134,7 @@ export default function HeaderComponent() {
             onClick={handleMenuItemClick}
           >
             <Icon
-              icon="ph:code-bold"
+              icon="fluent-emoji:briefcase"
               className={`${HeaderListItem_icon}`}
               color="#fff"
             />
@@ -148,7 +148,7 @@ export default function HeaderComponent() {
             onClick={handleMenuItemClick}
           >
             <Icon
-              icon="material-symbols:chat"
+              icon="fluent-emoji:envelope-with-arrow"
               className={`${HeaderListItem_icon}`}
               color="#fff"
             />

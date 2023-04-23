@@ -9,11 +9,6 @@ import {
 } from "./Home.css";
 import { Icon } from "@iconify/react";
 import { poppinsBold } from "../../styles/fonts";
-import {
-  socialMedia_github,
-  socialMedia_instagram,
-  socialMedia_linkedin,
-} from "../socialMedias";
 
 export default function HomeComponent() {
   return (
@@ -29,7 +24,7 @@ export default function HomeComponent() {
           EU SOU O <span className={`${Title_Gradient}`}>JOÃO</span>
         </h2>
         <div className={`${HomeIcons}`}>
-          <a href={socialMedia_github} target="__blank">
+          <a href="https://github.com/joohnq" target="__blank">
             <Icon
               className={`${HomeIcon}`}
               icon="line-md:github-loop"
@@ -37,7 +32,7 @@ export default function HomeComponent() {
             />
           </a>
 
-          <a href={socialMedia_instagram} target="__blank">
+          <a href="https://www.instagram.com/jhenrique.dev/" target="__blank">
             <Icon
               className={`${HomeIcon}`}
               icon="line-md:instagram"
@@ -45,7 +40,7 @@ export default function HomeComponent() {
             />
           </a>
 
-          <a href={socialMedia_linkedin}>
+          <a href="https://www.linkedin.com/in/joao-henrique-de-souza-silva-b43921196/">
             <Icon
               className={`${HomeIcon}`}
               icon="line-md:linkedin"

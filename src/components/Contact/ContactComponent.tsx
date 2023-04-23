@@ -25,11 +25,6 @@ import { poppinsBold, poppinsMedium, poppinsRegular } from "@/styles/fonts";
 import { Icon } from "@iconify/react";
 import NotebookIlustration from "../../../public/notebook-ilustration.png";
 import Image from "next/image";
-import {
-  socialMedia_github,
-  socialMedia_instagram,
-  socialMedia_linkedin,
-} from "../socialMedias";
 
 interface FormState {
   name: string;
@@ -92,7 +87,7 @@ export default function ContactComponent() {
           <div className={`${ContactSocialMedias}`}>
             <a
               className={`${ContactSocialMedia}`}
-              href={socialMedia_instagram}
+              href="https://www.instagram.com/jhenrique.dev/"
               target="__blank"
             >
               <Icon
@@ -110,7 +105,7 @@ export default function ContactComponent() {
             </a>
             <a
               className={`${ContactSocialMedia}`}
-              href={socialMedia_github}
+              href="https://github.com/joohnq"
               target="__blank"
             >
               <Icon
@@ -128,7 +123,7 @@ export default function ContactComponent() {
             </a>
             <a
               className={`${ContactSocialMedia}`}
-              href={socialMedia_linkedin}
+              href="https://www.linkedin.com/in/joao-henrique-de-souza-silva-b43921196/"
               target="__blank"
             >
               <Icon
@@ -146,13 +141,7 @@ export default function ContactComponent() {
             </a>
           </div>
         </div>
-        <Image
-          className={`${ContactNotebookIlustration}`}
-          src={NotebookIlustration}
-          width={300}
-          height={300}
-          alt="IMAGEM NOTEBOOK | ILUSTRATION"
-        />
+        <Icon icon="fluent-emoji:incoming-envelope" width="200" height="200" />
       </div>
       <form
         className={`${ContactRight}`}
@@ -171,6 +160,7 @@ export default function ContactComponent() {
             <h3 className={`${MainSubtitle} ${poppinsRegular.className}`}>
               {formMessage}
             </h3>
+            <p>Você poderá enviar outra mensagem daqui a 3 minutos</p>
           </div>
         ) : (
           ""
