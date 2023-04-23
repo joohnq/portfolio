@@ -40,7 +40,7 @@ export default function HeaderComponent() {
       AboutExperience: { start: 1200, end: 2000 },
       Habilities: { start: 2000, end: 3000 },
       Projects: { start: 3000, end: 5000 },
-      Contact: { start: 5000, end: 6000 },
+      Contact: { start: 5000, end: 7000 },
     };
 
     for (const [id, { start, end }] of Object.entries(hoverLimits)) {

@@ -1,5 +1,10 @@
-import React, { useState, FormEvent, ChangeEvent } from "react";
-import { Container, MainSubtitle, MainTitle } from "@/styles/styles.css";
+import React, { useState, FormEvent, ChangeEvent, useRef } from "react";
+import {
+  Container,
+  MainSubtitle,
+  MainTitle,
+  Disabled,
+} from "@/styles/styles.css";
 import {
   ContactStyle,
   ContactLeft,
@@ -14,8 +19,8 @@ import {
   ContactRight_Label,
   ContactRight_TextArea,
   ContactRightButton,
+  MessageModal,
 } from "./Contact.css";
-import { DisNone } from "@/styles/styles.css";
 import { poppinsBold, poppinsMedium, poppinsRegular } from "@/styles/fonts";
 import { Icon } from "@iconify/react";
 import NotebookIlustration from "../../../public/notebook-ilustration.png";
@@ -39,6 +44,7 @@ function encode(data: any): string {
 }
 
 export default function ContactComponent() {
+  const btnSubmit = useRef<HTMLButtonElement>(null);
   const [formState, setFormState] = useState<FormState>({
     name: "",
     email: "",
@@ -64,6 +70,14 @@ export default function ContactComponent() {
         setFormMessage("Ocorreu um erro");
         console.error(error);
       });
+
+    btnSubmit.current?.setAttribute("disabled", `${true}`);
+    btnSubmit.current?.classList.add(Disabled);
+
+    setTimeout(() => {
+      btnSubmit.current?.removeAttribute("disabled");
+      btnSubmit.current?.classList.remove(Disabled);
+    }, 60000);
   };
 
   const handleChange = (
@@ -73,62 +87,64 @@ export default function ContactComponent() {
   return (
     <section className={`${ContactStyle} ${Container}`} id="Contact">
       <div className={`${ContactLeft}`}>
-        <h2 className={`${MainTitle} ${poppinsBold.className} `}>Contato</h2>
-        <div className={`${ContactSocialMedias}`}>
-          <a
-            className={`${ContactSocialMedia}`}
-            href={socialMedia_instagram}
-            target="__blank"
-          >
-            <Icon
-              icon="ri:instagram-fill"
-              className={`${ContactSocialMedia_Icon}`}
-              color="#000"
-              width={30}
-              height={30}
-            />
-            <p
-              className={`${ContactSocialMedia_Name} ${poppinsBold.className}`}
+        <div>
+          <h2 className={`${MainTitle} ${poppinsBold.className} `}>Contato</h2>
+          <div className={`${ContactSocialMedias}`}>
+            <a
+              className={`${ContactSocialMedia}`}
+              href={socialMedia_instagram}
+              target="__blank"
             >
-              INSTAGRAM
-            </p>
-          </a>
-          <a
-            className={`${ContactSocialMedia}`}
-            href={socialMedia_github}
-            target="__blank"
-          >
-            <Icon
-              icon="bi:github"
-              className={`${ContactSocialMedia_Icon}`}
-              color="#000"
-              width={30}
-              height={30}
-            />
-            <p
-              className={`${ContactSocialMedia_Name} ${poppinsBold.className}`}
+              <Icon
+                icon="ri:instagram-fill"
+                className={`${ContactSocialMedia_Icon}`}
+                color="#000"
+                width={30}
+                height={30}
+              />
+              <p
+                className={`${ContactSocialMedia_Name} ${poppinsBold.className}`}
+              >
+                INSTAGRAM
+              </p>
+            </a>
+            <a
+              className={`${ContactSocialMedia}`}
+              href={socialMedia_github}
+              target="__blank"
             >
-              GITHUB
-            </p>
-          </a>
-          <a
-            className={`${ContactSocialMedia}`}
-            href={socialMedia_linkedin}
-            target="__blank"
-          >
-            <Icon
-              icon="uil:linkedin"
-              className={`${ContactSocialMedia_Icon}`}
-              color="#000"
-              width={30}
-              height={30}
-            />
-            <p
-              className={`${ContactSocialMedia_Name} ${poppinsBold.className}`}
+              <Icon
+                icon="bi:github"
+                className={`${ContactSocialMedia_Icon}`}
+                color="#000"
+                width={30}
+                height={30}
+              />
+              <p
+                className={`${ContactSocialMedia_Name} ${poppinsBold.className}`}
+              >
+                GITHUB
+              </p>
+            </a>
+            <a
+              className={`${ContactSocialMedia}`}
+              href={socialMedia_linkedin}
+              target="__blank"
             >
-              LINKEDIN
-            </p>
-          </a>
+              <Icon
+                icon="uil:linkedin"
+                className={`${ContactSocialMedia_Icon}`}
+                color="#000"
+                width={30}
+                height={30}
+              />
+              <p
+                className={`${ContactSocialMedia_Name} ${poppinsBold.className}`}
+              >
+                LINKEDIN
+              </p>
+            </a>
+          </div>
         </div>
         <Image
           className={`${ContactNotebookIlustration}`}
@@ -138,11 +154,27 @@ export default function ContactComponent() {
           alt="IMAGEM NOTEBOOK | ILUSTRATION"
         />
       </div>
-      <form className={`${ContactRight}`} onSubmit={handleSubmit} data-netlify-recaptcha="true" data-netlify="true">
+      <form
+        className={`${ContactRight}`}
+        onSubmit={handleSubmit}
+        data-netlify="true"
+      >
         <input type="hidden" name="form-name" value="contact" />
-        <h3 className={`${MainSubtitle} ${poppinsRegular.className}`}>
-          {formMessage}
-        </h3>
+
+        {formMessage ? (
+          <div className={`${MessageModal}`}>
+            <Icon
+              icon="emojione:white-heavy-check-mark"
+              width="30"
+              height="30"
+            />
+            <h3 className={`${MainSubtitle} ${poppinsRegular.className}`}>
+              {formMessage}
+            </h3>
+          </div>
+        ) : (
+          ""
+        )}
         <div className={`${ContactRightField}`}>
           <label
             className={`${ContactRight_Label} ${poppinsBold.className}`}
@@ -157,6 +189,7 @@ export default function ContactComponent() {
             id="name"
             value={formState.name}
             onChange={handleChange}
+            required
           />
         </div>
         <div className={`${ContactRightField}`}>
@@ -172,6 +205,7 @@ export default function ContactComponent() {
             name="email"
             value={formState.email}
             onChange={handleChange}
+            required
           />
         </div>
         <div className={`${ContactRightField}`}>
@@ -187,12 +221,13 @@ export default function ContactComponent() {
             id="message"
             value={formState.message}
             onChange={handleChange}
+            required
           ></textarea>
         </div>
-        <div data-netlify-recaptcha="true"></div>
         <button
           className={`${ContactRightButton} ${poppinsBold.className}`}
           type="submit"
+          ref={btnSubmit}
         >
           Enviar
         </button>

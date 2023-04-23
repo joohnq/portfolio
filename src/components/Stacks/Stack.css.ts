@@ -19,8 +19,7 @@ export const StackCard = style({
   gap: 10,
   background: vars.color.blueDarkTransparent,
   height: 400,
-  paddingLeft: 20,
-  paddingRight: 20,
+  padding: 10,
   borderRadius: 30,
 });
 

@@ -5,32 +5,41 @@ export const ContactStyle = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  gap: 100,
   marginTop: "clamp(80px, calc(100vw - 90vw), 200px)",
-  marginBottom: 100,
+  marginBottom: 50,
+  position: 'relative',
   "@media": {
     "screen and (min-width: 0px)": {
       flexDirection: "column",
       width: "90%",
+      gap: 0, 
     },
     "screen and (min-width: 768px)": {
       flexDirection: "row",
       width: "100%",
+      gap: 100,
     },
   },
 });
 
 export const ContactLeft = style({
   display: "flex",
-  justifyContent: "center",
   flexDirection: "column",
   "@media": {
     "screen and (min-width: 0px)": {
+      justifyContent: "center",
+    },
+    "screen and (min-width: 500px)": {
       alignItems: "center",
+      flexDirection: "row",
+      justifyContent: "space-between",
+      width: "100%",
     },
     "screen and (min-width: 768px)": {
-      alignItems: "flex-start",
       paddingLeft: 50,
+      alignItems: "flex-start",
+      flexDirection: "column",
+      justifyContent: "center",
     },
   },
 });
@@ -66,13 +75,16 @@ export const ContactSocialMedia_Name = style({
 export const ContactNotebookIlustration = style({
   width: "100%",
   height: "100%",
-  maxWidth: 500,
+
   "@media": {
-    "screen and (min-width: 0px)": {
+    "screen and (max-width: 500px)": {
       display: "none",
     },
+    "screen and (min-width: 0px)": {
+      maxWidth: 300,
+    },
     "screen and (min-width: 768px)": {
-      display: "block",
+      maxWidth: 500,
     },
   },
 });
@@ -149,3 +161,12 @@ export const ContactRightButton = style({
   borderRadius: 40,
   cursor: "pointer",
 });
+
+export const MessageModal = style({
+  background: vars.color.blueDark,
+
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: 20,
+})

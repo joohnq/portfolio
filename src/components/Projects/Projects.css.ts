@@ -7,7 +7,7 @@ export const ProjectsStyle = style({
   justifyContent: "center",
   flexDirection: "column",
 
-  padding: 30,
+  padding: "clamp(10px, calc(100vw - 96vw), 30px)",
 
   marginTop: "clamp(80px, calc(100vw - 90vw), 200px)",
 });
@@ -104,7 +104,7 @@ export const ProjectCard_ContentTitle = style({
   display: "inline-block",
   margin: 0,
 
-  fontSize: "clamp(20px, calc(100vw - 97vw), 24px)",
+  fontSize: "clamp(20px, calc(100vw - 98vw), 24px)",
 });
 
 export const ProjectCard_ContentDesc = style({
@@ -114,7 +114,7 @@ export const ProjectCard_ContentDesc = style({
 
   maxWidth: 600,
 
-  fontSize: "clamp(16px, calc(100vw - 97vw), 18px)",
+  fontSize: "clamp(16px, calc(100vw - 99vw), 18px)",
 });
 
 export const ProjectCard_Image = style({
