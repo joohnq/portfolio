@@ -12,7 +12,6 @@ import {
   ContactSocialMedia,
   ContactSocialMedia_Icon,
   ContactSocialMedia_Name,
-  ContactNotebookIlustration,
   ContactRight,
   ContactRightField,
   ContactRight_Input,
@@ -23,9 +22,6 @@ import {
 } from "./Contact.css";
 import { poppinsBold, poppinsMedium, poppinsRegular } from "@/styles/fonts";
 import { Icon } from "@iconify/react";
-import NotebookIlustration from "../../../public/notebook-ilustration.png";
-import Image from "next/image";
-
 interface FormState {
   name: string;
   email: string;
@@ -141,7 +137,6 @@ export default function ContactComponent() {
             </a>
           </div>
         </div>
-        <Icon icon="fluent-emoji:incoming-envelope" width="200" height="200" />
       </div>
       <form
         className={`${ContactRight}`}
@@ -153,6 +148,7 @@ export default function ContactComponent() {
         {formMessage ? (
           <div className={`${MessageModal}`}>
             <Icon
+            className=""
               icon="emojione:white-heavy-check-mark"
               width="30"
               height="30"

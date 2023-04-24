@@ -7,12 +7,12 @@ export const ContactStyle = style({
   justifyContent: "space-between",
   marginTop: "clamp(80px, calc(100vw - 90vw), 200px)",
   marginBottom: 50,
-  position: 'relative',
+  position: "relative",
   "@media": {
     "screen and (min-width: 0px)": {
       flexDirection: "column",
       width: "90%",
-      gap: 0, 
+      gap: 0,
     },
     "screen and (min-width: 768px)": {
       flexDirection: "row",
@@ -25,21 +25,16 @@ export const ContactStyle = style({
 export const ContactLeft = style({
   display: "flex",
   flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
   "@media": {
-    "screen and (min-width: 0px)": {
-      justifyContent: "center",
-    },
     "screen and (min-width: 500px)": {
-      alignItems: "center",
       flexDirection: "row",
-      justifyContent: "space-between",
       width: "100%",
     },
     "screen and (min-width: 768px)": {
       paddingLeft: 50,
-      alignItems: "flex-start",
       flexDirection: "column",
-      justifyContent: "center",
     },
   },
 });
@@ -70,23 +65,6 @@ export const ContactSocialMedia_Name = style({
   textDecoration: "none",
   color: vars.color.white,
   fontSize: "clamp(16px, calc(100vw - 98vw),20px)",
-});
-
-export const ContactNotebookIlustration = style({
-  width: "100%",
-  height: "100%",
-
-  "@media": {
-    "screen and (max-width: 500px)": {
-      display: "none",
-    },
-    "screen and (min-width: 0px)": {
-      maxWidth: 300,
-    },
-    "screen and (min-width: 768px)": {
-      maxWidth: 500,
-    },
-  },
 });
 
 export const ContactRight = style({
@@ -169,4 +147,4 @@ export const MessageModal = style({
   alignItems: "center",
   justifyContent: "center",
   gap: 20,
-})
+});
