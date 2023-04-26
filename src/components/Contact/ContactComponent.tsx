@@ -84,7 +84,7 @@ export default function ContactComponent() {
             <a
               className={`${ContactSocialMedia}`}
               href="https://www.instagram.com/jhenrique.dev/"
-              target="__blank"
+              target="__blank" aria-label="Link para o meu Instagram"
             >
               <Icon
                 icon="ri:instagram-fill"
@@ -103,6 +103,7 @@ export default function ContactComponent() {
               className={`${ContactSocialMedia}`}
               href="https://github.com/joohnq"
               target="__blank"
+              aria-label="Link para o meu Github"
             >
               <Icon
                 icon="bi:github"
@@ -120,7 +121,7 @@ export default function ContactComponent() {
             <a
               className={`${ContactSocialMedia}`}
               href="https://www.linkedin.com/in/joao-henrique-de-souza-silva-b43921196/"
-              target="__blank"
+              target="__blank" aria-label="Link para o meu Linkedin"
             >
               <Icon
                 icon="uil:linkedin"
@@ -189,6 +190,7 @@ export default function ContactComponent() {
             className={`${ContactRight_Input} ${poppinsMedium.className}`}
             type="text"
             name="email"
+            id="email"
             value={formState.email}
             onChange={handleChange}
             required

@@ -60,22 +60,6 @@ export const HeaderList = style({
   listStyle: "none",
 });
 
-export const HeaderListItem = style({
-  fontSize: 20,
-
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-
-  textDecoration: "none",
-
-  "@media": {
-    "screen and (max-width:768px)": {
-      display: "none",
-    },
-  },
-});
-
 export const HeaderListItem_icon = style({
   fontSize: 40,
   "@media": {
@@ -88,15 +72,17 @@ export const HeaderListItem_icon = style({
   },
 });
 
-export const HeaderListItem_text = style({
-  textDecoration: "none",
+export const HeaderListItem = style({});
+
+export const HeaderListItem_link = style({
   color: vars.color.white,
+  textDecoration: "none",
   fontSize: 24,
 
   ":hover": {
     color: vars.color.purpleLight,
     fontSize: 26,
-    transition: '0.1s linear',
+    transition: "0.1s linear",
   },
 
   "@media": {
@@ -148,10 +134,6 @@ export const MenuMobileList = style({
   gap: 30,
   padding: 0,
   marginTop: 100,
-});
-
-export const MenuMobileListItem = style({
-  textDecoration: "none",
 });
 
 export const MenuMobileListItem_text = style({

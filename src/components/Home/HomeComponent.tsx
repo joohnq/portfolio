@@ -24,7 +24,11 @@ export default function HomeComponent() {
           EU SOU O <span className={`${Title_Gradient}`}>JOÃO</span>
         </h2>
         <div className={`${HomeIcons}`}>
-          <a href="https://github.com/joohnq" target="__blank">
+          <a
+            href="https://github.com/joohnq"
+            target="__blank"
+            aria-label="Link para o meu Github"
+          >
             <Icon
               className={`${HomeIcon}`}
               icon="line-md:github-loop"
@@ -32,7 +36,11 @@ export default function HomeComponent() {
             />
           </a>
 
-          <a href="https://www.instagram.com/jhenrique.dev/" target="__blank">
+          <a
+            href="https://www.instagram.com/jhenrique.dev/"
+            target="__blank"
+            aria-label="Link para o meu Instagram"
+          >
             <Icon
               className={`${HomeIcon}`}
               icon="line-md:instagram"
@@ -40,7 +48,7 @@ export default function HomeComponent() {
             />
           </a>
 
-          <a href="https://www.linkedin.com/in/joao-henrique-de-souza-silva-b43921196/">
+          <a href="https://www.linkedin.com/in/joao-henrique-de-souza-silva-b43921196/" aria-label="Link para o meu Linkedin">
             <Icon
               className={`${HomeIcon}`}
               icon="line-md:linkedin"

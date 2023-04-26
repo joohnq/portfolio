@@ -5,14 +5,13 @@ import {
   LogoMobile,
   LogoTabletDesktop,
   HeaderList,
-  HeaderListItem,
   HeaderListMenu,
+  HeaderListItem,
   HeaderListItem_icon,
-  HeaderListItem_text,
+  HeaderListItem_link,
   MenuMobile,
   MenuMobileIconClose,
   MenuMobileList,
-  MenuMobileListItem,
   MenuMobileListItem_text,
 } from "./Header.css";
 import { DisNone, Hover } from "../../styles/styles.css";
@@ -44,7 +43,7 @@ export default function HeaderComponent() {
     };
 
     for (const [id, { start, end }] of Object.entries(hoverLimits)) {
-      const element = document.querySelector(`a[href="#${id}"]`)?.children[1];
+      const element = document.querySelector(`a[href="#${id}"]`);
       if (element) {
         if (scrollY >= start && scrollY < end) {
           element.classList.add(Hover);
@@ -86,76 +85,76 @@ export default function HeaderComponent() {
       </h1>
       <nav>
         <ul className={HeaderList}>
-          <a
-            href="#Home"
-            className={`${HeaderListItem}`}
-            onClick={handleMenuItemClick}
-          >
+          <li className={`${HeaderListItem}`}>
             <Icon
               icon="fluent-emoji:house"
               className={`${HeaderListItem_icon}`}
               color="#fff"
             />
-            <li className={`${HeaderListItem_text} ${poppinsBold.className}`}>
+            <a
+              href="#Home"
+              className={`${HeaderListItem_link} ${poppinsBold.className}`}
+              onClick={handleMenuItemClick}
+            >
               HOME
-            </li>
-          </a>
-          <a
-            href="#AboutExperience"
-            className={`${HeaderListItem}`}
-            onClick={handleMenuItemClick}
-          >
+            </a>
+          </li>
+          <li className={`${HeaderListItem}`}>
             <Icon
               icon="fluent-emoji:person-in-steamy-room-medium-dark"
               className={`${HeaderListItem_icon}`}
               color="#fff"
             />
-            <li className={`${HeaderListItem_text} ${poppinsBold.className}`}>
+            <a
+              href="#AboutExperience"
+              className={`${HeaderListItem_link} ${poppinsBold.className}`}
+              onClick={handleMenuItemClick}
+            >
               SOBRE
-            </li>
-          </a>
-          <a
-            href="#Habilities"
-            className={`${HeaderListItem}`}
-            onClick={handleMenuItemClick}
-          >
+            </a>
+          </li>
+          <li className={`${HeaderListItem}`}>
             <Icon
               icon="fluent-emoji:brain"
               className={`${HeaderListItem_icon}`}
               color="#fff"
             />
-            <li className={`${HeaderListItem_text} ${poppinsBold.className}`}>
+            <a
+              href="#Habilities"
+              className={`${HeaderListItem_link} ${poppinsBold.className}`}
+              onClick={handleMenuItemClick}
+            >
               HABILIDADES
-            </li>
-          </a>
-          <a
-            href="#Projects"
-            className={`${HeaderListItem}`}
-            onClick={handleMenuItemClick}
-          >
+            </a>
+          </li>
+          <li className={`${HeaderListItem}`}>
             <Icon
               icon="fluent-emoji:briefcase"
               className={`${HeaderListItem_icon}`}
               color="#fff"
             />
-            <li className={`${HeaderListItem_text} ${poppinsBold.className}`}>
+            <a
+              href="#Projects"
+              className={`${HeaderListItem_link} ${poppinsBold.className}`}
+              onClick={handleMenuItemClick}
+            >
               PROJETOS
-            </li>
-          </a>
-          <a
-            href="#Contact"
-            className={`${HeaderListItem}`}
-            onClick={handleMenuItemClick}
-          >
+            </a>
+          </li>
+          <li className={`${HeaderListItem}`}>
             <Icon
               icon="fluent-emoji:envelope-with-arrow"
               className={`${HeaderListItem_icon}`}
               color="#fff"
             />
-            <li className={`${HeaderListItem_text} ${poppinsBold.className}`}>
+            <a
+              href="#Contact"
+              className={`${HeaderListItem_link} ${poppinsBold.className}`}
+              onClick={handleMenuItemClick}
+            >
               CONTATO
-            </li>
-          </a>
+            </a>
+          </li>
           <Icon
             icon="material-symbols:menu-rounded"
             className={`${HeaderListMenu}`}
@@ -175,62 +174,51 @@ export default function HeaderComponent() {
           />
         </div>
         <ul className={MenuMobileList}>
-          <a
-            href="#AboutExperience"
-            className={`${MenuMobileListItem}`}
-            onClick={handleMenu}
-          >
-            <li
+          <li>
+            <a
+              href="#AboutExperience"
               className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
+              onClick={handleMenu}
             >
               SOBRE
-            </li>
-          </a>
-
-          <a
-            href="#Experience"
-            className={`${MenuMobileListItem}`}
-            onClick={handleMenu}
-          >
-            <li
+            </a>
+          </li>
+          <li>
+            <a
+              href="#Experience"
               className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
+              onClick={handleMenu}
             >
               EXPERIÊNCIAS
-            </li>
-          </a>
-          <a
-            href="#Habilities"
-            className={`${MenuMobileListItem}`}
-            onClick={handleMenu}
-          >
-            <li
+            </a>
+          </li>
+          <li>
+            <a
+              href="#Habilities"
               className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
+              onClick={handleMenu}
             >
               HABILIDADES
-            </li>
-          </a>
-          <a
-            href="#Projects"
-            className={`${MenuMobileListItem}`}
-            onClick={handleMenu}
-          >
-            <li
+            </a>
+          </li>
+          <li>
+            <a
+              href="#Projects"
               className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
+              onClick={handleMenu}
             >
               PROJETOS
-            </li>
-          </a>
-          <a
-            href="#Contact"
-            className={`${MenuMobileListItem}`}
-            onClick={handleMenu}
-          >
-            <li
+            </a>
+          </li>
+          <li>
+            <a
+              href="#Contact"
               className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
+              onClick={handleMenu}
             >
               CONTATO
-            </li>
-          </a>
+            </a>
+          </li>
         </ul>
       </div>
     </header>
