@@ -36,15 +36,14 @@ interface Props {
 }
 
 const initialDesc =
-  " Olá caro visitante, meu nome é João e sou um jovem entusiasta da programação. Há alguns anos, descobri minha paixão pela área e desde então venho me dedicando intensamente aos estudos das linguagens necessárias para me tornar um desenvolvedor de front-end. Em particular, tenho dedicado bastante tempo ao HTML, CSS e JavaScript, que são tecnologias essenciais para a criação de websites e aplicações web modernas.";
+  " Olá caro visitante, meu nome é João e sou um jovem entusiasta da programação. Há alguns anos, descobri minha paixão pela área e desde então venho me dedicando intensamente aos estudos das linguagens necessárias para me tornar um desenvolvedor de front-end. Em particular, tenho dedicado bastante tempo ao HTML, CSS e JavaScript, que são tecnologias essenciais para a criação de websites e aplicações web modernas. ";
 
-const extendedDesc =
-  "Olá caro visitante, meu nome é João e sou um jovem entusiasta da programação. Há alguns anos, descobri minha paixão pela área e desde então venho me dedicando intensamente aos estudos das linguagens necessárias para me tornar um desenvolvedor de front-end. Em particular, tenho dedicado bastante tempo ao HTML, CSS e JavaScript, que são tecnologias essenciais para a criação de websites e aplicações web modernas. Atualmente, estou passando por um processo de mudança do front-end para o mobile. Estou estudando e me preparando para as novas tecnologias envolvidas no desenvolvimento de aplicativos móveis, como o Flutter. Apesar das dificuldades que surgem durante esse processo de mudança, estou bastante animado com as novas possibilidades que estão surgindo. Acredito que o desenvolvimento móvel será uma área muito promissora nos próximos anos e quero estar preparado para aproveitar todas as oportunidades.";
+const extendedDesc = `Atualmente, estou passando por um processo de mudança do front-end para o mobile. Estou estudando e me preparando para as novas tecnologias envolvidas no desenvolvimento de aplicativos móveis, como o Flutter. Apesar das dificuldades que surgem durante esse processo de mudança, estou bastante animado com as novas possibilidades que estão surgindo. Acredito que o desenvolvimento móvel será uma área muito promissora nos próximos anos e quero estar preparado para aproveitar todas as oportunidades. `;
 
 export default function AboutExperienceComponent() {
   const [aboutState, setAboutState] = useState<boolean>(true);
   const AboutExperienceBodyRef = useRef<HTMLDivElement>(null);
-  const [aboutDesc, setAboutDesc] = useState<string>(initialDesc);
+  const [aboutDesc, setAboutDesc] = useState([initialDesc]);
 
   const HabilitiesBodyAbout = (): ReactNode => {
     return (
@@ -55,13 +54,18 @@ export default function AboutExperienceComponent() {
           alt="Foto de João Henrique"
         />
         <p className={`${AboutBodyDesc} ${poppinsMedium.className}`}>
-          {aboutDesc}
-          {aboutDesc == initialDesc ? (
+          {aboutDesc.length == 1 ? (
+            <span>{aboutDesc[0]}</span>
+          ) : (
+            <span>
+              {aboutDesc[0]} <br /> <br /> {aboutDesc[1]}
+            </span>
+          )}
+          {aboutDesc.length == 1 ? (
             <span
               className={`${AboutReadMore}`}
               onClick={() => {
-                setAboutDesc(extendedDesc);
-                console.log(aboutDesc);
+                setAboutDesc([initialDesc, extendedDesc]);
               }}
             >
               Leia Mais
@@ -70,8 +74,7 @@ export default function AboutExperienceComponent() {
             <span
               className={`${AboutReadMore}`}
               onClick={() => {
-                setAboutDesc(initialDesc);
-                console.log(aboutDesc);
+                setAboutDesc([initialDesc]);
               }}
             >
               Leia Menos

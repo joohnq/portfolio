@@ -128,7 +128,7 @@ export const AboutBodyPhoto = style({
 });
 
 export const AboutBodyDesc = style({
-  fontSize: "clamp(16px, calc(100vw - 98vw), 18px)",
+  fontSize: "clamp(16px, calc(100vw - 98vw), 17px)",
   letterSpacing: 1,
 
   "@media": {
