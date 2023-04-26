@@ -1,6 +1,19 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/global.css";
 
+export const AboutReadMore = style({
+  textDecoration: "underline",
+  cursor: "pointer",
+
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "flex-end",
+  color: vars.color.purpleLight,
+  fontSize: 14,
+
+  marginTop: 20,
+});
+
 export const AboutExperience = style({
   backgroundColor: vars.color.blueDarkTransparent,
   borderRadius: 50,

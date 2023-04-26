@@ -1,10 +1,17 @@
-import React, { useState, ReactElement, useRef, useEffect } from "react";
+import React, {
+  useState,
+  ReactElement,
+  useRef,
+  useEffect,
+  useMemo,
+} from "react";
 import ReactDOMServer from "react-dom/server";
 import Image from "next/image";
 import ProfilePhoto from "../../../public/profilephoto.jpg";
 import TGAPhoto from "../../../public/tgaphoto.png";
 
 import {
+  AboutReadMore,
   AboutExperience,
   AboutExperienceHeaders,
   AboutExperienceHeader,
@@ -22,20 +29,24 @@ import {
 } from "./AboutExperience.css";
 import { Container } from "@/styles/styles.css";
 import { poppinsBold, poppinsMedium } from "../../styles/fonts";
+import { ReactNode } from "react";
+
+interface Props {
+  aboutState: boolean;
+}
+
+const initialDesc =
+  " Olá caro visitante, meu nome é João e sou um jovem entusiasta da programação. Há alguns anos, descobri minha paixão pela área e desde então venho me dedicando intensamente aos estudos das linguagens necessárias para me tornar um desenvolvedor de front-end. Em particular, tenho dedicado bastante tempo ao HTML, CSS e JavaScript, que são tecnologias essenciais para a criação de websites e aplicações web modernas.";
+
+const extendedDesc =
+  "Olá caro visitante, meu nome é João e sou um jovem entusiasta da programação. Há alguns anos, descobri minha paixão pela área e desde então venho me dedicando intensamente aos estudos das linguagens necessárias para me tornar um desenvolvedor de front-end. Em particular, tenho dedicado bastante tempo ao HTML, CSS e JavaScript, que são tecnologias essenciais para a criação de websites e aplicações web modernas. Atualmente, estou passando por um processo de mudança do front-end para o mobile. Estou estudando e me preparando para as novas tecnologias envolvidas no desenvolvimento de aplicativos móveis, como o Flutter. Apesar das dificuldades que surgem durante esse processo de mudança, estou bastante animado com as novas possibilidades que estão surgindo. Acredito que o desenvolvimento móvel será uma área muito promissora nos próximos anos e quero estar preparado para aproveitar todas as oportunidades.";
 
 export default function AboutExperienceComponent() {
   const [aboutState, setAboutState] = useState<boolean>(true);
   const AboutExperienceBodyRef = useRef<HTMLDivElement>(null);
+  const [aboutDesc, setAboutDesc] = useState<string>(initialDesc);
 
-  const handleHeader = (e: any) => {
-    if (!e.target.classList.contains("AboutExperienceSelected")) {
-      setAboutState(!aboutState);
-    } else {
-      return "";
-    }
-  };
-
-  const HabilitiesBodyAbout = (): ReactElement => {
+  const HabilitiesBodyAbout = (): ReactNode => {
     return (
       <div className={`${AboutBody}`}>
         <Image
@@ -44,27 +55,34 @@ export default function AboutExperienceComponent() {
           alt="Foto de João Henrique"
         />
         <p className={`${AboutBodyDesc} ${poppinsMedium.className}`}>
-          Olá caro visitante, meu nome é João e sou um jovem entusiasta da
-          programação. Há alguns anos, descobri minha paixão pela área e desde
-          então venho me dedicando intensamente aos estudos das linguagens
-          necessárias para me tornar um desenvolvedor de front-end. Em
-          particular, tenho dedicado bastante tempo ao HTML, CSS e JavaScript,
-          que são tecnologias essenciais para a criação de websites e aplicações
-          web modernas.
-          {/* <br /> Atualmente, estou passando por um processo de mudança do
-          front-end para o mobile. Estou estudando e me preparando para as novas
-          tecnologias envolvidas no desenvolvimento de aplicativos móveis, como
-          o Flutter. Apesar das dificuldades que surgem durante esse processo de
-          mudança, estou bastante animado com as novas possibilidades que estão
-          surgindo. Acredito que o desenvolvimento móvel será uma área muito
-          promissora nos próximos anos e quero estar preparado para aproveitar
-          todas as oportunidades. */}
+          {aboutDesc}
+          {aboutDesc == initialDesc ? (
+            <span
+              className={`${AboutReadMore}`}
+              onClick={() => {
+                setAboutDesc(extendedDesc);
+                console.log(aboutDesc);
+              }}
+            >
+              Leia Mais
+            </span>
+          ) : (
+            <span
+              className={`${AboutReadMore}`}
+              onClick={() => {
+                setAboutDesc(initialDesc);
+                console.log(aboutDesc);
+              }}
+            >
+              Leia Menos
+            </span>
+          )}
         </p>
       </div>
     );
   };
 
-  const HabilitiesBodyExperience = (): ReactElement => {
+  const HabilitiesBodyExperience = (): ReactNode => {
     return (
       <div className={`${ExperienceBody}`}>
         <div className={`${ExperienceBodyJob}`}>
@@ -122,17 +140,13 @@ export default function AboutExperienceComponent() {
     );
   };
 
-  useEffect(() => {
-    if (aboutState) {
-      const element = HabilitiesBodyAbout();
-      const html = ReactDOMServer.renderToStaticMarkup(element);
-      AboutExperienceBodyRef.current!.innerHTML = html;
+  const handleHeader = (e: any) => {
+    if (!e.target.classList.contains("AboutExperienceSelected")) {
+      setAboutState(!aboutState);
     } else {
-      const element = HabilitiesBodyExperience();
-      const html = ReactDOMServer.renderToStaticMarkup(element);
-      AboutExperienceBodyRef.current!.innerHTML = html;
+      return "";
     }
-  }, [aboutState]);
+  };
 
   return (
     <div className={Container} id="AboutExperience">
@@ -162,7 +176,9 @@ export default function AboutExperienceComponent() {
           </button>
         </div>
 
-        <div className="HabilitiesBody" ref={AboutExperienceBodyRef}></div>
+        <div className="HabilitiesBody" ref={AboutExperienceBodyRef}>
+          {aboutState ? HabilitiesBodyAbout() : HabilitiesBodyExperience()}
+        </div>
       </section>
     </div>
   );
