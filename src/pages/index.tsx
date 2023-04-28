@@ -1,10 +1,10 @@
+import React, { forwardRef, useEffect } from "react";
 import Head from "next/head";
 import "../styles/styles.css";
 import HeaderComponent from "@/components/Header/HeaderComponent";
 import HomeComponent from "@/components/Home/HomeComponent";
 import StacksComponent from "@/components/Stacks/StacksComponent";
 import AboutExperience from "@/components/AboutExperience/AboutExperience";
-import LightComponent from "@/components/Lights/Lights";
 import HabilitiesComponent from "@/components/Habilities/HabilitiesComponent";
 import ProjectsComponent from "@/components/Projects/ProjectsComponent";
 import ContactComponent from "@/components/Contact/ContactComponent";
@@ -19,7 +19,6 @@ export default function Home() {
       </Head>
       <HeaderComponent />
       <main>
-        {/* <LightComponent /> */}
         <HomeComponent />
         <StacksComponent />
         <AboutExperience />

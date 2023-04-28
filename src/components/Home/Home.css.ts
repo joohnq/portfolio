@@ -2,12 +2,13 @@ import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/global.css";
 
 export const Title_Gradient = style({
-  background: vars.color.purpleGradient,
-  backgroundClip: "text",
-  WebkitBackgroundClip: "text",
-  MozBackgroundClip: "text",
-  WebkitTextFillColor: "transparent",
-  fontWeight: 900,
+  // background: vars.color.purpleGradient,
+  // backgroundClip: "text",
+  // WebkitBackgroundClip: "text",
+  // MozBackgroundClip: "text",
+  // WebkitTextFillColor: "transparent",
+  // fontWeight: 900,
+  color: vars.color.white
 });
 
 export const HomeStyle = style({
