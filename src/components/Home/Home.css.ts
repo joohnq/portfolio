@@ -2,13 +2,11 @@ import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/global.css";
 
 export const Title_Gradient = style({
-  // background: vars.color.purpleGradient,
-  // backgroundClip: "text",
-  // WebkitBackgroundClip: "text",
-  // MozBackgroundClip: "text",
-  // WebkitTextFillColor: "transparent",
-  // fontWeight: 900,
-  color: vars.color.white
+  background: vars.color.purpleGradient,
+  backgroundClip: "text",
+  WebkitBackgroundClip: "text",
+  MozBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
 });
 
 export const HomeStyle = style({
@@ -21,11 +19,11 @@ export const HomeStyle = style({
 
   "@media": {
     "screen and (min-height: 0px)": {
-      height: "100%",
-      marginTop: "clamp(80px, calc(100vw - 90vw), 200px)",
+      height: "calc(100vh - 80px)",
+      marginTop: "clamp(80px, calc(100vw - 95vw), 200px)",
+      top: "50%",
     },
-    "screen and (min-height: 768px)": {
-      height: "calc(100vh - 100px)",
+    "screen and (min-height: 500px)": {
       marginTop: 0,
     },
   },
@@ -34,7 +32,6 @@ export const HomeStyle = style({
 export const HomeSubtitle = style({
   margin: 0,
   fontSize: "clamp(20px, calc(100vw - 96vw), 40px)",
-  fontWeight: 900,
 });
 
 export const HomeTitle = style({
@@ -44,7 +41,6 @@ export const HomeTitle = style({
   width: "100%",
   textAlign: "center",
   fontSize: "clamp(30px, calc(100vw - 90vw), 100px)",
-  fontWeight: 900,
 });
 
 export const HomeIcons = style({
@@ -61,16 +57,15 @@ export const HomeIcon = style({
 
 export const HomeIconScroll = style({
   position: "absolute",
+  bottom: 10,
+  right: "50%",
+  transform: "translateX(50%)",
   "@media": {
     "screen and (min-height: 0px)": {
-      bottom: "50%",
-      right: 10,
-      transform: "translateY(50%)",
+      display: "none",
     },
     "screen and (min-height: 768px)": {
-      bottom: 10,
-      right: "50%",
-      transform: "translateX(50%)",
+      display: "block",
     },
   },
 });

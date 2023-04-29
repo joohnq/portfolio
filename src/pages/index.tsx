@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect } from "react";
+import React from "react";
 import Head from "next/head";
 import "../styles/styles.css";
 import HeaderComponent from "@/components/Header/HeaderComponent";

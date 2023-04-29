@@ -7,10 +7,7 @@ globalStyle("body", {
   border: 0,
   padding: 0,
   boxSizing: "border-box",
-  backgroundImage: `url('/background.png')`,
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-  // backgroundPosition: 'center',
+  backgroundColor: vars.color.blueDark,
 });
 
 export const Disabled = style({
