@@ -8,6 +8,9 @@ import AboutExperience from "@/components/AboutExperience/AboutExperience";
 import HabilitiesComponent from "@/components/Habilities/HabilitiesComponent";
 import ProjectsComponent from "@/components/Projects/ProjectsComponent";
 import ContactComponent from "@/components/Contact/ContactComponent";
+import LightConicComponent from "@/components/Lights/LightsComponents";
+
+import { BackgroundTransparent, Main } from "../styles/styles.css";
 
 export default function Home() {
   return (
@@ -18,7 +21,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <HeaderComponent />
-      <main>
+      <div className={BackgroundTransparent}></div>
+      <LightConicComponent />
+      <main className={Main}>
         <HomeComponent />
         <StacksComponent />
         <AboutExperience />

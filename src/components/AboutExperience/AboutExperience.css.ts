@@ -15,7 +15,6 @@ export const AboutReadMore = style({
 });
 
 export const AboutExperience = style({
-  backgroundColor: vars.color.blueDarkTransparent,
   borderRadius: 50,
   color: "#fff",
 

@@ -17,7 +17,6 @@ export const StackCard = style({
   justifyContent: "center",
   flexDirection: "column",
   gap: 10,
-  background: vars.color.blueDarkTransparent,
   height: 400,
   padding: 10,
   borderRadius: 30,
