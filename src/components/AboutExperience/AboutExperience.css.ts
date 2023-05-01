@@ -232,8 +232,12 @@ export const ExperienceBodyJobDesc = style({
 });
 
 export const ExperienceBodyJobLanguages = style({
+  background: "linear-gradient(90.67deg, #FFA800 -14.32%, #FF00B8 113.23%)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  backgroundClip: "text",
+  MozBackgroundClip: "text",
   marginTop: 20,
   marginBottom: 0,
-  color: vars.color.purpleLight,
   fontSize: "clamp(14px, calc(100vw - 98vw), 16px)",
 });

@@ -56,7 +56,7 @@ export const HomeIcon = style({
 
 export const HomeIconScroll = style({
   position: "absolute",
-  bottom: 10,
+  top: 'calc(100vh - 100px)',
   right: "50%",
   transform: "translateX(50%)",
   "@media": {
