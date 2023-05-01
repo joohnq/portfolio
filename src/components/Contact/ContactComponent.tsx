@@ -84,7 +84,8 @@ export default function ContactComponent() {
             <a
               className={`${ContactSocialMedia}`}
               href="https://www.instagram.com/jhenrique.dev/"
-              target="__blank" aria-label="Link para o meu Instagram"
+              target="__blank"
+              aria-label="Link para o meu Instagram"
             >
               <Icon
                 icon="ri:instagram-fill"
@@ -121,7 +122,8 @@ export default function ContactComponent() {
             <a
               className={`${ContactSocialMedia}`}
               href="https://www.linkedin.com/in/joao-henrique-de-souza-silva-b43921196/"
-              target="__blank" aria-label="Link para o meu Linkedin"
+              target="__blank"
+              aria-label="Link para o meu Linkedin"
             >
               <Icon
                 icon="uil:linkedin"
@@ -149,7 +151,7 @@ export default function ContactComponent() {
         {formMessage ? (
           <div className={`${MessageModal}`}>
             <Icon
-            className=""
+              className=""
               icon="emojione:white-heavy-check-mark"
               width="30"
               height="30"
@@ -217,7 +219,7 @@ export default function ContactComponent() {
           type="submit"
           ref={btnSubmit}
         >
-          Enviar
+          ENVIAR
         </button>
       </form>
     </section>

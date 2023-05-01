@@ -15,10 +15,11 @@ import { Container } from "../../styles/styles.css";
 import { Icon } from "@iconify/react";
 import { poppinsBold, poppinsRegular, dm_sansBold } from "../../styles/fonts";
 import StatusComponent from "../Status/StatusComponent";
+import LightConicComponent from "../Lights/LightsComponents";
 
 export default function StacksComponent() {
   return (
-    <section className={`${StacksStyle} ${Container}`}>
+    <section className={`${StacksStyle}`}>
       <div className={`${StackCard} ${StackCard_1}`}>
         <div>
           <div className={`${StackCardHeader}`}>

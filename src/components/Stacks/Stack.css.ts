@@ -26,10 +26,11 @@ export const StackCard_3 = style({
 
 export const StacksStyle = style({
   display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(400px, 500px))",
+  gridTemplateColumns: "repeat(auto-fit, minmax(300px, 400px))",
   justifyContent: "center",
   justifyItems: "center",
-  marginTop: 200,
+  maxWidth: 1000,
+  margin: "400px auto",
 });
 
 export const StackCard = style({
@@ -41,7 +42,7 @@ export const StackCard = style({
   height: 300,
   "@media": {
     "screen and (min-width: 0px)": {
-      maxWidth: 500,
+      maxWidth: 400,
     },
     "screen and (min-width: 550px)": {
       width: 500,
@@ -79,4 +80,5 @@ export const StackCardFooter = style({
 export const StackCardFooter_desc = style({
   color: vars.color.white,
   margin: 0,
+  fontSize: "clamp(16px, calc(100vw - 96vw), 20px)",
 });

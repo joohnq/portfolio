@@ -11,7 +11,7 @@ import ProfilePhoto from "../../../public/profilephoto.jpg";
 import TGAPhoto from "../../../public/tgaphoto.png";
 
 import {
-  AboutReadMore,
+AboutReadMore,
   AboutExperience,
   AboutExperienceHeaders,
   AboutExperienceHeader,

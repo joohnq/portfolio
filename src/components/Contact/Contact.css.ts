@@ -131,13 +131,14 @@ export const ContactRight_TextArea = style({
 
 export const ContactRightButton = style({
   width: "100%",
-  background: vars.color.purpleLight,
   color: vars.color.white,
   border: 0,
-  padding: "10px 15px",
+  padding: "15px 15px",
   fontSize: 20,
-  borderRadius: 40,
+  borderRadius: 10,
   cursor: "pointer",
+  // background: vars.color.white,
+  background: "linear-gradient(90.67deg, #FFA800 -14.32%, #FF00B8 113.23%)",
 });
 
 export const MessageModal = style({

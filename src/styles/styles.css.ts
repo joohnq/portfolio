@@ -6,7 +6,7 @@ globalStyle("body", {
   border: 0,
   padding: 0,
   boxSizing: "border-box",
-  backgroundColor: "#121212",
+  backgroundColor: vars.color.blueDark,
 });
 
 export const BackgroundTransparent = style({
@@ -17,7 +17,7 @@ export const BackgroundTransparent = style({
   right: 0,
   bottom: 0,
   opacity: 0.7,
-  height: 6000,
+  height: 7000,
   backdropFilter: "blur(250px)",
   WebkitFilter: "blur(250px)",
   backgroundBlendMode: "lighten",

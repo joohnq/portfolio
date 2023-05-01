@@ -8,10 +8,15 @@ export const AboutReadMore = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "flex-end",
-  color: vars.color.purpleLight,
   fontSize: 14,
 
   marginTop: 20,
+
+  background: "linear-gradient(90.67deg, #FFA800 -14.32%, #FF00B8 113.23%)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  backgroundClip: "text",
+  MozBackgroundClip: "text",
 });
 
 export const AboutExperience = style({
@@ -73,13 +78,12 @@ export const AboutExperienceHeader = style({
 });
 
 export const AboutExperienceSelected = style({
-  paddingTop: 10,
-  paddingBottom: 10,
-  paddingLeft: 20,
-  paddingRight: 20,
+  padding: "15px 20px",
 
   backgroundColor: vars.color.purpleLight,
   borderRadius: 10,
+
+  background: "linear-gradient(97.64deg, #FFA800 -78.72%, #FF00B8 236.02%);",
 });
 
 export const AboutBody = style({
