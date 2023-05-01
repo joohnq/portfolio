@@ -1,58 +1,111 @@
 import {
   StacksStyle,
   StackCard,
-  StackCard_Title,
-  StackCard_Desc,
+  StackCard_1,
+  StackCard_2,
+  StackCard_3,
+  StackCardHeader,
+  StackCarHeader_number,
+  StackCardBody,
+  StackCardBody_title,
+  StackCardFooter,
+  StackCardFooter_desc,
 } from "./Stack.css";
 import { Container } from "../../styles/styles.css";
 import { Icon } from "@iconify/react";
-import { poppinsBold, poppinsRegular } from "../../styles/fonts";
+import { poppinsBold, poppinsRegular, dm_sansBold } from "../../styles/fonts";
+import StatusComponent from "../Status/StatusComponent";
 
 export default function StacksComponent() {
   return (
     <section className={`${StacksStyle} ${Container}`}>
-      <div className={`${StackCard}`}>
-        <Icon
-          icon="material-symbols:web"
-          width={100}
-          height={100}
-          color="#ffffff"
-        />
-        <h3 className={`${StackCard_Title} ${poppinsBold.className}`}>
-          DESENVOLVIMENTO <br /> WEB
-        </h3>
-        <p className={`${StackCard_Desc} ${poppinsRegular.className}`}>
-          Desenvolvimento de interfaces responsivas, que primam pela harmonia
-          estética, elegância e, sobretudo, velocidade de carregamento.
-        </p>
+      <div className={`${StackCard} ${StackCard_1}`}>
+        <div>
+          <div className={`${StackCardHeader}`}>
+            <h3 className={`${StackCarHeader_number} ${dm_sansBold.className}`}>
+              01
+            </h3>
+            <StatusComponent status={[true, true, false, false, false]} />
+          </div>
+          <div className={`${StackCardBody}`}>
+            <h4 className={`${StackCardBody_title} ${poppinsBold.className}`}>
+              Design - Figma
+            </h4>
+          </div>
+          <div className={`${StackCardFooter}`}>
+            <p
+              className={`${StackCardFooter_desc} ${poppinsRegular.className}`}
+            >
+              Description
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className={`${StackCard} ${StackCard_2}`}>
+        <div>
+          <div className={`${StackCardHeader}`}>
+            <h3 className={`${StackCarHeader_number} ${dm_sansBold.className}`}>
+              02
+            </h3>
+            <StatusComponent status={[true, true, true, false, false]} />
+          </div>
+          <div className={`${StackCardBody}`}>
+            <h4 className={`${StackCardBody_title} ${poppinsBold.className}`}>
+              Front-end
+            </h4>
+          </div>
+          <div className={`${StackCardFooter}`}>
+            <p
+              className={`${StackCardFooter_desc} ${poppinsRegular.className}`}
+            >
+              Description
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className={`${StackCard} ${StackCard_3}`}>
+        <div>
+          <div className={`${StackCardHeader}`}>
+            <h3 className={`${StackCarHeader_number} ${dm_sansBold.className}`}>
+              03
+            </h3>
+            <StatusComponent status={[true, true, false, false, false]} />
+          </div>
+          <div className={`${StackCardBody}`}>
+            <h4 className={`${StackCardBody_title} ${poppinsBold.className}`}>
+              Back-end
+            </h4>
+          </div>
+          <div className={`${StackCardFooter}`}>
+            <p
+              className={`${StackCardFooter_desc} ${poppinsRegular.className}`}
+            >
+              Description
+            </p>
+          </div>
+        </div>
       </div>
       <div className={`${StackCard}`}>
-        <Icon icon="bx:server" width={100} height={100} color="#ffffff" />
-        <h3 className={`${StackCard_Title} ${poppinsBold.className}`}>
-          DESENVOLVIMENTO <br /> BACK-END
-        </h3>
-        <p className={`${StackCard_Desc} ${poppinsRegular.className}`}>
-          Foco em manter a organização e escalabilidade do código do backend,
-          utilizando as melhores práticas de desenvolvimento para garantir a
-          qualidade e eficiência da aplicação.
-        </p>
-      </div>
-      <div className={`${StackCard}`}>
-        <Icon
-          icon="ph:device-mobile-camera-bold"
-          width={100}
-          height={100}
-          color="#ffffff"
-        />
-        <h3 className={`${StackCard_Title} ${poppinsBold.className}`}>
-          DESENVOLVIMENTO <br /> MOBILE
-        </h3>
-        <p className={`${StackCard_Desc} ${poppinsRegular.className}`}>
-          Conhecimento de habilidades básicas em desenvolvimento mobile
-          utilizando React Native, mas busco constantemente expandir meus
-          conhecimentos para criar produtos de alta qualidade para os usuários
-          finais.
-        </p>
+        <div>
+          <div className={`${StackCardHeader}`}>
+            <h3 className={`${StackCarHeader_number} ${dm_sansBold.className}`}>
+              04
+            </h3>
+            <StatusComponent status={[true, true, false, false, false]} />
+          </div>
+          <div className={`${StackCardBody}`}>
+            <h4 className={`${StackCardBody_title} ${poppinsBold.className}`}>
+              Mobile
+            </h4>
+          </div>
+          <div className={`${StackCardFooter}`}>
+            <p
+              className={`${StackCardFooter_desc} ${poppinsRegular.className}`}
+            >
+              Description
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

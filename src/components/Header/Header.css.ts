@@ -7,7 +7,7 @@ export const HeaderStyle = style({
   left: 0,
   right: 0,
   zIndex: 100,
-  backgroundColor: vars.color.blueDark,
+  backgroundColor: vars.color.blueDarkTransparent,
   color: vars.color.white,
   display: "flex",
   alignItems: "center",

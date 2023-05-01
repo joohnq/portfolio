@@ -8,7 +8,7 @@ import {
   HomeIconScroll,
 } from "./Home.css";
 import { Icon } from "@iconify/react";
-import { poppinsBold } from "../../styles/fonts";
+import { poppinsBold} from "../../styles/fonts";
 
 export default function HomeComponent() {
   return (

@@ -1,4 +1,5 @@
 import { Poppins } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 
 export const poppinsExtraBold = Poppins({
   weight: ["800"],
@@ -30,3 +31,8 @@ export const poppinsRegular = Poppins({
   display: "block",
 });
 
+export const dm_sansBold = DM_Sans({
+  weight: ["700"],
+  subsets: ["latin"],
+  display: "block",
+});
