@@ -31,7 +31,7 @@ export const Main = style({
 });
 
 export const Disabled = style({
-  backgroundColor: "5 !important",
+  backgroundColor: "#555 !important",
 });
 
 export const Hover = style({
@@ -52,7 +52,7 @@ export const Container = style({
 
 export const HtmlStyle = style({
   scrollbarWidth: "auto",
-  scrollbarColor: vars.color.purpleLight,
+  scrollbarColor: "#FF00B8",
 
   "::-webkit-scrollbar": {
     width: "5px",
@@ -60,7 +60,7 @@ export const HtmlStyle = style({
   },
 
   "::-webkit-scrollbar-thumb": {
-    backgroundColor: vars.color.purpleLight,
+    backgroundColor: "#FF00B8",
   },
   WebkitTapHighlightColor: "transparent",
 

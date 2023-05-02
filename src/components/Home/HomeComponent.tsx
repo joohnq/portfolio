@@ -8,7 +8,7 @@ import {
   HomeIconScroll,
 } from "./Home.css";
 import { Icon } from "@iconify/react";
-import { poppinsBold} from "../../styles/fonts";
+import { poppinsBold } from "../../styles/fonts";
 
 export default function HomeComponent() {
   return (
@@ -48,7 +48,10 @@ export default function HomeComponent() {
             />
           </a>
 
-          <a href="https://www.linkedin.com/in/joao-henrique-de-souza-silva-b43921196/" aria-label="Link para o meu Linkedin">
+          <a
+            href="https://www.linkedin.com/in/joao-henrique-de-souza-silva-b43921196/"
+            aria-label="Link para o meu Linkedin"
+          >
             <Icon
               className={`${HomeIcon}`}
               icon="line-md:linkedin"

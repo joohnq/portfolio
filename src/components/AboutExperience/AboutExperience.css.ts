@@ -80,7 +80,6 @@ export const AboutExperienceHeader = style({
 export const AboutExperienceSelected = style({
   padding: "15px 20px",
 
-  backgroundColor: vars.color.purpleLight,
   borderRadius: 10,
 
   background: "linear-gradient(97.64deg, #FFA800 -78.72%, #FF00B8 236.02%);",

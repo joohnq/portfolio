@@ -11,11 +11,8 @@ import {
   StackCardFooter,
   StackCardFooter_desc,
 } from "./Stack.css";
-import { Container } from "../../styles/styles.css";
-import { Icon } from "@iconify/react";
 import { poppinsBold, poppinsRegular, dm_sansBold } from "../../styles/fonts";
 import StatusComponent from "../Status/StatusComponent";
-import LightConicComponent from "../Lights/LightsComponents";
 
 export default function StacksComponent() {
   return (

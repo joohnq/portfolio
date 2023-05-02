@@ -1,17 +1,12 @@
-import React, {
-  useState,
-  ReactElement,
-  useRef,
-  useEffect,
-  useMemo,
-} from "react";
-import ReactDOMServer from "react-dom/server";
+import React, { useState, useRef, ReactNode } from "react";
 import Image from "next/image";
 import ProfilePhoto from "../../../public/profilephoto.jpg";
 import TGAPhoto from "../../../public/tgaphoto.png";
+import { Container } from "@/styles/styles.css";
+import { poppinsBold, poppinsMedium } from "../../styles/fonts";
 
 import {
-AboutReadMore,
+  AboutReadMore,
   AboutExperience,
   AboutExperienceHeaders,
   AboutExperienceHeader,
@@ -27,13 +22,6 @@ AboutReadMore,
   ExperienceBodyJobDesc,
   ExperienceBodyJobLanguages,
 } from "./AboutExperience.css";
-import { Container } from "@/styles/styles.css";
-import { poppinsBold, poppinsMedium } from "../../styles/fonts";
-import { ReactNode } from "react";
-
-interface Props {
-  aboutState: boolean;
-}
 
 const initialDesc =
   " Olá caro visitante, meu nome é João e sou um jovem entusiasta da programação. Há alguns anos, descobri minha paixão pela área e desde então venho me dedicando intensamente aos estudos das linguagens necessárias para me tornar um desenvolvedor de front-end. Em particular, tenho dedicado bastante tempo ao HTML, CSS e JavaScript, que são tecnologias essenciais para a criação de websites e aplicações web modernas. ";

@@ -59,7 +59,11 @@ export default function ProjectsComponent() {
             className={`${ProjectCard_ContentDesc} ${TextStart} ${poppinsMedium.className}`}
           >
             Este aplicativo foi criado utilizando o REACT NATIVE e a{" "}
-            <a className={`${LinkExternal}`}  href="https://pokeapi.co/" target="__blank">
+            <a
+              className={`${LinkExternal}`}
+              href="https://pokeapi.co/"
+              target="__blank"
+            >
               PokeAPI
             </a>{" "}
             . Em resumo, ele apresenta uma lista de 20 pokemons ordenados
@@ -99,7 +103,11 @@ export default function ProjectsComponent() {
             correspondente, e serão exibidas informações como temperatura,
             sensação térmica, umidade e pressão. Destaca-se que essa aplicação
             se conecta à API da{" "}
-            <a className={`${LinkExternal}`} href="https://openweathermap.org/" target="__blank">
+            <a
+              className={`${LinkExternal}`}
+              href="https://openweathermap.org/"
+              target="__blank"
+            >
               OpenWeather
             </a>{" "}
             para obter dados precisos e atualizados.{" "}
@@ -147,8 +155,14 @@ export default function ProjectsComponent() {
           <p
             className={`${ProjectCard_ContentDesc} ${TextStart} ${poppinsMedium.className}`}
           >
-            Com esse projeto de cronômetro e timer feito em HTML, CSS e JavaScript, você terá uma ferramenta completa e personalizável para medir o tempo em diferentes situações.
-            O cronômetro conta com botões de início, pausa, reinício e volta, permitindo uma contagem precisa e flexível do tempo. Já o timer possibilita que você defina o tempo desejado para a contagem regressiva.A interface do projeto é moderna e responsiva, permitindo a sua utilização em diferentes dispositivos e tamanhos de tela.
+            Com esse projeto de cronômetro e timer feito em HTML, CSS e
+            JavaScript, você terá uma ferramenta completa e personalizável para
+            medir o tempo em diferentes situações. O cronômetro conta com botões
+            de início, pausa, reinício e volta, permitindo uma contagem precisa
+            e flexível do tempo. Já o timer possibilita que você defina o tempo
+            desejado para a contagem regressiva.A interface do projeto é moderna
+            e responsiva, permitindo a sua utilização em diferentes dispositivos
+            e tamanhos de tela.
           </p>
         </div>
       </div>
