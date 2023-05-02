@@ -32,7 +32,6 @@ export default function ProjectsComponent() {
             className={`${ProjectCard_Img}`}
             height={500}
             src={pokedex}
-            quality={50}
             alt="Image do projetos"
           />
         </div>
@@ -119,7 +118,6 @@ export default function ProjectsComponent() {
             className={`${ProjectCard_Img}`}
             height={500}
             src={weather}
-            quality={50}
             alt="Image do projetos"
           />
         </div>
@@ -130,7 +128,6 @@ export default function ProjectsComponent() {
             className={`${ProjectCard_Img}`}
             height={500}
             src={timerCronometro}
-            quality={50}
             alt="Image do projetos"
           />
         </div>
