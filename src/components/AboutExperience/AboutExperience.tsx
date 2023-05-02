@@ -40,6 +40,7 @@ export default function AboutExperienceComponent() {
           className={`${AboutBodyPhoto}`}
           src={ProfilePhoto}
           alt="Foto de João Henrique"
+          quality={50}
         />
         <p className={`${AboutBodyDesc} ${poppinsMedium.className}`}>
           {aboutDesc.length == 1 ? (

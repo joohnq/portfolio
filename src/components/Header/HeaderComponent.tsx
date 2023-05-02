@@ -14,8 +14,7 @@ import {
   MenuMobileList,
   MenuMobileListItem_text,
 } from "./Header.css";
-import { DisNone, Hover } from "../../styles/styles.css";
-import { Container } from "../../styles/styles.css";
+import { Container, DisNone, Hover } from "../../styles/styles.css";
 import { Icon } from "@iconify/react";
 import { poppinsBold } from "../../styles/fonts";
 
@@ -35,11 +34,11 @@ export default function HeaderComponent() {
 
   useEffect(() => {
     const hoverLimits = {
-      Home: { start: 0, end: 1200 },
-      AboutExperience: { start: 1200, end: 2000 },
-      Habilities: { start: 2000, end: 3000 },
-      Projects: { start: 3000, end: 5000 },
-      Contact: { start: 5000, end: 7000 },
+      Home: { start: 0, end: 1400 },
+      AboutExperience: { start: 1400, end: 2600 },
+      Habilities: { start: 2600, end: 3400 },
+      Projects: { start: 3400, end: 6500 },
+      Contact: { start: 6500, end: 7000 },
     };
 
     for (const [id, { start, end }] of Object.entries(hoverLimits)) {
