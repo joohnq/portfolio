@@ -6,22 +6,26 @@ globalStyle("body", {
   border: 0,
   padding: 0,
   boxSizing: "border-box",
-  backgroundImage: "url(/background.png)",
-  backgroundPosition: " top center",
+  backgroundColor: vars.color.blueDark,
+  // backgroundPosition: "top center",
 });
 
 export const BackgroundTransparent = style({
   position: "absolute",
   zIndex: 2,
   left: 0,
-  top: 0,
+  top: 400,
   right: 0,
   bottom: 0,
-  opacity: 0.7,
-  height: 7000,
-  backdropFilter: "blur(250px)",
-  WebkitFilter: "blur(250px)",
-  backgroundColor: vars.color.blueDark,
+  width: "100%",
+  height: 2350,
+  // opacity: 0.7,
+  // height: 7000,
+  // backdropFilter: "blur(250px)",
+  // WebkitFilter: "blur(250px)",
+  // backgroundColor: vars.color.blueDark,
+  backgroundImage: "url(/background-stack.png)",
+  backgroundPosition: "center center",
 });
 
 export const Main = style({

@@ -19,7 +19,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <HeaderComponent />
-      {/* <div className={BackgroundTransparent}></div> */}
+      <div className={BackgroundTransparent}></div>
       {/* <LightConicComponent /> */}
       <main className={Main}>
         <HomeComponent />
