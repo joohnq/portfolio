@@ -6,7 +6,8 @@ globalStyle("body", {
   border: 0,
   padding: 0,
   boxSizing: "border-box",
-  backgroundColor: vars.color.blueDark,
+  backgroundImage: "url(/background.png)",
+  backgroundPosition: " top center",
 });
 
 export const BackgroundTransparent = style({

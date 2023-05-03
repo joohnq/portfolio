@@ -1,9 +1,7 @@
 import { style } from "@vanilla-extract/css";
-import { vars } from "../../styles/global.css";
 
 export const Title_Gradient = style({
-  // background: "linear-gradient(90.67deg, #FFA800 -14.32%, #FF00B8 113.23%)",
-  background: "#fff",
+  background: "linear-gradient(90.67deg, #FFA800 -14.32%, #FF00B8 113.23%)",
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
