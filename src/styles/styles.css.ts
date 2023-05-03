@@ -17,7 +17,7 @@ export const BackgroundTransparent = style({
   right: 0,
   bottom: 0,
   opacity: 0.7,
-  // height: 7000,
+  height: 7000,
   backdropFilter: "blur(250px)",
   WebkitFilter: "blur(250px)",
   backgroundColor: vars.color.blueDark,

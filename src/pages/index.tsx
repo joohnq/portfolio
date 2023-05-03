@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <HeaderComponent />
       <div className={BackgroundTransparent}></div>
-      {/* <LightConicComponent /> */}
+      <LightConicComponent />
       <main className={Main}>
         <HomeComponent />
         <StacksComponent />

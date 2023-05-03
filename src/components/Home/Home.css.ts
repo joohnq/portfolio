@@ -2,7 +2,8 @@ import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/global.css";
 
 export const Title_Gradient = style({
-  background: "linear-gradient(90.67deg, #FFA800 -14.32%, #FF00B8 113.23%)",
+  // background: "linear-gradient(90.67deg, #FFA800 -14.32%, #FF00B8 113.23%)",
+  background: "#fff",
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
@@ -56,7 +57,7 @@ export const HomeIcon = style({
 
 export const HomeIconScroll = style({
   position: "absolute",
-  top: 'calc(100vh - 100px)',
+  top: "calc(100vh - 100px)",
   right: "50%",
   transform: "translateX(50%)",
   "@media": {
