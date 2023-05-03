@@ -24,8 +24,10 @@ export const BackgroundTransparent = style({
   // backdropFilter: "blur(250px)",
   // WebkitFilter: "blur(250px)",
   // backgroundColor: vars.color.blueDark,
-  backgroundImage: "url(/background-stack.png)",
+  backgroundImage: "url(/background-stack-p.png)",
   backgroundPosition: "center center",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
 });
 
 export const Main = style({
