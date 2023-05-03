@@ -80,7 +80,7 @@ export const HeaderListItem_link = style({
   fontSize: 24,
 
   ":hover": {
-    background: "linear-gradient(90.67deg, #FFA800 -14.32%, #FF00B8 113.23%)",
+    background: vars.color.gradient,
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",

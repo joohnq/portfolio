@@ -7,7 +7,6 @@ globalStyle("body", {
   padding: 0,
   boxSizing: "border-box",
   backgroundColor: vars.color.blueDark,
-  // backgroundPosition: "top center",
 });
 
 export const BackgroundTransparent = style({
@@ -19,12 +18,7 @@ export const BackgroundTransparent = style({
   bottom: 0,
   width: "100%",
   height: 2350,
-  // opacity: 0.7,
-  // height: 7000,
-  // backdropFilter: "blur(250px)",
-  // WebkitFilter: "blur(250px)",
-  // backgroundColor: vars.color.blueDark,
-  backgroundImage: "url(/background-stack-p.png)",
+  backgroundImage: "url(/background-stack.png)",
   backgroundPosition: "center center",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",

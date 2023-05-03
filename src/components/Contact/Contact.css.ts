@@ -137,8 +137,7 @@ export const ContactRightButton = style({
   fontSize: 20,
   borderRadius: 10,
   cursor: "pointer",
-  // background: vars.color.white,
-  background: "linear-gradient(90.67deg, #FFA800 -14.32%, #FF00B8 113.23%)",
+  background: vars.color.gradient,
 });
 
 export const MessageModal = style({

@@ -12,7 +12,7 @@ export const AboutReadMore = style({
 
   marginTop: 20,
 
-  background: "linear-gradient(90.67deg, #FFA800 -14.32%, #FF00B8 113.23%)",
+  background: vars.color.gradient,
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
@@ -82,7 +82,7 @@ export const AboutExperienceSelected = style({
 
   borderRadius: 10,
 
-  background: "linear-gradient(97.64deg, #FFA800 -78.72%, #FF00B8 236.02%);",
+  background: vars.color.gradient,
 });
 
 export const AboutBody = style({
@@ -231,7 +231,7 @@ export const ExperienceBodyJobDesc = style({
 });
 
 export const ExperienceBodyJobLanguages = style({
-  background: "linear-gradient(90.67deg, #FFA800 -14.32%, #FF00B8 113.23%)",
+  background: vars.color.gradient,
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
