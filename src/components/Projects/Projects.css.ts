@@ -47,7 +47,7 @@ export const ProjectRight = style({
 export const TextStart = style({
   "@media": {
     "screen and (min-width:0px)": {
-      textAlign: "center",
+      textAlign: "justify",
     },
     "screen and (min-width: 768px)": {
       textAlign: "start",
@@ -58,7 +58,7 @@ export const TextStart = style({
 export const TextEnd = style({
   "@media": {
     "screen and (min-width:0px)": {
-      textAlign: "center",
+      textAlign: "justify",
     },
     "screen and (min-width: 768px)": {
       textAlign: "end",

@@ -13,8 +13,6 @@ export const HeaderStyle = style({
   alignItems: "center",
   justifyContent: "space-between",
   height: 80,
-  borderBottomLeftRadius: 10,
-  borderBottomRightRadius: 10,
 
   "@media": {
     "screen and (min-width: 0px)": {
@@ -24,6 +22,10 @@ export const HeaderStyle = style({
     "screen and (min-width: 500px)": {
       paddingLeft: 50,
       paddingRight: 50,
+    },
+    "screen and (min-width: 768px)": {
+      borderBottomLeftRadius: 10,
+      borderBottomRightRadius: 10,
     },
   },
 });
@@ -72,8 +74,6 @@ export const HeaderListItem_icon = style({
   },
 });
 
-export const HeaderListItem = style({});
-
 export const HeaderListItem_link = style({
   color: vars.color.white,
   textDecoration: "none",
@@ -119,6 +119,7 @@ export const MenuMobile = style({
   zIndex: 20,
   background: vars.color.blueDark,
   overflow: "hidden",
+  transition: "all 1s linear",
 });
 
 export const MenuMobileIconClose = style({
@@ -137,7 +138,7 @@ export const MenuMobileList = style({
   listStyle: "none",
   gap: 30,
   padding: 0,
-  marginTop: 100,
+  marginTop: 20,
 });
 
 export const MenuMobileListItem_text = style({

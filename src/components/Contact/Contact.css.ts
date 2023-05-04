@@ -130,12 +130,12 @@ export const ContactRight_TextArea = style({
 });
 
 export const ContactRightButton = style({
-  width: "100%",
+  width: "50%",
   color: vars.color.white,
   border: 0,
   padding: "15px 15px",
-  fontSize: 20,
-  borderRadius: 10,
+  fontSize: 18,
+  borderRadius: 5,
   cursor: "pointer",
   background: vars.color.gradient,
 });

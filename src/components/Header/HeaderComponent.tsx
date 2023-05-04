@@ -6,7 +6,6 @@ import {
   LogoTabletDesktop,
   HeaderList,
   HeaderListMenu,
-  HeaderListItem,
   HeaderListItem_icon,
   HeaderListItem_link,
   MenuMobile,
@@ -84,7 +83,7 @@ export default function HeaderComponent() {
       </h1>
       <nav>
         <ul className={HeaderList}>
-          <li className={`${HeaderListItem}`}>
+          <li>
             <Icon
               icon="fluent-emoji:house"
               className={`${HeaderListItem_icon}`}
@@ -98,7 +97,7 @@ export default function HeaderComponent() {
               HOME
             </a>
           </li>
-          <li className={`${HeaderListItem}`}>
+          <li>
             <Icon
               icon="fluent-emoji:person-in-steamy-room-medium-dark"
               className={`${HeaderListItem_icon}`}
@@ -112,7 +111,7 @@ export default function HeaderComponent() {
               SOBRE
             </a>
           </li>
-          <li className={`${HeaderListItem}`}>
+          <li>
             <Icon
               icon="fluent-emoji:brain"
               className={`${HeaderListItem_icon}`}
@@ -126,7 +125,7 @@ export default function HeaderComponent() {
               HABILIDADES
             </a>
           </li>
-          <li className={`${HeaderListItem}`}>
+          <li>
             <Icon
               icon="fluent-emoji:briefcase"
               className={`${HeaderListItem_icon}`}
@@ -140,7 +139,7 @@ export default function HeaderComponent() {
               PROJETOS
             </a>
           </li>
-          <li className={`${HeaderListItem}`}>
+          <li>
             <Icon
               icon="fluent-emoji:envelope-with-arrow"
               className={`${HeaderListItem_icon}`}
@@ -155,7 +154,7 @@ export default function HeaderComponent() {
             </a>
           </li>
           <Icon
-            icon="material-symbols:menu-rounded"
+            icon="tabler:menu"
             className={`${HeaderListMenu}`}
             color="#fff"
             onClick={handleMenu}
@@ -173,6 +172,15 @@ export default function HeaderComponent() {
           />
         </div>
         <ul className={MenuMobileList}>
+          <li>
+            <a
+              href="#Home"
+              className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
+              onClick={handleMenu}
+            >
+              HOME
+            </a>
+          </li>
           <li>
             <a
               href="#AboutExperience"

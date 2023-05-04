@@ -91,11 +91,10 @@ export default function ProjectsComponent() {
               color="white"
               width="30"
               height="30"
-              
             />
           </a>
           <p
-            className={`${ProjectCard_ContentDesc} ${TextStart} ${poppinsMedium.className}`}
+            className={`${ProjectCard_ContentDesc} ${TextEnd} ${poppinsMedium.className}`}
           >
             Este website, desenvolvido em REACT, constitui um sistema que
             oferece informações básicas sobre a previsão do tempo de qualquer
@@ -176,10 +175,10 @@ export default function ProjectsComponent() {
         </div>
         <div className={`${ProjectCard_Image}`}>
           <Icon
-            icon="ant-design:stop-twotone"
+            icon="svg-spinners:blocks-scale"
             color="#fff"
-            width="150"
-            height="150"
+            width="120"
+            height="120"
           />
         </div>
       </div>
@@ -195,10 +194,10 @@ export default function ProjectsComponent() {
         </div>
         <div className={`${ProjectCard_Image}`}>
           <Icon
-            icon="ant-design:stop-twotone"
+            icon="svg-spinners:blocks-scale"
             color="#fff"
-            width="150"
-            height="150"
+            width="120"
+            height="120"
           />
         </div>
       </div>
