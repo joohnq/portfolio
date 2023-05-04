@@ -19,6 +19,10 @@ import {
   ContactRight_TextArea,
   ContactRightButton,
   MessageModal,
+  MessageModalBox,
+  MessageModalBox_close,
+  MessageModalBox_body,
+  MessageModalBox_message,
 } from "./Contact.css";
 import { poppinsBold, poppinsMedium, poppinsRegular } from "@/styles/fonts";
 import { Icon } from "@iconify/react";
@@ -51,10 +55,10 @@ export default function ContactComponent() {
       body: encode({ "form-name": "contact", ...formState }),
     })
       .then(() => {
-        setFormMessage("Sucesso");
+        setFormMessage("Sua mensagem foi enviada!");
         setTimeout(() => {
           setFormMessage("");
-        }, 3000);
+        }, 4000);
         setFormState({ name: "", email: "", message: "" });
       })
       .catch((error) => {
@@ -150,16 +154,34 @@ export default function ContactComponent() {
 
         {formMessage ? (
           <div className={`${MessageModal}`}>
-            <Icon
-              className=""
-              icon="emojione:white-heavy-check-mark"
-              width="30"
-              height="30"
-            />
-            <h3 className={`${MainSubtitle} ${poppinsRegular.className}`}>
-              {formMessage}
-            </h3>
-            <p>Você poderá enviar outra mensagem daqui a 3 minutos</p>
+            <div className={`${MessageModalBox}`}>
+              <div className={`${MessageModalBox_close}`}>
+                <Icon
+                  icon="ph:x"
+                  width="30"
+                  height="30"
+                  color="#01040D"
+                  onClick={() => setFormMessage("")}
+                />
+              </div>
+              <div className={`${MessageModalBox_body}`}>
+                <Icon
+                  icon="emojione:white-heavy-check-mark"
+                  width="100"
+                  height="100"
+                />
+                <h3
+                  className={`${MessageModalBox_message} ${poppinsRegular.className}`}
+                >
+                  {formMessage}
+                </h3>
+                <p
+                  className={`${MessageModalBox_message} ${poppinsRegular.className}`}
+                >
+                  Você poderá enviar outra mensagem daqui a 3 minutos
+                </p>
+              </div>
+            </div>
           </div>
         ) : (
           ""

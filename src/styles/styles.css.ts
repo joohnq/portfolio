@@ -18,7 +18,7 @@ export const BackgroundTransparent = style({
   bottom: 0,
   width: "100%",
   height: 2350,
-  backgroundImage: "url(/background-stack.png)",
+  backgroundImage: "url(/background-stack-small.png)",
   backgroundPosition: "center center",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
@@ -30,7 +30,7 @@ export const Main = style({
 });
 
 export const Disabled = style({
-  backgroundColor: "#555 !important",
+  background: "#555 !important",
 });
 
 export const Hover = style({
