@@ -24,7 +24,7 @@ import {
   MessageModalBox_body,
   MessageModalBox_message,
 } from "./Contact.css";
-import { poppinsBold, poppinsMedium, poppinsRegular } from "@/styles/fonts";
+import { poppinsBold, poppinsMedium, poppinsRegular, poppinsSemiBold } from "@/styles/fonts";
 import { Icon } from "@iconify/react";
 interface FormState {
   name: string;
@@ -99,7 +99,7 @@ export default function ContactComponent() {
                 height={30}
               />
               <p
-                className={`${ContactSocialMedia_Name} ${poppinsBold.className}`}
+                className={`${ContactSocialMedia_Name} ${poppinsSemiBold.className}`}
               >
                 INSTAGRAM
               </p>
@@ -118,7 +118,7 @@ export default function ContactComponent() {
                 height={30}
               />
               <p
-                className={`${ContactSocialMedia_Name} ${poppinsBold.className}`}
+                className={`${ContactSocialMedia_Name} ${poppinsSemiBold.className}`}
               >
                 GITHUB
               </p>
@@ -137,7 +137,7 @@ export default function ContactComponent() {
                 height={30}
               />
               <p
-                className={`${ContactSocialMedia_Name} ${poppinsBold.className}`}
+                className={`${ContactSocialMedia_Name} ${poppinsSemiBold.className}`}
               >
                 LINKEDIN
               </p>

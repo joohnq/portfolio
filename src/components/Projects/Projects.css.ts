@@ -10,10 +10,14 @@ export const ProjectsStyle = style({
   padding: "clamp(10px, calc(100vw - 96vw), 30px)",
 
   marginTop: "clamp(80px, calc(100vw - 90vw), 200px)",
+  maxWidth: 1200,
 });
 
 export const ProjectCard = style({
-  width: "100%",
+  maxWidth: 300,
+  backgroundColor: "#01040DFF",
+  padding: "50px 30px 0px",
+  borderRadius: 10,
   "@media": {
     "screen and (min-width:0px)": {
       display: "grid",
@@ -26,6 +30,7 @@ export const ProjectCard = style({
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
+      flexDirection: "column",
       marginBottom: 30,
     },
   },
@@ -85,8 +90,6 @@ export const ProjectCard_Content = style({
       paddingBottom: 40,
     },
     "screen and (min-width: 768px)": {
-      alignItems: "center",
-      width: "50%",
       padding: 40,
     },
   },
@@ -125,12 +128,6 @@ export const ProjectCard_Image = style({
       width: "100%",
       margin: "0 auto",
       textAlign: "center",
-    },
-    "screen and (min-width: 576px)": {
-      width: "80%",
-    },
-    "screen and (min-width: 768px)": {
-      width: "50%",
     },
   },
 });

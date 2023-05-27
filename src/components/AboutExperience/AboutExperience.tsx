@@ -42,7 +42,20 @@ export default function AboutExperienceComponent() {
           alt="Foto de João Henrique"
         />
         <p className={`${AboutBodyDesc} ${poppinsMedium.className}`}>
-          {aboutDesc.length == 1 ? (
+          👋 Olá caro visitante!
+          <br />
+          😄 Meu nome é João e sou um entusiasta da programação.
+          <br />
+          💻 Sou apaixonado pela área e tenho dedicado meu tempo aos estudos.
+          <br />
+          🌍 Além disso, estou aprimorando meu inglês para ampliar minhas
+          oportunidades.
+          <br />
+          📱 Estou explorando o mundo do desenvolvimento mobile para expandir
+          minhas habilidades.
+          <br />⏰ Dedico-me diariamente para alcançar meus objetivos e crescer
+          como profissional.
+          {/* {aboutDesc.length == 1 ? (
             <span>{aboutDesc[0]}</span>
           ) : (
             <span>
@@ -67,7 +80,7 @@ export default function AboutExperienceComponent() {
             >
               Leia Menos
             </span>
-          )}
+          )} */}
         </p>
       </div>
     );

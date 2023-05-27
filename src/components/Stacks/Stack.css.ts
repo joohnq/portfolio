@@ -73,12 +73,3 @@ export const StackCardBody_title = style({
 export const StackCardBody = style({
   marginTop: 10,
 });
-export const StackCardFooter = style({
-  marginTop: 10,
-});
-
-export const StackCardFooter_desc = style({
-  color: vars.color.white,
-  margin: 0,
-  fontSize: "clamp(16px, calc(100vw - 96vw), 20px)",
-});

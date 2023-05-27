@@ -8,10 +8,8 @@ import {
   StackCarHeader_number,
   StackCardBody,
   StackCardBody_title,
-  StackCardFooter,
-  StackCardFooter_desc,
 } from "./Stack.css";
-import { poppinsBold, poppinsRegular, dm_sansBold } from "../../styles/fonts";
+import { poppinsBold, dm_sansBold } from "../../styles/fonts";
 import StatusComponent from "../Status/StatusComponent";
 
 export default function StacksComponent() {
@@ -27,15 +25,8 @@ export default function StacksComponent() {
           </div>
           <div className={`${StackCardBody}`}>
             <h4 className={`${StackCardBody_title} ${poppinsBold.className}`}>
-              Design - Figma
+              DESIGN - FIGMA
             </h4>
-          </div>
-          <div className={`${StackCardFooter}`}>
-            <p
-              className={`${StackCardFooter_desc} ${poppinsRegular.className}`}
-            >
-              Description
-            </p>
           </div>
         </div>
       </div>
@@ -49,15 +40,8 @@ export default function StacksComponent() {
           </div>
           <div className={`${StackCardBody}`}>
             <h4 className={`${StackCardBody_title} ${poppinsBold.className}`}>
-              Front-end
+              FRONT-END
             </h4>
-          </div>
-          <div className={`${StackCardFooter}`}>
-            <p
-              className={`${StackCardFooter_desc} ${poppinsRegular.className}`}
-            >
-              Description
-            </p>
           </div>
         </div>
       </div>
@@ -71,15 +55,8 @@ export default function StacksComponent() {
           </div>
           <div className={`${StackCardBody}`}>
             <h4 className={`${StackCardBody_title} ${poppinsBold.className}`}>
-              Back-end
+              BACK-END
             </h4>
-          </div>
-          <div className={`${StackCardFooter}`}>
-            <p
-              className={`${StackCardFooter_desc} ${poppinsRegular.className}`}
-            >
-              Description
-            </p>
           </div>
         </div>
       </div>
@@ -93,15 +70,8 @@ export default function StacksComponent() {
           </div>
           <div className={`${StackCardBody}`}>
             <h4 className={`${StackCardBody_title} ${poppinsBold.className}`}>
-              Mobile
+              MOBILE
             </h4>
-          </div>
-          <div className={`${StackCardFooter}`}>
-            <p
-              className={`${StackCardFooter_desc} ${poppinsRegular.className}`}
-            >
-              Description
-            </p>
           </div>
         </div>
       </div>
