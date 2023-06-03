@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Container, Hover } from "../../styles/styles.css";
-import { poppinsBold } from "../../styles/fonts";
-import MenuMobileComponent from "../MenuMobile/MenuMobileComponent";
+import { Container, Hover } from "@/styles/styles.css";
+import { poppinsBold } from "@/styles/fonts";
+import MenuMobileComponent from "@/components/MenuMobile/MenuMobileComponent";
 import {
   HeaderStyle,
   Logo,

@@ -24,9 +24,9 @@ export default function Home() {
         <HomeComponent />
         {/* <StacksComponent /> */}
         <AboutExperience />
-        {/* <HabilitiesComponent />
-        <ContactComponent /> */}
+        <HabilitiesComponent />
         {/* <ProjectsComponent /> */}
+        <ContactComponent />
       </main>
     </>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { poppinsBold, poppinsSemiBold } from "@/styles/fonts";
+import MacPointsComponent from "@/components/MacPoints/MacPoints";
 import {
   ProjectCard,
   ProjectCard_Content,
@@ -13,7 +14,6 @@ import {
   ProjectCard_Button,
   ProjectCard_Button_a,
 } from "./ProjectsCard.css";
-import MacPointsComponent from "../MacPoints/MacPoints";
 
 interface ProjectCardProps {
   projectData: {

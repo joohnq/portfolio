@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
-import { poppinsBold } from "../../styles/fonts";
-import { Title_Gradient } from "../../styles/styles.css";
+import { poppinsBold } from "@/styles/fonts";
+import { Title_Gradient } from "@/styles/styles.css";
 import {
   HomeStyle,
   HomeSubtitle,

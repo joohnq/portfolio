@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, MainTitle } from "@/styles/styles.css";
+import { Container, BigTitle } from "@/styles/styles.css";
 import { ProjectsStyle, ProjectsStyle_Box } from "./Projects.css";
 import { poppinsBold } from "@/styles/fonts";
 import ProjectCardComponent from "./ProjectCardComponent";
@@ -7,7 +7,7 @@ import ProjectCardComponent from "./ProjectCardComponent";
 export default function ProjectsComponent() {
   return (
     <section className={`${ProjectsStyle} ${Container}`} id="Projects">
-      <h2 className={`${MainTitle} ${poppinsBold.className}`}>PROJETOS</h2>
+      <h2 className={`${BigTitle} ${poppinsBold.className}`}>PROJETOS</h2>
       <div className={`${ProjectsStyle_Box}`}>
         <ProjectCardComponent
           projectData={{

@@ -1,10 +1,12 @@
 import React, { useState, FormEvent, ChangeEvent, useRef } from "react";
+import { Container, Disabled, BigTitle } from "@/styles/styles.css";
 import {
-  Container,
-  MainSubtitle,
-  MainTitle,
-  Disabled,
-} from "@/styles/styles.css";
+  poppinsBold,
+  poppinsMedium,
+  poppinsRegular,
+  poppinsSemiBold,
+} from "@/styles/fonts";
+import { Icon } from "@iconify/react";
 import {
   ContactStyle,
   ContactLeft,
@@ -24,8 +26,6 @@ import {
   MessageModalBox_body,
   MessageModalBox_message,
 } from "./Contact.css";
-import { poppinsBold, poppinsMedium, poppinsRegular, poppinsSemiBold } from "@/styles/fonts";
-import { Icon } from "@iconify/react";
 interface FormState {
   name: string;
   email: string;
@@ -83,7 +83,7 @@ export default function ContactComponent() {
     <section className={`${ContactStyle} ${Container}`} id="Contact">
       <div className={`${ContactLeft}`}>
         <div>
-          <h2 className={`${MainTitle} ${poppinsBold.className} `}>Contato</h2>
+          <h2 className={`${BigTitle} ${poppinsBold.className} `}>Contato</h2>
           <div className={`${ContactSocialMedias}`}>
             <a
               className={`${ContactSocialMedia}`}

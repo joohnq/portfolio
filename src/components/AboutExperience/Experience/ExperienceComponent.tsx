@@ -5,6 +5,7 @@ import { poppinsBold, poppinsMedium } from "@/styles/fonts";
 import MacPointsComponent from "@/components/MacPoints/MacPoints";
 import {
   ExperienceBody,
+  Experience_MacPoints,
   ExperienceBodyJob,
   ExperienceBodyJobImageText,
   ExperienceBodyJobContent,
@@ -12,11 +13,14 @@ import {
   ExperienceBodyJobDesc,
   ExperienceBodyJobLanguages,
 } from "./Experience.css";
+import { Icon } from "@iconify/react";
 
 const ExperienceComponent = () => {
   return (
-    <div className={`${ExperienceBody}`}>
-      <MacPointsComponent />
+    <div className={`${ExperienceBody}`} id="Experience">
+      <div className={`${Experience_MacPoints}`}>
+        <MacPointsComponent />
+      </div>
       <div className={`${ExperienceBodyJob}`}>
         <div>
           <Image
@@ -33,11 +37,14 @@ const ExperienceComponent = () => {
             Desenvolvimento de Langing Pages responsivas e eficazes, utilizando
             boas práticas de código, de SEO, e acessibilidade.
           </p>
-          <p
+          <div
             className={`${ExperienceBodyJobLanguages} ${poppinsBold.className}`}
           >
-            HTML, CSS, JAVASCRIPT, BOOTSTRAP
-          </p>
+            <Icon icon="bxl:html5" color="#888" width="35" />
+            <Icon icon="bxl:css3" color="#888" width="35" />
+            <Icon icon="bxl:javascript" color="#888" width="35" />
+            <Icon icon="bxl:bootstrap" color="#888" width="35" />
+          </div>
         </div>
       </div>
       <div className={`${ExperienceBodyJob}`}>
@@ -56,7 +63,10 @@ const ExperienceComponent = () => {
           <p
             className={`${ExperienceBodyJobLanguages} ${poppinsBold.className}`}
           >
-            HTML, CSS, JAVASCRIPT, BOOTSTRAP
+            <Icon icon="bxl:html5" color="#888" width="35" />
+            <Icon icon="bxl:css3" color="#888" width="35" />
+            <Icon icon="bxl:javascript" color="#888" width="35" />
+            <Icon icon="bxl:bootstrap" color="#888" width="35" />
           </p>
         </div>
       </div>

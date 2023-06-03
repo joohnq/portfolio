@@ -1,4 +1,7 @@
 import React from "react";
+import { Container } from "@/styles/styles.css";
+import { Icon } from "@iconify/react";
+import { poppinsBold } from "@/styles/fonts";
 import {
   HabilitiesStyle,
   HabilitiesGridCards,
@@ -6,9 +9,6 @@ import {
   HabilitiesCard_Title,
   HabilitiesTitle,
 } from "./Habilities.css";
-import { Container } from "@/styles/styles.css";
-import { Icon } from "@iconify/react";
-import { poppinsBold } from "@/styles/fonts";
 
 export default function HabilitiesComponent() {
   return (

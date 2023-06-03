@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css";
-import { vars } from "../../styles/global.css";
+import { vars } from "@/styles/global.css";
 
 export const AboutExperience = style({
   borderRadius: 50,
@@ -65,4 +65,8 @@ export const AboutExperienceSelected = style({
   borderRadius: "10px 10px 0 0",
 
   background: vars.color.gradient,
+});
+
+export const AboutExperienceBody = style({
+  width: "100%",
 });

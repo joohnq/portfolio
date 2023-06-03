@@ -1,3 +1,6 @@
+import React from "react";
+import { poppinsBold, dm_sansBold } from "@/styles/fonts";
+import StatusComponent from "@/components/Status/StatusComponent";
 import {
   StacksStyle,
   StackCard,
@@ -9,8 +12,6 @@ import {
   StackCardBody,
   StackCardBody_title,
 } from "./Stack.css";
-import { poppinsBold, dm_sansBold } from "../../styles/fonts";
-import StatusComponent from "../Status/StatusComponent";
 
 export default function StacksComponent() {
   return (

@@ -9,6 +9,7 @@ export const AboutBody = style({
   borderRadius: 10,
   minHeight: 700,
   maxWidth: 1200,
+  position: "relative",
 
   "@media": {
     "screen and (min-width: 0px)": {
@@ -72,6 +73,12 @@ export const AboutBody_BoxContent = style({
       width: "55%",
     },
   },
+});
+
+export const AboutBody_MaxPoints = style({
+  position: "absolute",
+  top: 30,
+  right: 30,
 });
 
 export const AboutBody_Content = style({

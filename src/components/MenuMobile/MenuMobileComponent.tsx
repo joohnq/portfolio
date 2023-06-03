@@ -1,11 +1,11 @@
 import React from "react";
+import { poppinsBold } from "@/styles/fonts";
+import { DisNone } from "@/styles/styles.css";
 import {
   MenuMobile,
   MenuMobileList,
   MenuMobileListItem_text,
 } from "./MenuMobile.css";
-import { poppinsBold } from "../../styles/fonts";
-import { DisNone } from "../../styles/styles.css";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -35,15 +35,6 @@ const MenuMobileComponent: React.FC<MobileMenuProps> = ({
             onClick={handleMenuClick}
           >
             SOBRE
-          </a>
-        </li>
-        <li>
-          <a
-            href="#Experience"
-            className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
-            onClick={handleMenuClick}
-          >
-            EXPERIÊNCIAS
           </a>
         </li>
         <li>

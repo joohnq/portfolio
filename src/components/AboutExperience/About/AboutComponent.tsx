@@ -7,6 +7,7 @@ import {
   AboutBody_BoxImage,
   AboutBody_Image,
   AboutBody_BoxContent,
+  AboutBody_MaxPoints,
   AboutBody_Content,
   AboutBodyDesc,
 } from "./About.css";
@@ -24,7 +25,9 @@ export default function AboutComponent() {
         />
       </div>
       <div className={`${AboutBody_BoxContent}`}>
-        <MacPointsComponent />
+        <div className={`${AboutBody_MaxPoints}`}>
+          <MacPointsComponent />
+        </div>
         <div className={`${AboutBody_Content}`}>
           <h3 className={`${MediumTitle} ${poppinsBold.className}`}>
             João Henrique

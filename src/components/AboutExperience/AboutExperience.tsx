@@ -1,12 +1,13 @@
-import React, { useState, useRef, ReactNode } from "react";
+import React, { useState, useRef } from "react";
 import { Container } from "@/styles/styles.css";
-import { poppinsBold } from "../../styles/fonts";
+import { poppinsBold } from "@/styles/fonts";
 
 import {
   AboutExperience,
   AboutExperienceHeaders,
   AboutExperienceHeader,
   AboutExperienceSelected,
+  AboutExperienceBody,
 } from "./AboutExperience.css";
 import AboutComponent from "./About/AboutComponent";
 import ExperienceComponent from "./Experience/ExperienceComponent";
@@ -51,7 +52,7 @@ export default function AboutExperienceComponent() {
           </button>
         </div>
 
-        <div className="HabilitiesBody" ref={AboutExperienceBodyRef}>
+        <div className={AboutExperienceBody} ref={AboutExperienceBodyRef}>
           {aboutState ? AboutComponent() : ExperienceComponent()}
         </div>
       </section>

@@ -9,6 +9,7 @@ export const ExperienceBody = style({
   borderRadius: 10,
   minHeight: 700,
   maxWidth: 1200,
+  position: "relative",
 
   "@media": {
     "screen and (min-width: 0px)": {
@@ -23,6 +24,12 @@ export const ExperienceBody = style({
       gap: 50,
     },
   },
+});
+
+export const Experience_MacPoints = style({
+  position: "absolute",
+  top: 30,
+  right: 30,
 });
 
 export const ExperienceBodyJob = style({
@@ -48,6 +55,7 @@ export const ExperienceBodyJobImageText = style({
   fontSize: 40,
   marginTop: 20,
   marginBottom: 0,
+  maxWidth: 300,
 
   "@media": {
     "screen and (min-width: 0px)": {
@@ -64,6 +72,7 @@ export const ExperienceBodyJobContent = style({
   margin: 0,
   display: "flex",
   flexDirection: "column",
+  maxWidth: 500,
 
   "@media": {
     "screen and (min-width: 0px)": {
@@ -91,18 +100,12 @@ export const ExperienceBodyJobDesc = style({
 
   "@media": {
     "screen and (min-width: 0px)": {
-      maxWidth: 400,
+      maxWidth: 500,
     },
   },
 });
 
 export const ExperienceBodyJobLanguages = style({
-  background: vars.color.gradient,
-  WebkitBackgroundClip: "text",
-  WebkitTextFillColor: "transparent",
-  backgroundClip: "text",
-  MozBackgroundClip: "text",
   marginTop: 20,
-  marginBottom: 0,
-  fontSize: "clamp(14px, calc(100vw - 98vw), 16px)",
+  color: vars.color.gradientColor1,
 });

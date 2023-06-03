@@ -64,6 +64,22 @@ export const HtmlStyle = style({
   scrollBehavior: "smooth",
 });
 
+export const BigTitle = style({
+  color: vars.color.white,
+  fontSize: "clamp(24px, calc(100vw - 96vw), 50px)",
+  textAlign: "start",
+  margin: 0,
+
+  "@media": {
+    "screen and (min-width: 0px)": {
+      fontSize: "clamp(24px, calc(100vw - 94vw), 38px)",
+    },
+    "screen and (min-width: 768px)": {
+      fontSize: "clamp(24px, calc(100vw - 96vw), 50px)",
+    },
+  },
+});
+
 export const MediumTitle = style({
   color: vars.color.white,
   fontSize: "clamp(24px, calc(100vw - 96vw), 50px)",
@@ -78,6 +94,10 @@ export const MediumTitle = style({
       fontSize: "clamp(24px, calc(100vw - 96vw), 50px)",
     },
   },
+});
+
+export const Disabled = style({
+  color: vars.color.gray,
 });
 
 export const DisNone = style({

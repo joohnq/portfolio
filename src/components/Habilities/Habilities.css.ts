@@ -48,7 +48,7 @@ export const HabilitiesCard_Title = style({
 });
 
 export const HabilitiesTitle = style({
-  color: vars.color.white,
+  color: vars.color.lightGray,
   textAlign: "center",
 
   fontSize: "clamp(20px, calc(100vw - 97vw), 30px)",
