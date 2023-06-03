@@ -24,8 +24,12 @@ globalStyle("body", {
 //   backgroundSize: "cover",
 // });
 
-export const Disabled = style({
-  background: "#555 !important",
+export const Title_Gradient = style({
+  background: vars.color.gradient,
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  backgroundClip: "text",
+  MozBackgroundClip: "text",
 });
 
 export const Hover = style({
@@ -60,15 +64,20 @@ export const HtmlStyle = style({
   scrollBehavior: "smooth",
 });
 
-export const MainTitle = style({
+export const MediumTitle = style({
   color: vars.color.white,
-  fontSize: "clamp(40px, calc(100vw - 94vw), 60px)",
-});
+  fontSize: "clamp(24px, calc(100vw - 96vw), 50px)",
+  textAlign: "start",
+  margin: 0,
 
-export const MainSubtitle = style({
-  color: vars.color.white,
-  fontSize: "clamp(14px, calc(100vw - 98vw), 16px)",
-  textAlign: "center",
+  "@media": {
+    "screen and (min-width: 0px)": {
+      fontSize: "clamp(24px, calc(100vw - 94vw), 38px)",
+    },
+    "screen and (min-width: 768px)": {
+      fontSize: "clamp(24px, calc(100vw - 96vw), 50px)",
+    },
+  },
 });
 
 export const DisNone = style({

@@ -3,7 +3,7 @@ import {
   MenuMobile,
   MenuMobileList,
   MenuMobileListItem_text,
-} from "../Header/Header.css";
+} from "./MenuMobile.css";
 import { poppinsBold } from "../../styles/fonts";
 import { DisNone } from "../../styles/styles.css";
 

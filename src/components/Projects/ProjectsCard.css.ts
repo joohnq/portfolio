@@ -4,36 +4,13 @@ import { vars } from "@/styles/global.css";
 export const ProjectCard = style({
   maxWidth: 500,
   padding: 30,
-  backgroundColor: "#111111",
+  backgroundColor: vars.color.gray,
   display: "flex",
   alignItems: "flex-start",
   justifyContent: "space-between",
   flexDirection: "column",
   gap: 10,
   borderRadius: 10,
-});
-
-export const ProjectCard_MacPoints = style({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  gap: 5,
-});
-
-export const ProjectCard_MacPoint = style({
-  width: 10,
-  height: 10,
-  borderRadius: 10,
-});
-
-export const PointRed = style({
-  backgroundColor: vars.color.pointRed,
-});
-export const PointYellow = style({
-  backgroundColor: vars.color.pointYellow,
-});
-export const PointGreen = style({
-  backgroundColor: vars.color.pointGreen,
 });
 
 export const LinkExternal = style({

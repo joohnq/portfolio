@@ -21,12 +21,12 @@ export default function Home() {
       {/* <div className={BackgroundTransparent}></div> */}
       {/* <LightConicComponent /> */}
       <main>
-        {/* <HomeComponent /> */}
+        <HomeComponent />
         {/* <StacksComponent /> */}
-        {/* <AboutExperience />
-        <HabilitiesComponent />
-        <ProjectsComponent />
-        <ContactComponent />  */}
+        <AboutExperience />
+        {/* <HabilitiesComponent />
+        <ContactComponent /> */}
+        {/* <ProjectsComponent /> */}
       </main>
     </>
   );

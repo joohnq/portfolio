@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Container, Hover } from "../../styles/styles.css";
+import { poppinsBold } from "../../styles/fonts";
+import MenuMobileComponent from "../MenuMobile/MenuMobileComponent";
 import {
   HeaderStyle,
   Logo,
@@ -14,9 +17,6 @@ import {
   HeaderListMenu_lineDownClose,
   HeaderListItem_link,
 } from "./Header.css";
-import { Container, Hover } from "../../styles/styles.css";
-import { poppinsBold } from "../../styles/fonts";
-import MenuMobileComponent from "../MenuMobile/MenuMobileComponent";
 
 export default function HeaderComponent() {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -4,22 +4,22 @@ import { vars } from "../../styles/global.css";
 export const StackCard_1 = style({
   "@media": {
     "screen and (min-width:992px)": {
-      borderBottom: "2px dotted #fff",
+      borderBottom: `2px dotted ${vars.color.white}`,
     },
   },
 });
 export const StackCard_2 = style({
   "@media": {
     "screen and (min-width:992px)": {
-      borderLeft: "2px dotted #fff",
-      borderBottom: "2px dotted #fff",
+      borderLeft: `2px dotted ${vars.color.white}`,
+      borderBottom: `2px dotted ${vars.color.white}`,
     },
   },
 });
 export const StackCard_3 = style({
   "@media": {
     "screen and (min-width:992px)": {
-      borderRight: "2px dotted #fff",
+      borderRight: `2px dotted ${vars.color.white}`,
     },
   },
 });

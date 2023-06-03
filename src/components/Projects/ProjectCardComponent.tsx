@@ -4,11 +4,6 @@ import { Icon } from "@iconify/react";
 import { poppinsBold, poppinsSemiBold } from "@/styles/fonts";
 import {
   ProjectCard,
-  ProjectCard_MacPoints,
-  ProjectCard_MacPoint,
-  PointRed,
-  PointYellow,
-  PointGreen,
   ProjectCard_Content,
   ProjectCard_ContentTitle,
   ProjectCard_Languages,
@@ -18,6 +13,7 @@ import {
   ProjectCard_Button,
   ProjectCard_Button_a,
 } from "./ProjectsCard.css";
+import MacPointsComponent from "../MacPoints/MacPoints";
 
 interface ProjectCardProps {
   projectData: {
@@ -38,11 +34,7 @@ export default function ProjectCardComponent({
 
   return (
     <div className={`${ProjectCard}`}>
-      <div className={`${ProjectCard_MacPoints}`}>
-        <div className={`${ProjectCard_MacPoint} ${PointRed}`}></div>
-        <div className={`${ProjectCard_MacPoint} ${PointYellow}`}></div>
-        <div className={`${ProjectCard_MacPoint} ${PointGreen}`}></div>
-      </div>
+      <MacPointsComponent />
       <div className={`${ProjectCard_Content}`}>
         <h3 className={`${ProjectCard_ContentTitle} ${poppinsBold.className}`}>
           {title}

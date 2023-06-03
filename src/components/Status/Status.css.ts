@@ -11,13 +11,13 @@ export const StatusBar = style({
 export const StatusBarOff = style({
   width: 8,
   background: "transparent",
-  border: "2px solid #fff",
+  border: `2px solid ${vars.color.white}`,
   borderRadius: 30,
 });
 export const StatusBarOn = style({
   background: vars.color.white,
   width: 8,
-  border: "2px solid #fff",
+  border: `2px solid ${vars.color.white}`,
   borderRadius: 30,
 });
 

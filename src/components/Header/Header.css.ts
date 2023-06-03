@@ -6,13 +6,14 @@ export const HeaderStyle = style({
   top: 0,
   left: 0,
   right: 0,
+  height: 70,
+  zIndex: 100,
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  height: 70,
+  backgroundColor: vars.color.blueDark,
   backdropFilter: "blur(10px)",
   WebkitBackdropFilter: "blur(4px)",
-  backgroundColor: vars.color.blueDark,
 
   "@media": {
     "screen and (min-width: 0px)": {
@@ -28,8 +29,8 @@ export const HeaderStyle = style({
 });
 
 export const Logo = style({
-  margin: 0,
   color: vars.color.white,
+  margin: 0,
 });
 
 export const LogoMobile = style({
@@ -70,17 +71,17 @@ export const HeaderList = style({
 });
 
 export const HeaderListItem_link = style({
+  fontSize: 22,
   color: vars.color.white,
   textDecoration: "none",
-  fontSize: 22,
 
   ":hover": {
+    fontSize: 22,
     background: vars.color.gradient,
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
     MozBackgroundClip: "text",
-    fontSize: 22,
     transition: "0.1s linear",
   },
 });
@@ -90,8 +91,8 @@ export const HeaderListMenu = style({
   flexDirection: "column",
   justifyContent: "space-between",
   alignItems: "center",
-  width: "30px",
-  height: "15px",
+  width: 30,
+  height: 15,
   cursor: "pointer",
   position: "relative",
   "@media": {
@@ -103,10 +104,10 @@ export const HeaderListMenu = style({
 
 export const HeaderListMenu_line = style({
   width: "100%",
-  height: "2px",
+  height: 2,
   backgroundColor: vars.color.white,
-  transition: "transform .5s linear",
   position: "absolute",
+  transition: "transform .5s linear",
 });
 
 export const HeaderListMenu_lineUpOpen = style({
@@ -162,7 +163,7 @@ export const MenuMobileList = style({
 });
 
 export const MenuMobileListItem_text = style({
+  fontSize: 28,
   textDecoration: "none",
   color: vars.color.white,
-  fontSize: 28,
 });

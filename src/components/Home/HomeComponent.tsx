@@ -1,5 +1,7 @@
+import { Icon } from "@iconify/react";
+import { poppinsBold } from "../../styles/fonts";
+import { Title_Gradient } from "../../styles/styles.css";
 import {
-  Title_Gradient,
   HomeStyle,
   HomeSubtitle,
   HomeTitle,
@@ -7,8 +9,6 @@ import {
   HomeIcon,
   HomeIconScroll,
 } from "./Home.css";
-import { Icon } from "@iconify/react";
-import { poppinsBold } from "../../styles/fonts";
 
 export default function HomeComponent() {
   return (

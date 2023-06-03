@@ -1,13 +1,4 @@
 import { style } from "@vanilla-extract/css";
-import { vars } from "@/styles/global.css";
-
-export const Title_Gradient = style({
-  background: vars.color.gradient,
-  WebkitBackgroundClip: "text",
-  WebkitTextFillColor: "transparent",
-  backgroundClip: "text",
-  MozBackgroundClip: "text",
-});
 
 export const HomeStyle = style({
   display: "flex",
@@ -30,6 +21,7 @@ export const HomeStyle = style({
 export const HomeSubtitle = style({
   margin: 0,
   fontSize: "clamp(20px, calc(100vw - 96vw), 40px)",
+  textAlign: "center",
 });
 
 export const HomeTitle = style({
