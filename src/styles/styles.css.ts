@@ -9,25 +9,20 @@ globalStyle("body", {
   backgroundColor: vars.color.blueDark,
 });
 
-export const BackgroundTransparent = style({
-  position: "absolute",
-  zIndex: 2,
-  left: 0,
-  top: 400,
-  right: 0,
-  bottom: 0,
-  width: "100%",
-  height: 2350,
-  backgroundImage: "url(/background-stack-small.png)",
-  backgroundPosition: "center center",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "cover",
-});
-
-export const Main = style({
-  position: "relative",
-  zIndex: 3,
-});
+// export const BackgroundTransparent = style({
+//   position: "absolute",
+//   zIndex: 2,
+//   left: 0,
+//   top: 400,
+//   right: 0,
+//   bottom: 0,
+//   width: "100%",
+//   height: 2350,
+//   backgroundImage: "url(/background-stack-small.png)",
+//   backgroundPosition: "center center",
+//   backgroundRepeat: "no-repeat",
+//   backgroundSize: "cover",
+// });
 
 export const Disabled = style({
   background: "#555 !important",

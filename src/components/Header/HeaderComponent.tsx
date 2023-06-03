@@ -4,6 +4,7 @@ import {
   Logo,
   LogoMobile,
   LogoTabletDesktop,
+  Nav,
   HeaderList,
   HeaderListMenu,
   HeaderListMenu_line,
@@ -81,7 +82,7 @@ export default function HeaderComponent() {
         <span className={`${LogoMobile}`}>JH</span>{" "}
         <span className={`${LogoTabletDesktop}`}>JOOHNQ</span>
       </h1>
-      <nav>
+      <nav className={Nav}>
         <ul className={HeaderList}>
           <li>
             <a
@@ -128,24 +129,24 @@ export default function HeaderComponent() {
               CONTATO
             </a>
           </li>
-          <div className={`${HeaderListMenu} `} onClick={handleMenu}>
-            <div
-              className={`${HeaderListMenu_line} ${
-                menuOpen
-                  ? `${HeaderListMenu_lineUpOpen}`
-                  : `${HeaderListMenu_lineUpClose}`
-              }`}
-            ></div>
-            <div
-              className={`${HeaderListMenu_line} ${
-                menuOpen
-                  ? `${HeaderListMenu_lineDownOpen}`
-                  : `${HeaderListMenu_lineDownClose}`
-              }`}
-            ></div>
-          </div>
         </ul>
       </nav>
+      <div className={`${HeaderListMenu} `} onClick={handleMenu}>
+        <div
+          className={`${HeaderListMenu_line} ${
+            menuOpen
+              ? `${HeaderListMenu_lineUpOpen}`
+              : `${HeaderListMenu_lineUpClose}`
+          }`}
+        ></div>
+        <div
+          className={`${HeaderListMenu_line} ${
+            menuOpen
+              ? `${HeaderListMenu_lineDownOpen}`
+              : `${HeaderListMenu_lineDownClose}`
+          }`}
+        ></div>
+      </div>
       <MenuMobileComponent isOpen={menuOpen} handleMenuClick={handleMenu} />
     </header>
   );

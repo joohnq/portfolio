@@ -55,7 +55,6 @@ export default function ProjectsComponent() {
           }}
         />
       </div>
-
       <a
         href="https://github.com/joohnq?tab=repositories"
         target="__blank"

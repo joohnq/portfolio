@@ -2,7 +2,6 @@ import { style } from "@vanilla-extract/css";
 import { vars } from "@/styles/global.css";
 
 export const ProjectCard = style({
-  width: "100%",
   maxWidth: 500,
   padding: 30,
   backgroundColor: "#111111",

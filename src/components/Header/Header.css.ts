@@ -6,41 +6,38 @@ export const HeaderStyle = style({
   top: 0,
   left: 0,
   right: 0,
-  zIndex: 100,
-  backgroundColor: vars.color.blueDarkTransparent,
-  color: vars.color.white,
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
   height: 70,
-  backdropFilter: "blur( 10px )",
-  WebkitBackdropFilter: "blur( 4px )",
+  backdropFilter: "blur(10px)",
+  WebkitBackdropFilter: "blur(4px)",
+  backgroundColor: vars.color.blueDark,
 
   "@media": {
     "screen and (min-width: 0px)": {
-      paddingLeft: 20,
-      paddingRight: 20,
+      padding: "0px 20px",
     },
     "screen and (min-width: 500px)": {
-      paddingLeft: 50,
-      paddingRight: 50,
+      padding: "0px 50px",
     },
     "screen and (min-width: 768px)": {
-      borderBottomLeftRadius: 10,
-      borderBottomRightRadius: 10,
+      borderRadius: "0 10px 10px 0",
     },
   },
 });
 
 export const Logo = style({
   margin: 0,
+  color: vars.color.white,
 });
 
 export const LogoMobile = style({
+  color: vars.color.white,
   fontSize: 30,
   marginRight: 20,
   "@media": {
-    "screen and (min-width: 500px)": {
+    "screen and (min-width: 501px)": {
       display: "none",
     },
   },
@@ -51,6 +48,14 @@ export const LogoTabletDesktop = style({
   marginRight: 20,
   "@media": {
     "screen and (max-width: 500px)": {
+      display: "none",
+    },
+  },
+});
+
+export const Nav = style({
+  "@media": {
+    "(max-width: 992px)": {
       display: "none",
     },
   },
@@ -77,12 +82,6 @@ export const HeaderListItem_link = style({
     MozBackgroundClip: "text",
     fontSize: 22,
     transition: "0.1s linear",
-  },
-
-  "@media": {
-    "(max-width: 992px)": {
-      display: "none",
-    },
   },
 });
 
@@ -144,7 +143,7 @@ export const MenuMobile = style({
   left: 0,
   right: 0,
   bottom: 0,
-  height: "100vh",
+  height: "calc(100vh - 70px)",
   zIndex: 20,
   background: vars.color.blueDark,
   overflow: "hidden",

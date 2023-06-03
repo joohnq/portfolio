@@ -15,7 +15,6 @@ export const HomeStyle = style({
   justifyContent: "center",
   flexDirection: "column",
   gap: 10,
-  width: "100%",
 
   "@media": {
     "screen and (min-height: 0px)": {
