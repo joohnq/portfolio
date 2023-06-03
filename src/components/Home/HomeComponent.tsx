@@ -50,6 +50,7 @@ export default function HomeComponent() {
 
           <a
             href="https://www.linkedin.com/in/joao-henrique-de-souza-silva-b43921196/"
+            target="__blank"
             aria-label="Link para o meu Linkedin"
           >
             <Icon

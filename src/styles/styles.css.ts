@@ -34,10 +34,9 @@ export const Disabled = style({
 });
 
 export const Hover = style({
-  fontSize: "26px !important",
+  fontSize: "22px !important",
   transition: "0.1s linear !important",
-
-  background: "linear-gradient(90.67deg, #FFA800 -14.32%, #FF00B8 113.23%)",
+  background: vars.color.gradient,
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
@@ -59,7 +58,7 @@ export const HtmlStyle = style({
   },
 
   "::-webkit-scrollbar-thumb": {
-    backgroundColor: "#FF00B8",
+    backgroundColor: vars.color.gradientColor1,
   },
   WebkitTapHighlightColor: "transparent",
 

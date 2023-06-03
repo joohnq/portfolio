@@ -6,16 +6,16 @@ import {
   LogoTabletDesktop,
   HeaderList,
   HeaderListMenu,
-  HeaderListItem_icon,
+  HeaderListMenu_line,
+  HeaderListMenu_lineUpOpen,
+  HeaderListMenu_lineUpClose,
+  HeaderListMenu_lineDownOpen,
+  HeaderListMenu_lineDownClose,
   HeaderListItem_link,
-  MenuMobile,
-  MenuMobileIconClose,
-  MenuMobileList,
-  MenuMobileListItem_text,
 } from "./Header.css";
-import { Container, DisNone, Hover } from "../../styles/styles.css";
-import { Icon } from "@iconify/react";
+import { Container, Hover } from "../../styles/styles.css";
 import { poppinsBold } from "../../styles/fonts";
+import MenuMobileComponent from "../MenuMobile/MenuMobileComponent";
 
 export default function HeaderComponent() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -84,11 +84,6 @@ export default function HeaderComponent() {
       <nav>
         <ul className={HeaderList}>
           <li>
-            <Icon
-              icon="fluent-emoji:house"
-              className={`${HeaderListItem_icon}`}
-              color="#fff"
-            />
             <a
               href="#Home"
               className={`${HeaderListItem_link} ${poppinsBold.className}`}
@@ -98,11 +93,6 @@ export default function HeaderComponent() {
             </a>
           </li>
           <li>
-            <Icon
-              icon="fluent-emoji:person-in-steamy-room-medium-dark"
-              className={`${HeaderListItem_icon}`}
-              color="#fff"
-            />
             <a
               href="#AboutExperience"
               className={`${HeaderListItem_link} ${poppinsBold.className}`}
@@ -112,11 +102,6 @@ export default function HeaderComponent() {
             </a>
           </li>
           <li>
-            <Icon
-              icon="fluent-emoji:brain"
-              className={`${HeaderListItem_icon}`}
-              color="#fff"
-            />
             <a
               href="#Habilities"
               className={`${HeaderListItem_link} ${poppinsBold.className}`}
@@ -126,11 +111,6 @@ export default function HeaderComponent() {
             </a>
           </li>
           <li>
-            <Icon
-              icon="fluent-emoji:briefcase"
-              className={`${HeaderListItem_icon}`}
-              color="#fff"
-            />
             <a
               href="#Projects"
               className={`${HeaderListItem_link} ${poppinsBold.className}`}
@@ -140,11 +120,6 @@ export default function HeaderComponent() {
             </a>
           </li>
           <li>
-            <Icon
-              icon="fluent-emoji:envelope-with-arrow"
-              className={`${HeaderListItem_icon}`}
-              color="#fff"
-            />
             <a
               href="#Contact"
               className={`${HeaderListItem_link} ${poppinsBold.className}`}
@@ -153,81 +128,25 @@ export default function HeaderComponent() {
               CONTATO
             </a>
           </li>
-          <Icon
-            icon="tabler:menu"
-            className={`${HeaderListMenu}`}
-            color="#fff"
-            onClick={handleMenu}
-          />
+          <div className={`${HeaderListMenu} `} onClick={handleMenu}>
+            <div
+              className={`${HeaderListMenu_line} ${
+                menuOpen
+                  ? `${HeaderListMenu_lineUpOpen}`
+                  : `${HeaderListMenu_lineUpClose}`
+              }`}
+            ></div>
+            <div
+              className={`${HeaderListMenu_line} ${
+                menuOpen
+                  ? `${HeaderListMenu_lineDownOpen}`
+                  : `${HeaderListMenu_lineDownClose}`
+              }`}
+            ></div>
+          </div>
         </ul>
       </nav>
-      <div className={`${MenuMobile} ${menuOpen ? "" : `${DisNone}`}`}>
-        <div className={MenuMobileIconClose}>
-          <Icon
-            icon="material-symbols:close-rounded"
-            color="white"
-            width="50"
-            height="50"
-            onClick={handleMenu}
-          />
-        </div>
-        <ul className={MenuMobileList}>
-          <li>
-            <a
-              href="#Home"
-              className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
-              onClick={handleMenu}
-            >
-              HOME
-            </a>
-          </li>
-          <li>
-            <a
-              href="#AboutExperience"
-              className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
-              onClick={handleMenu}
-            >
-              SOBRE
-            </a>
-          </li>
-          <li>
-            <a
-              href="#Experience"
-              className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
-              onClick={handleMenu}
-            >
-              EXPERIÊNCIAS
-            </a>
-          </li>
-          <li>
-            <a
-              href="#Habilities"
-              className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
-              onClick={handleMenu}
-            >
-              HABILIDADES
-            </a>
-          </li>
-          <li>
-            <a
-              href="#Projects"
-              className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
-              onClick={handleMenu}
-            >
-              PROJETOS
-            </a>
-          </li>
-          <li>
-            <a
-              href="#Contact"
-              className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
-              onClick={handleMenu}
-            >
-              CONTATO
-            </a>
-          </li>
-        </ul>
-      </div>
+      <MenuMobileComponent isOpen={menuOpen} handleMenuClick={handleMenu} />
     </header>
   );
 }

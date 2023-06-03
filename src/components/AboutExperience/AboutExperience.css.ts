@@ -1,24 +1,6 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "../../styles/global.css";
 
-export const AboutReadMore = style({
-  textDecoration: "underline",
-  cursor: "pointer",
-
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "flex-end",
-  fontSize: 14,
-
-  marginTop: 20,
-
-  background: vars.color.gradient,
-  WebkitBackgroundClip: "text",
-  WebkitTextFillColor: "transparent",
-  backgroundClip: "text",
-  MozBackgroundClip: "text",
-});
-
 export const AboutExperience = style({
   borderRadius: 50,
   color: "#fff",
@@ -27,7 +9,6 @@ export const AboutExperience = style({
   alignItems: "center",
   justifyContent: "center",
   flexDirection: "column",
-  gap: 50,
 
   position: "relative",
   marginTop: "clamp(80px, calc(100vw - 90vw), 200px)",
@@ -65,6 +46,7 @@ export const AboutExperienceHeader = style({
   color: vars.color.white,
   border: 0,
   cursor: "pointer",
+  marginBottom: "-1px",
 
   "@media": {
     "screen and (min-width: 0px)": {
@@ -80,7 +62,7 @@ export const AboutExperienceHeader = style({
 export const AboutExperienceSelected = style({
   padding: "15px 20px",
 
-  borderRadius: 10,
+  borderRadius: "10px 10px 0 0",
 
   background: vars.color.gradient,
 });
@@ -92,6 +74,8 @@ export const AboutBody = style({
   margin: "auto",
   marginBottom: 20,
   gap: 50,
+  border: `1px solid ${vars.color.white}`,
+  borderRadius: 10,
 
   "@media": {
     "screen and (min-width: 0px)": {
@@ -105,7 +89,8 @@ export const AboutBody = style({
 });
 
 export const AboutBodyPhoto = style({
-  borderRadius: "50%",
+  borderRadius: "10px 0 0 10px",
+  margin: "-1px",
   width: "100%",
   height: "100%",
 
@@ -132,6 +117,8 @@ export const AboutBodyPhoto = style({
 export const AboutBodyDesc = style({
   fontSize: "clamp(16px, calc(100vw - 98vw), 17px)",
   letterSpacing: 1,
+
+  marginRight: "20px",
 
   "@media": {
     "screen and (min-width: 0px)": {
