@@ -1,5 +1,5 @@
 import React from "react";
-import { poppinsRegular } from "@/styles/fonts";
+import { poppinsMedium, poppinsRegular, poppinsSemiBold } from "@/styles/fonts";
 import { Icon } from "@iconify/react";
 import {
   MessageModal,
@@ -37,14 +37,14 @@ export default function ModalContactComponent({
             height="100"
           />
           <h3
-            className={`${MessageModalBox_message} ${poppinsRegular.className}`}
+            className={`${MessageModalBox_message} ${poppinsSemiBold.className}`}
           >
             {formMessage}
           </h3>
           <p
-            className={`${MessageModalBox_message} ${poppinsRegular.className}`}
+            className={`${MessageModalBox_message} ${poppinsMedium.className}`}
           >
-            Você poderá enviar outra mensagem daqui a 3 minutos
+            Você poderá enviar outra mensagem daqui a 1 minutos
           </p>
         </div>
       </div>

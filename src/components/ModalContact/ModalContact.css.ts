@@ -4,19 +4,22 @@ import { style } from "@vanilla-extract/css";
 export const MessageModal = style({
   gap: 20,
 
-  position: "absolute",
+  position: "fixed",
   background: vars.color.blueDarkTransparent,
   top: 0,
   right: 0,
   bottom: 0,
   left: 0,
+  zIndex: 1000,
+
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
 });
 
 export const MessageModalBox = style({
-  maxWidth: 500,
-  margin: "50% auto",
+  maxWidth: 400,
   background: vars.color.white,
-  padding: 30,
   borderRadius: 10,
 });
 
@@ -25,10 +28,11 @@ export const MessageModalBox_body = style({
   alignItems: "center",
   justifyContent: "center",
   flexDirection: "column",
+  padding: 30,
 });
 
 export const MessageModalBox_close = style({
-  margin: "10px 0 30px 0",
+  margin: "20px 20px 0 0",
   textAlign: "end",
   cursor: "pointer",
 });
@@ -36,4 +40,6 @@ export const MessageModalBox_close = style({
 export const MessageModalBox_message = style({
   color: vars.color.blueDark,
   textAlign: "center",
+  fontSize: 18,
+  marginBottom: 30,
 });

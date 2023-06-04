@@ -30,7 +30,35 @@ export const Container = style({
 });
 
 export const Disabled = style({
-  color: vars.color.gray,
+  background: vars.color.mediumGray,
+});
+
+export const DisabledButton = style({
+  background: `${vars.color.mediumGray} !important`,
+
+  selectors: {
+    "&:hover::after": {
+      content: "Espere...",
+      position: "absolute",
+      bottom: -30,
+      left: 10,
+      display: "block",
+      width: 100,
+      height: 20,
+      color: "white",
+    },
+
+    "&:focus::after": {
+      content: "Espere...",
+      position: "absolute",
+      bottom: -30,
+      left: 10,
+      display: "block",
+      width: 100,
+      height: 20,
+      color: "white",
+    },
+  },
 });
 
 export const DisNone = style({

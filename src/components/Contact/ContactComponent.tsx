@@ -1,8 +1,13 @@
-import React, { useState, FormEvent, ChangeEvent, useRef } from "react";
-import { Container, Disabled, BigTitle } from "@/styles/styles.css";
+import React, {
+  useState,
+  FormEvent,
+  ChangeEvent,
+  useRef,
+  useEffect,
+} from "react";
+import { Container, DisabledButton, BigTitle } from "@/styles/styles.css";
 import { poppinsBold, poppinsSemiBold } from "@/styles/fonts";
 import ModalContactComponent from "../ModalContact/ModalContactComponent";
-import { Icon } from "@iconify/react";
 import {
   ContactStyle,
   ContactStyle_Desc,
@@ -11,10 +16,12 @@ import {
   ContactForm_Label,
   ContactForm_Input,
   ContactForm_TextArea,
+  ContactFormBoxButton,
   ContactFormButton,
   ContactFormButton_Text,
   ContactFormButton_Icon,
 } from "./Contact.css";
+import { Icon } from "@iconify/react";
 interface FormState {
   name: string;
   email: string;
@@ -45,27 +52,27 @@ export default function ContactComponent() {
     })
       .then(() => {
         setFormMessage("Sua mensagem foi enviada!");
-        setFormState({ name: "", email: "", message: "" });
         setTimeout(() => {
           setFormMessage("");
         }, 8000);
+        setFormState({ name: "", email: "", message: "" });
+
+        btnSubmit.current?.setAttribute("disabled", `${true}`);
+        btnSubmit.current?.classList.add(`${DisabledButton}`);
+
+        setTimeout(() => {
+          btnSubmit.current?.removeAttribute("disabled");
+          btnSubmit.current?.classList.remove(`${DisabledButton}`);
+        }, 60000);
       })
-      .catch(() => {
-        setFormMessage("Ocorreu um erro");
-      });
-
-    btnSubmit.current?.setAttribute("disabled", `${true}`);
-    btnSubmit.current?.classList.add(Disabled);
-
-    setTimeout(() => {
-      btnSubmit.current?.removeAttribute("disabled");
-      btnSubmit.current?.classList.remove(Disabled);
-    }, 60000);
+      .catch((error) => alert(error));
   };
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ): void => setFormState({ ...formState, [e.target.name]: e.target.value });
+
+  useEffect(() => {}, [formMessage]);
 
   return (
     <section className={`${ContactStyle} ${Container}`} id="Contact">
@@ -81,13 +88,11 @@ export default function ContactComponent() {
       >
         <input type="hidden" name="form-name" value="contact" />
 
-        {formMessage ? (
+        {formMessage != "" && (
           <ModalContactComponent
             formMessage={formMessage}
             setFormMessage={setFormMessage}
           />
-        ) : (
-          ""
         )}
         <div className={`${ContactFormField}`}>
           <label
@@ -116,7 +121,7 @@ export default function ContactComponent() {
           </label>
           <input
             className={`${ContactForm_Input} ${poppinsSemiBold.className}`}
-            type="text"
+            type="email"
             name="email"
             id="email"
             value={formState.email}
@@ -142,25 +147,28 @@ export default function ContactComponent() {
             required
           ></textarea>
         </div>
-        <button
-          className={`${ContactFormButton} ${poppinsSemiBold.className}`}
-          type="submit"
-          ref={btnSubmit}
-        >
-          <div className={`${ContactFormButton_Icon}`}>
-            <Icon
-              icon="solar:arrow-right-broken"
-              color="#fff"
-              width={40}
-              height={40}
-            />
-          </div>
-          <p
-            className={`${ContactFormButton_Text} ${poppinsSemiBold.className}`}
+
+        <div className={`${ContactFormBoxButton}`}>
+          <button
+            className={`${ContactFormButton} ${poppinsSemiBold.className}`}
+            type="submit"
+            ref={btnSubmit}
           >
-            ENVIAR
-          </p>
-        </button>
+            <div className={`${ContactFormButton_Icon}`}>
+              <Icon
+                icon="solar:arrow-right-broken"
+                color="#fff"
+                width={40}
+                height={40}
+              />
+            </div>
+            <p
+              className={`${ContactFormButton_Text} ${poppinsSemiBold.className}`}
+            >
+              ENVIAR
+            </p>
+          </button>
+        </div>
       </form>
     </section>
   );

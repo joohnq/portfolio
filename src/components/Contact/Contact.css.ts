@@ -7,7 +7,7 @@ export const ContactStyle = style({
   justifyContent: "space-between",
   flexDirection: "column",
   marginTop: "clamp(80px, calc(100vw - 90vw), 200px)",
-  marginBottom: 50,
+  marginBottom: 100,
   "@media": {
     "screen and (min-width: 0px)": {
       width: "90%",
@@ -83,6 +83,10 @@ export const ContactForm_TextArea = style({
   },
 });
 
+export const ContactFormBoxButton = style({
+  position: "relative",
+});
+
 export const ContactFormButton = style({
   width: 50,
   border: 0,
@@ -94,16 +98,43 @@ export const ContactFormButton = style({
   marginTop: 10,
   overflow: "hidden",
 
-  selectors: {
-    "&:hover": {
-      width: "45%",
-      borderRadius: 5,
-      transition: ".1s ease",
-      padding: "0 30px",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      flexDirection: "row-reverse",
+  "@media": {
+    "screen and (min-width: 0px)": {
+      selectors: {
+        "&:hover": {
+          width: "80%",
+          borderRadius: 5,
+          transition: ".1s ease",
+          padding: "0 30px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          flexDirection: "row-reverse",
+        },
+
+        "&:focus": {
+          width: "80%",
+          borderRadius: 5,
+          transition: ".1s ease",
+          padding: "0 30px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          flexDirection: "row-reverse",
+        },
+      },
+    },
+
+    "screen and (min-width: 300px)": {
+      selectors: {
+        "&:hover": {
+          width: 200,
+        },
+
+        "&:focus": {
+          width: 200,
+        },
+      },
     },
   },
 });
