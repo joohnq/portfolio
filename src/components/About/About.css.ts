@@ -19,7 +19,7 @@ export const AboutBody = style({
       padding: 20,
       gap: 20,
     },
-    "screen and (min-width: 768px)": {
+    "screen and (min-width: 767px)": {
       flexDirection: "row",
       alignItems: "stretch",
       padding: 0,
@@ -38,7 +38,7 @@ export const AboutBody_BoxImage = style({
       borderRadius: "10px",
       marginTop: 20,
     },
-    "screen and (min-width: 768px)": {
+    "screen and (min-width: 767px)": {
       width: "45%",
       borderRadius: "10px 0 0 10px",
     },
@@ -56,7 +56,7 @@ export const AboutBody_Image = style({
       marginTop: 20,
       transform: "scale(1.5)",
     },
-    "(min-width: 530px) and (max-width: 768px)": {
+    "(min-width: 530px) and (max-width: 767px)": {
       transform: "scale(1)",
       marginTop: 0,
       height: 300,
