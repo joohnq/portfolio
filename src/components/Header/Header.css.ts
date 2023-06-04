@@ -70,22 +70,6 @@ export const HeaderList = style({
   listStyle: "none",
 });
 
-export const HeaderListItem_link = style({
-  fontSize: 22,
-  color: vars.color.white,
-  textDecoration: "none",
-
-  ":hover": {
-    fontSize: 22,
-    background: vars.color.gradient,
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-    backgroundClip: "text",
-    MozBackgroundClip: "text",
-    transition: "0.1s linear",
-  },
-});
-
 export const HeaderListMenu = style({
   display: "flex",
   flexDirection: "column",
@@ -138,32 +122,18 @@ export const HeaderListMenu_lineDownClose = style({
   transform: "translate(-50%, -50%) rotate(360deg)",
 });
 
-export const MenuMobile = style({
-  position: "absolute",
-  top: 70,
-  left: 0,
-  right: 0,
-  bottom: 0,
-  height: "calc(100vh - 70px)",
-  zIndex: 20,
-  background: vars.color.blueDark,
-  overflow: "hidden",
-  transition: "all 1s linear",
-});
-
-export const MenuMobileList = style({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  flexDirection: "column",
-  listStyle: "none",
-  gap: 30,
-  padding: 0,
-  marginTop: 50,
-});
-
-export const MenuMobileListItem_text = style({
-  fontSize: 28,
-  textDecoration: "none",
+export const HeaderListItem_link = style({
+  fontSize: 22,
   color: vars.color.white,
+  textDecoration: "none",
+
+  ":hover": {
+    fontSize: 22,
+    background: vars.color.gradient,
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    backgroundClip: "text",
+    MozBackgroundClip: "text",
+    transition: "0.1s linear",
+  },
 });

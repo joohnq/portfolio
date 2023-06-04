@@ -20,17 +20,17 @@ export const MessageModalBox = style({
   borderRadius: 10,
 });
 
-export const MessageModalBox_close = style({
-  margin: "10px 0 30px 0",
-  textAlign: "end",
-  cursor: "pointer",
-});
-
 export const MessageModalBox_body = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   flexDirection: "column",
+});
+
+export const MessageModalBox_close = style({
+  margin: "10px 0 30px 0",
+  textAlign: "end",
+  cursor: "pointer",
 });
 
 export const MessageModalBox_message = style({

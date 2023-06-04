@@ -2,12 +2,10 @@ import React from "react";
 import Head from "next/head";
 import HeaderComponent from "@/components/Header/HeaderComponent";
 import HomeComponent from "@/components/Home/HomeComponent";
-import StacksComponent from "@/components/Stacks/StacksComponent";
 import AboutExperience from "@/components/AboutExperience/AboutExperience";
 import HabilitiesComponent from "@/components/Habilities/HabilitiesComponent";
 import ProjectsComponent from "@/components/Projects/ProjectsComponent";
 import ContactComponent from "@/components/Contact/ContactComponent";
-import LightConicComponent from "@/components/Lights/LightsComponents";
 import FooterComponent from "@/components/Footer/FooterComponent";
 
 export default function Home() {
@@ -19,11 +17,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <HeaderComponent />
-      {/* <div className={BackgroundTransparent}></div> */}
-      {/* <LightConicComponent /> */}
       <main>
         <HomeComponent />
-        {/* <StacksComponent /> */}
         <AboutExperience />
         <HabilitiesComponent />
         <ProjectsComponent />

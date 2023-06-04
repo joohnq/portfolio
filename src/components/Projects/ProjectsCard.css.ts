@@ -31,13 +31,6 @@ export const ProjectCard_Content = style({
   width: "100%",
 });
 
-export const ProjectCard_ContentAbove = style({
-  display: "flex",
-  alignItems: "center",
-  gap: 20,
-  textDecoration: "none",
-});
-
 export const ProjectCard_ContentTitle = style({
   color: vars.color.white,
   wordBreak: "break-word",

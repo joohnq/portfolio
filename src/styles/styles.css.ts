@@ -9,27 +9,32 @@ globalStyle("body", {
   backgroundColor: vars.color.blueDark,
 });
 
-// export const BackgroundTransparent = style({
-//   position: "absolute",
-//   zIndex: 2,
-//   left: 0,
-//   top: 400,
-//   right: 0,
-//   bottom: 0,
-//   width: "100%",
-//   height: 2350,
-//   backgroundImage: "url(/background-stack-small.png)",
-//   backgroundPosition: "center center",
-//   backgroundRepeat: "no-repeat",
-//   backgroundSize: "cover",
-// });
+export const BigTitle = style({
+  color: vars.color.lightGray,
+  textAlign: "start",
+  margin: 0,
 
-export const Title_Gradient = style({
-  background: vars.color.gradient,
-  WebkitBackgroundClip: "text",
-  WebkitTextFillColor: "transparent",
-  backgroundClip: "text",
-  MozBackgroundClip: "text",
+  "@media": {
+    "screen and (min-width: 0px)": {
+      fontSize: "clamp(30px, calc(100vw - 90vw), 40px)",
+    },
+    "screen and (min-width: 768px)": {
+      fontSize: "clamp(40px, calc(100vw - 96vw), 60px)",
+    },
+  },
+});
+
+export const Container = style({
+  maxWidth: 1420,
+  margin: "auto",
+});
+
+export const Disabled = style({
+  color: vars.color.gray,
+});
+
+export const DisNone = style({
+  display: "none",
 });
 
 export const Hover = style({
@@ -40,17 +45,6 @@ export const Hover = style({
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
   MozBackgroundClip: "text",
-});
-
-export const Container = style({
-  maxWidth: 1420,
-  margin: "auto",
-});
-
-export const LinkExternal = style({
-  color: vars.color.lightGray,
-  fontSize: 16,
-  marginTop: 20,
 });
 
 export const HtmlStyle = style({
@@ -70,19 +64,10 @@ export const HtmlStyle = style({
   scrollBehavior: "smooth",
 });
 
-export const BigTitle = style({
+export const LinkExternal = style({
   color: vars.color.lightGray,
-  textAlign: "start",
-  margin: 0,
-
-  "@media": {
-    "screen and (min-width: 0px)": {
-      fontSize: "clamp(30px, calc(100vw - 90vw), 40px)",
-    },
-    "screen and (min-width: 768px)": {
-      fontSize: "clamp(40px, calc(100vw - 96vw), 60px)",
-    },
-  },
+  fontSize: 16,
+  marginTop: 20,
 });
 
 export const MediumTitle = style({
@@ -101,12 +86,10 @@ export const MediumTitle = style({
   },
 });
 
-export const SmallTitle = style({});
-
-export const Disabled = style({
-  color: vars.color.gray,
-});
-
-export const DisNone = style({
-  display: "none",
+export const Title_Gradient = style({
+  background: vars.color.gradient,
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  backgroundClip: "text",
+  MozBackgroundClip: "text",
 });

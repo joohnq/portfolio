@@ -1,7 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Container } from "@/styles/styles.css";
 import { poppinsBold } from "@/styles/fonts";
-
 import {
   AboutExperience,
   AboutExperienceHeaders,

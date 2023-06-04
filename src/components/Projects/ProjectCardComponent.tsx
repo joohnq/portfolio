@@ -15,7 +15,6 @@ import {
   ProjectCard_Button,
   ProjectCard_Button_a,
 } from "./ProjectsCard.css";
-import Link from "next/link";
 
 interface ProjectCardProps {
   projectData: {

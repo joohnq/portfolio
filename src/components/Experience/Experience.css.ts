@@ -15,7 +15,6 @@ export const ExperienceBody = style({
   "@media": {
     "screen and (min-width: 0px)": {
       flexDirection: "column",
-      // alignItems: "flex-start",
       gap: 20,
     },
     "screen and (min-width: 768px)": {

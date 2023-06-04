@@ -1,6 +1,8 @@
 import React, { useState, FormEvent, ChangeEvent, useRef } from "react";
 import { Container, Disabled, BigTitle } from "@/styles/styles.css";
 import { poppinsBold, poppinsSemiBold } from "@/styles/fonts";
+import ModalContactComponent from "../ModalContact/ModalContactComponent";
+import { Icon } from "@iconify/react";
 import {
   ContactStyle,
   ContactStyle_Desc,
@@ -13,8 +15,6 @@ import {
   ContactFormButton_Text,
   ContactFormButton_Icon,
 } from "./Contact.css";
-import ModalContactComponent from "../ModalContact/ModalContactComponent";
-import { Icon } from "@iconify/react";
 interface FormState {
   name: string;
   email: string;
