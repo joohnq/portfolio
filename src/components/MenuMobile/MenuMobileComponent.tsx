@@ -12,10 +12,10 @@ interface MobileMenuProps {
   handleMenuClick: () => void;
 }
 
-const MenuMobileComponent: React.FC<MobileMenuProps> = ({
+export default function MenuMobileComponent({
   isOpen,
   handleMenuClick,
-}) => {
+}: MobileMenuProps) {
   return (
     <div className={`${MenuMobile} ${isOpen ? "" : `${DisNone}`}`}>
       <ul className={MenuMobileList}>
@@ -67,6 +67,4 @@ const MenuMobileComponent: React.FC<MobileMenuProps> = ({
       </ul>
     </div>
   );
-};
-
-export default MenuMobileComponent;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, BigTitle } from "@/styles/styles.css";
+import { Container, BigTitle, LinkExternal } from "@/styles/styles.css";
 import { ProjectsStyle, ProjectsStyle_Box } from "./Projects.css";
 import { poppinsBold } from "@/styles/fonts";
 import ProjectCardComponent from "./ProjectCardComponent";
@@ -58,9 +58,9 @@ export default function ProjectsComponent() {
       <a
         href="https://github.com/joohnq?tab=repositories"
         target="__blank"
-        className={`${poppinsBold.className}`}
+        className={`${LinkExternal} ${poppinsBold.className}`}
       >
-        VEJA MAIS NO MEU GITHUB...
+        Ver mais no meu GitHub...
       </a>
     </section>
   );

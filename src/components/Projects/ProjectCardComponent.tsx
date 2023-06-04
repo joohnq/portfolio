@@ -8,12 +8,14 @@ import {
   ProjectCard_Content,
   ProjectCard_ContentTitle,
   ProjectCard_Languages,
+  ProjectCard_LanguagesIcon,
   ProjectCard_Image,
   ProjectCard_Img,
   ProjectCard_Buttons,
   ProjectCard_Button,
   ProjectCard_Button_a,
 } from "./ProjectsCard.css";
+import Link from "next/link";
 
 interface ProjectCardProps {
   projectData: {
@@ -42,7 +44,13 @@ export default function ProjectCardComponent({
         <div className={`${ProjectCard_Languages}`}>
           {languages.map((item, index) => {
             return (
-              <Icon key={index} icon={`${item}`} color="#888" width="40" />
+              <Icon
+                className={`${ProjectCard_LanguagesIcon}`}
+                key={index}
+                icon={`${item}`}
+                color="#888"
+                width="40"
+              />
             );
           })}
         </div>
@@ -66,7 +74,7 @@ export default function ProjectCardComponent({
           </button>
           <button className={`${ProjectCard_Button}`}>
             <a
-              className={`${ProjectCard_Button_a} ${poppinsSemiBold.className}`}
+              className={`${ProjectCard_Button_a} ${poppinsSemiBold.className} `}
               href={`${codeLink}`}
             >
               CÓDIGO

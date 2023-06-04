@@ -9,8 +9,8 @@ import {
   AboutExperienceSelected,
   AboutExperienceBody,
 } from "./AboutExperience.css";
-import AboutComponent from "./About/AboutComponent";
-import ExperienceComponent from "./Experience/ExperienceComponent";
+import AboutComponent from "../About/AboutComponent";
+import ExperienceComponent from "../Experience/ExperienceComponent";
 
 export default function AboutExperienceComponent() {
   const [aboutState, setAboutState] = useState<boolean>(true);
@@ -25,37 +25,35 @@ export default function AboutExperienceComponent() {
   };
 
   return (
-    <div className={Container} id="AboutExperience">
-      <section className={`${AboutExperience}`}>
-        <div className={`${AboutExperienceHeaders}`}>
-          <button
-            className={`${AboutExperienceHeader} ${
-              aboutState
-                ? `${AboutExperienceSelected} AboutExperienceSelected`
-                : ""
-            }  ${poppinsBold.className}`}
-            onClick={(e) => handleHeader(e)}
-          >
-            {" "}
-            SOBRE MIM{" "}
-          </button>
+    <section className={`${AboutExperience}`} id="AboutExperience">
+      <div className={`${AboutExperienceHeaders}`}>
+        <button
+          className={`${AboutExperienceHeader} ${
+            aboutState
+              ? `${AboutExperienceSelected} AboutExperienceSelected`
+              : ""
+          }  ${poppinsBold.className}`}
+          onClick={(e) => handleHeader(e)}
+        >
+          {" "}
+          SOBRE MIM{" "}
+        </button>
 
-          <button
-            className={`${AboutExperienceHeader} ${
-              !aboutState
-                ? `${AboutExperienceSelected} AboutExperienceSelected`
-                : ""
-            }  ${poppinsBold.className}`}
-            onClick={(e) => handleHeader(e)}
-          >
-            EXPERIÊNCIA
-          </button>
-        </div>
+        <button
+          className={`${AboutExperienceHeader} ${
+            !aboutState
+              ? `${AboutExperienceSelected} AboutExperienceSelected`
+              : ""
+          }  ${poppinsBold.className}`}
+          onClick={(e) => handleHeader(e)}
+        >
+          EXPERIÊNCIA
+        </button>
+      </div>
 
-        <div className={AboutExperienceBody} ref={AboutExperienceBodyRef}>
-          {aboutState ? AboutComponent() : ExperienceComponent()}
-        </div>
-      </section>
-    </div>
+      <div className={AboutExperienceBody} ref={AboutExperienceBodyRef}>
+        {aboutState ? AboutComponent() : ExperienceComponent()}
+      </div>
+    </section>
   );
 }

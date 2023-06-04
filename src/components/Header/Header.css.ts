@@ -38,7 +38,7 @@ export const LogoMobile = style({
   fontSize: 30,
   marginRight: 20,
   "@media": {
-    "screen and (min-width: 501px)": {
+    "screen and (min-width: 300px)": {
       display: "none",
     },
   },
@@ -48,7 +48,7 @@ export const LogoTabletDesktop = style({
   fontSize: 35,
   marginRight: 20,
   "@media": {
-    "screen and (max-width: 500px)": {
+    "screen and (max-width: 300px)": {
       display: "none",
     },
   },
@@ -121,7 +121,7 @@ export const HeaderListMenu_lineUpClose = style({
   position: "absolute",
   top: 0,
   left: "50%",
-  transform: "translate(-50%, -50%)",
+  transform: "translate(-50%, -50%) rotate(360deg)",
 });
 
 export const HeaderListMenu_lineDownOpen = style({
@@ -135,7 +135,7 @@ export const HeaderListMenu_lineDownClose = style({
   position: "absolute",
   bottom: 0,
   left: "50%",
-  transform: "translate(-50%, -50%)",
+  transform: "translate(-50%, -50%) rotate(360deg)",
 });
 
 export const MenuMobile = style({

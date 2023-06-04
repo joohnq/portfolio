@@ -12,6 +12,7 @@ export const vars = createGlobalTheme(":root", {
     pointYellow: "#FBBE2E",
     pointGreen: "#2ACB45",
     gray: "#111",
+    mediumGray: "#888",
     lightGray: "#d9d9d9",
   },
 });

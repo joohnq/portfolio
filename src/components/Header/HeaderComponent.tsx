@@ -55,6 +55,8 @@ export default function HeaderComponent() {
 
   function handleMenu() {
     setMenuOpen(!menuOpen);
+
+    document.body.style.overflow = menuOpen ? "auto" : "hidden";
   }
 
   const handleMenuItemClick = (event: React.MouseEvent<HTMLAnchorElement>) => {

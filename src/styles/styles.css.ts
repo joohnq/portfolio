@@ -47,6 +47,12 @@ export const Container = style({
   margin: "auto",
 });
 
+export const LinkExternal = style({
+  color: vars.color.lightGray,
+  fontSize: 16,
+  marginTop: 20,
+});
+
 export const HtmlStyle = style({
   scrollbarWidth: "auto",
   scrollbarColor: "#FF00B8",
@@ -65,17 +71,16 @@ export const HtmlStyle = style({
 });
 
 export const BigTitle = style({
-  color: vars.color.white,
-  fontSize: "clamp(24px, calc(100vw - 96vw), 50px)",
+  color: vars.color.lightGray,
   textAlign: "start",
   margin: 0,
 
   "@media": {
     "screen and (min-width: 0px)": {
-      fontSize: "clamp(24px, calc(100vw - 94vw), 38px)",
+      fontSize: "clamp(30px, calc(100vw - 90vw), 40px)",
     },
     "screen and (min-width: 768px)": {
-      fontSize: "clamp(24px, calc(100vw - 96vw), 50px)",
+      fontSize: "clamp(40px, calc(100vw - 96vw), 60px)",
     },
   },
 });
@@ -95,6 +100,8 @@ export const MediumTitle = style({
     },
   },
 });
+
+export const SmallTitle = style({});
 
 export const Disabled = style({
   color: vars.color.gray,

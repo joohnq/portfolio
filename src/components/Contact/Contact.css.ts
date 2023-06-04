@@ -5,89 +5,43 @@ export const ContactStyle = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
+  flexDirection: "column",
   marginTop: "clamp(80px, calc(100vw - 90vw), 200px)",
   marginBottom: 50,
-  position: "relative",
   "@media": {
     "screen and (min-width: 0px)": {
-      flexDirection: "column",
       width: "90%",
-      gap: 0,
     },
     "screen and (min-width: 768px)": {
-      flexDirection: "row",
       width: "100%",
-      gap: 100,
     },
   },
 });
 
-export const ContactLeft = style({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  "@media": {
-    "screen and (min-width: 500px)": {
-      flexDirection: "row",
-      width: "100%",
-    },
-    "screen and (min-width: 768px)": {
-      paddingLeft: 50,
-      flexDirection: "column",
-    },
-  },
+export const ContactStyle_Desc = style({
+  color: vars.color.mediumGray,
+  maxWidth: 400,
+  textAlign: "center",
+  fontSize: 18,
+  margin: 0,
 });
 
-export const ContactSocialMedias = style({
+export const ContactForm = style({
   display: "flex",
   alignItems: "flex-start",
   justifyContent: "center",
   flexDirection: "column",
-  gap: 10,
-});
-
-export const ContactSocialMedia = style({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  gap: 20,
-  textDecoration: "none",
-});
-
-export const ContactSocialMedia_Icon = style({
-  padding: 10,
-  backgroundColor: vars.color.white,
-  borderRadius: "50%",
-});
-
-export const ContactSocialMedia_Name = style({
-  textDecoration: "none",
-  color: vars.color.white,
-  fontSize: "clamp(16px, calc(100vw - 98vw),20px)",
-});
-
-export const ContactRight = style({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  flexDirection: "column",
   gap: 15,
+  width: "100%",
+  padding: "30px 20px 20px 20px",
+  maxWidth: 500,
 
   "@media": {
-    "screen and (min-width: 0px)": {
-      width: "100%",
-      padding: 20,
-      maxWidth: 500,
-    },
-
-    "screen and (min-width: 768px)": {
-      padding: 50,
-    },
+    "screen and (min-width: 0px)": {},
   },
 });
 
-export const ContactRightField = style({
+export const ContactFormField = style({
   display: "flex",
   alignItems: "stretch",
   justifyContent: "center",
@@ -95,13 +49,13 @@ export const ContactRightField = style({
   width: "100%",
 });
 
-export const ContactRight_Label = style({
-  color: vars.color.white,
+export const ContactForm_Label = style({
+  color: vars.color.lightGray,
   marginBottom: 5,
   fontSize: "clamp(16px, calc(100vw - 98vw),20px)",
 });
 
-export const ContactRight_Input = style({
+export const ContactForm_Input = style({
   background: vars.color.white,
   height: 40,
   border: 0,
@@ -115,7 +69,7 @@ export const ContactRight_Input = style({
   },
 });
 
-export const ContactRight_TextArea = style({
+export const ContactForm_TextArea = style({
   background: vars.color.white,
   border: 0,
   height: 200,
@@ -129,50 +83,42 @@ export const ContactRight_TextArea = style({
   },
 });
 
-export const ContactRightButton = style({
-  width: "50%",
-  color: vars.color.white,
+export const ContactFormButton = style({
+  width: 50,
   border: 0,
-  padding: "15px 15px",
-  fontSize: 18,
-  borderRadius: 5,
+  height: 50,
+
+  borderRadius: "50%",
   cursor: "pointer",
   background: vars.color.gradient,
+  marginTop: 10,
+  overflow: "hidden",
+
+  selectors: {
+    "&:hover": {
+      width: "45%",
+      borderRadius: 5,
+      transition: ".1s ease",
+      padding: "0 30px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      flexDirection: "row-reverse",
+    },
+  },
 });
 
-export const MessageModal = style({
-  gap: 20,
-
-  position: "absolute",
-  background: vars.color.blueDarkTransparent,
-  top: 0,
-  right: 0,
-  bottom: 0,
-  left: 0,
+export const ContactFormButton_Text = style({
+  fontSize: 18,
+  color: vars.color.white,
 });
 
-export const MessageModalBox = style({
-  maxWidth: 500,
-  margin: "50% auto",
-  background: vars.color.white,
-  padding: 30,
-  borderRadius: 10,
-});
-
-export const MessageModalBox_close = style({
-  margin: "10px 0 30px 0",
-  textAlign: "end",
-  cursor: "pointer",
-});
-
-export const MessageModalBox_body = style({
+export const ContactFormButton_Icon = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  flexDirection: "column",
-});
-
-export const MessageModalBox_message = style({
-  color: vars.color.blueDark,
-  textAlign: "center",
+  width: 50,
+  height: 50,
+  border: 0,
+  margin: "-1px 0 0 -6px",
 });

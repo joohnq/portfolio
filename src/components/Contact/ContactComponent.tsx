@@ -1,31 +1,20 @@
 import React, { useState, FormEvent, ChangeEvent, useRef } from "react";
 import { Container, Disabled, BigTitle } from "@/styles/styles.css";
-import {
-  poppinsBold,
-  poppinsMedium,
-  poppinsRegular,
-  poppinsSemiBold,
-} from "@/styles/fonts";
-import { Icon } from "@iconify/react";
+import { poppinsBold, poppinsSemiBold } from "@/styles/fonts";
 import {
   ContactStyle,
-  ContactLeft,
-  ContactSocialMedias,
-  ContactSocialMedia,
-  ContactSocialMedia_Icon,
-  ContactSocialMedia_Name,
-  ContactRight,
-  ContactRightField,
-  ContactRight_Input,
-  ContactRight_Label,
-  ContactRight_TextArea,
-  ContactRightButton,
-  MessageModal,
-  MessageModalBox,
-  MessageModalBox_close,
-  MessageModalBox_body,
-  MessageModalBox_message,
+  ContactStyle_Desc,
+  ContactForm,
+  ContactFormField,
+  ContactForm_Label,
+  ContactForm_Input,
+  ContactForm_TextArea,
+  ContactFormButton,
+  ContactFormButton_Text,
+  ContactFormButton_Icon,
 } from "./Contact.css";
+import ModalContactComponent from "../ModalContact/ModalContactComponent";
+import { Icon } from "@iconify/react";
 interface FormState {
   name: string;
   email: string;
@@ -56,14 +45,13 @@ export default function ContactComponent() {
     })
       .then(() => {
         setFormMessage("Sua mensagem foi enviada!");
+        setFormState({ name: "", email: "", message: "" });
         setTimeout(() => {
           setFormMessage("");
-        }, 4000);
-        setFormState({ name: "", email: "", message: "" });
+        }, 8000);
       })
-      .catch((error) => {
+      .catch(() => {
         setFormMessage("Ocorreu um erro");
-        console.error(error);
       });
 
     btnSubmit.current?.setAttribute("disabled", `${true}`);
@@ -81,167 +69,97 @@ export default function ContactComponent() {
 
   return (
     <section className={`${ContactStyle} ${Container}`} id="Contact">
-      <div className={`${ContactLeft}`}>
-        <div>
-          <h2 className={`${BigTitle} ${poppinsBold.className} `}>Contato</h2>
-          <div className={`${ContactSocialMedias}`}>
-            <a
-              className={`${ContactSocialMedia}`}
-              href="https://www.instagram.com/jhenrique.dev/"
-              target="__blank"
-              aria-label="Link para o meu Instagram"
-            >
-              <Icon
-                icon="ri:instagram-fill"
-                className={`${ContactSocialMedia_Icon}`}
-                color="#000"
-                width={30}
-                height={30}
-              />
-              <p
-                className={`${ContactSocialMedia_Name} ${poppinsSemiBold.className}`}
-              >
-                INSTAGRAM
-              </p>
-            </a>
-            <a
-              className={`${ContactSocialMedia}`}
-              href="https://github.com/joohnq"
-              target="__blank"
-              aria-label="Link para o meu Github"
-            >
-              <Icon
-                icon="bi:github"
-                className={`${ContactSocialMedia_Icon}`}
-                color="#000"
-                width={30}
-                height={30}
-              />
-              <p
-                className={`${ContactSocialMedia_Name} ${poppinsSemiBold.className}`}
-              >
-                GITHUB
-              </p>
-            </a>
-            <a
-              className={`${ContactSocialMedia}`}
-              href="https://www.linkedin.com/in/joao-henrique-de-souza-silva-b43921196/"
-              target="__blank"
-              aria-label="Link para o meu Linkedin"
-            >
-              <Icon
-                icon="uil:linkedin"
-                className={`${ContactSocialMedia_Icon}`}
-                color="#000"
-                width={30}
-                height={30}
-              />
-              <p
-                className={`${ContactSocialMedia_Name} ${poppinsSemiBold.className}`}
-              >
-                LINKEDIN
-              </p>
-            </a>
-          </div>
-        </div>
-      </div>
+      <h2 className={`${BigTitle} ${poppinsBold.className} `}>Contato</h2>
+      <p className={`${ContactStyle_Desc} ${poppinsSemiBold.className} `}>
+        Vamos iniciar uma conversa! Envie-me uma mensagem ou conecte-se comigo
+        através das minhas redes sociais.
+      </p>
       <form
-        className={`${ContactRight}`}
+        className={`${ContactForm}`}
         onSubmit={handleSubmit}
         data-netlify="true"
       >
         <input type="hidden" name="form-name" value="contact" />
 
         {formMessage ? (
-          <div className={`${MessageModal}`}>
-            <div className={`${MessageModalBox}`}>
-              <div className={`${MessageModalBox_close}`}>
-                <Icon
-                  icon="ph:x"
-                  width="30"
-                  height="30"
-                  color="#01040D"
-                  onClick={() => setFormMessage("")}
-                />
-              </div>
-              <div className={`${MessageModalBox_body}`}>
-                <Icon
-                  icon="emojione:white-heavy-check-mark"
-                  width="100"
-                  height="100"
-                />
-                <h3
-                  className={`${MessageModalBox_message} ${poppinsRegular.className}`}
-                >
-                  {formMessage}
-                </h3>
-                <p
-                  className={`${MessageModalBox_message} ${poppinsRegular.className}`}
-                >
-                  Você poderá enviar outra mensagem daqui a 3 minutos
-                </p>
-              </div>
-            </div>
-          </div>
+          <ModalContactComponent
+            formMessage={formMessage}
+            setFormMessage={setFormMessage}
+          />
         ) : (
           ""
         )}
-        <div className={`${ContactRightField}`}>
+        <div className={`${ContactFormField}`}>
           <label
-            className={`${ContactRight_Label} ${poppinsBold.className}`}
+            className={`${ContactForm_Label} ${poppinsSemiBold.className}`}
             htmlFor="name"
           >
             Nome:{" "}
           </label>
           <input
-            className={`${ContactRight_Input} ${poppinsMedium.className}`}
+            className={`${ContactForm_Input} ${poppinsSemiBold.className}`}
             type="text"
             name="name"
             id="name"
             value={formState.name}
             onChange={handleChange}
+            placeholder="Digite o seu nome..."
             required
           />
         </div>
-        <div className={`${ContactRightField}`}>
+        <div className={`${ContactFormField}`}>
           <label
-            className={`${ContactRight_Label} ${poppinsBold.className}`}
+            className={`${ContactForm_Label} ${poppinsSemiBold.className}`}
             htmlFor="email"
           >
             Email:{" "}
           </label>
           <input
-            className={`${ContactRight_Input} ${poppinsMedium.className}`}
+            className={`${ContactForm_Input} ${poppinsSemiBold.className}`}
             type="text"
             name="email"
             id="email"
             value={formState.email}
             onChange={handleChange}
+            placeholder="Digite o seu e-mail..."
             required
           />
         </div>
-        <div className={`${ContactRightField}`}>
+        <div className={`${ContactFormField}`}>
           <label
-            className={`${ContactRight_Label} ${poppinsBold.className}`}
+            className={`${ContactForm_Label} ${poppinsSemiBold.className}`}
             htmlFor="message"
           >
             Mensagem:{" "}
           </label>
           <textarea
-            className={`${ContactRight_TextArea} ${poppinsMedium.className}`}
+            className={`${ContactForm_TextArea} ${poppinsSemiBold.className}`}
             name="message"
             id="message"
             value={formState.message}
             onChange={handleChange}
+            placeholder="Digite a sua mensagem..."
             required
           ></textarea>
         </div>
         <button
-          className={`${ContactRightButton} ${poppinsBold.className}`}
+          className={`${ContactFormButton} ${poppinsSemiBold.className}`}
           type="submit"
           ref={btnSubmit}
         >
-          ENVIAR
+          <div className={`${ContactFormButton_Icon}`}>
+            <Icon
+              icon="solar:arrow-right-broken"
+              color="#fff"
+              width={40}
+              height={40}
+            />
+          </div>
+          <p
+            className={`${ContactFormButton_Text} ${poppinsSemiBold.className}`}
+          >
+            ENVIAR
+          </p>
         </button>
       </form>
     </section>

@@ -6,9 +6,7 @@ export const ProjectsStyle = style({
   justifyContent: "center",
   alignItems: "center",
   marginTop: "clamp(80px, calc(100vw - 90vw), 200px)",
-  marginRight: 20,
-  marginBottom: 20,
-  marginLeft: 20,
+  padding: "0 20px",
 });
 
 export const ProjectsStyle_Box = style({
@@ -18,4 +16,5 @@ export const ProjectsStyle_Box = style({
   justifyItems: "center",
   gap: 50,
   gridTemplateColumns: "repeat(auto-fit, minmax(0, 400px))",
+  marginTop: 100,
 });

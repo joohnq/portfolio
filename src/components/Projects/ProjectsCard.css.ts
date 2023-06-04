@@ -11,10 +11,16 @@ export const ProjectCard = style({
   flexDirection: "column",
   gap: 10,
   borderRadius: 10,
-});
 
-export const LinkExternal = style({
-  backgroundColor: vars.color.pointRed,
+  "@media": {
+    "screen and (min-width: 0px)": {
+      padding: 20,
+    },
+
+    "screen and (min-width: 400px)": {
+      padding: 30,
+    },
+  },
 });
 
 export const ProjectCard_Content = style({
@@ -40,11 +46,19 @@ export const ProjectCard_ContentTitle = style({
 });
 
 export const ProjectCard_Languages = style({
-  display: "flex",
-  alignItems: "flex-start",
-  justifyContent: "center",
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(35px, 40px))",
+  alignItems: "center",
+  justifyContent: "flex-start",
+  width: "100%",
   gap: 10,
   marginBottom: 20,
+});
+
+export const ProjectCard_LanguagesIcon = style({
+  ":hover": {
+    color: `${vars.color.white} !important`,
+  },
 });
 
 export const ProjectCard_Image = style({
@@ -74,6 +88,11 @@ export const ProjectCard_Button = style({
   height: 40,
   borderRadius: 5,
   border: 0,
+  cursor: "pointer",
+
+  ":hover": {
+    background: vars.color.lightGray,
+  },
 });
 
 export const ProjectCard_Button_a = style({

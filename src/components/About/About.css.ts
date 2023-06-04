@@ -9,6 +9,7 @@ export const AboutBody = style({
   borderRadius: 10,
   minHeight: 700,
   maxWidth: 1200,
+  margin: "0 auto",
   position: "relative",
 
   "@media": {
@@ -29,19 +30,22 @@ export const AboutBody = style({
 
 export const AboutBody_BoxImage = style({
   objectFit: "cover",
+  overflow: "hidden",
 
   "@media": {
     "screen and (min-width: 0px)": {
       width: "100%",
+      borderRadius: "10px",
+      marginTop: 20,
     },
     "screen and (min-width: 768px)": {
       width: "45%",
+      borderRadius: "10px 0 0 10px",
     },
   },
 });
 
 export const AboutBody_Image = style({
-  borderRadius: "10px 0 0 10px",
   width: "100%",
   height: "100%",
   objectFit: "cover",
@@ -49,10 +53,13 @@ export const AboutBody_Image = style({
 
   "@media": {
     "screen and (min-width: 0px)": {
-      borderRadius: "10px",
+      marginTop: 20,
+      transform: "scale(1.5)",
     },
-    "screen and (min-width: 768px)": {
-      borderRadius: "10px 0 0 10px",
+    "(min-width: 530px) and (max-width: 768px)": {
+      transform: "scale(1)",
+      marginTop: 0,
+      height: 300,
     },
   },
 });
@@ -77,8 +84,17 @@ export const AboutBody_BoxContent = style({
 
 export const AboutBody_MaxPoints = style({
   position: "absolute",
-  top: 30,
-  right: 30,
+
+  "@media": {
+    "screen and (min-width: 0px)": {
+      top: 20,
+      right: 25,
+    },
+    "screen and (min-width: 768px)": {
+      top: 30,
+      right: 30,
+    },
+  },
 });
 
 export const AboutBody_Content = style({

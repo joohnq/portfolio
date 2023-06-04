@@ -3,24 +3,23 @@ import { style } from "@vanilla-extract/css";
 
 export const ExperienceBody = style({
   display: "flex",
+  alignItems: "center",
   justifyContent: "center",
-  marginBottom: 20,
   backgroundColor: vars.color.gray,
   borderRadius: 10,
   minHeight: 700,
   maxWidth: 1200,
+  margin: "0 auto 20px",
   position: "relative",
 
   "@media": {
     "screen and (min-width: 0px)": {
       flexDirection: "column",
-      alignItems: "flex-start",
-      padding: 20,
+      // alignItems: "flex-start",
       gap: 20,
     },
     "screen and (min-width: 768px)": {
       flexDirection: "column",
-      padding: 30,
       gap: 50,
     },
   },
@@ -28,8 +27,34 @@ export const ExperienceBody = style({
 
 export const Experience_MacPoints = style({
   position: "absolute",
-  top: 30,
-  right: 30,
+
+  "@media": {
+    "screen and (min-width: 0px)": {
+      top: 20,
+      right: 25,
+    },
+    "screen and (min-width: 768px)": {
+      top: 30,
+      right: 30,
+    },
+  },
+});
+
+export const ExperienceBodyJobs = style({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  flexDirection: "column",
+  gap: 20,
+  "@media": {
+    "screen and (min-width: 0px)": {
+      padding: 20,
+    },
+
+    "screen and (min-width: 768px)": {
+      padding: 30,
+    },
+  },
 });
 
 export const ExperienceBodyJob = style({
@@ -42,30 +67,40 @@ export const ExperienceBodyJob = style({
   "@media": {
     "screen and (min-width: 0px)": {
       flexDirection: "column",
+      maxWidth: 500,
     },
 
     "screen and (min-width: 768px)": {
       flexDirection: "row",
+      maxWidth: 1000,
     },
   },
 });
 
-export const ExperienceBodyJobImageText = style({
-  textAlign: "center",
-  fontSize: 40,
-  marginTop: 20,
-  marginBottom: 0,
-  maxWidth: 300,
-
+export const ExperienceBodyJob_BoxImage = style({
   "@media": {
     "screen and (min-width: 0px)": {
-      width: "100%",
+      maxWidth: 300,
     },
 
     "screen and (min-width: 768px)": {
-      width: "40%",
+      width: 300,
     },
   },
+});
+
+export const ExperienceBodyJob_Image = style({
+  width: "100%",
+  height: "100%",
+});
+
+export const ExperienceBodyJobImageText = style({
+  textAlign: "center",
+  marginTop: 20,
+  marginBottom: 0,
+  width: "100%",
+
+  fontSize: "clamp(24px, calc(100vw - 90vw), 40px)",
 });
 
 export const ExperienceBodyJobContent = style({
@@ -95,6 +130,7 @@ export const ExperienceBodyJobTitle = style({
 export const ExperienceBodyJobDesc = style({
   marginTop: 10,
   marginBottom: 0,
+  color: vars.color.lightGray,
 
   fontSize: "clamp(14px, calc(100vw - 96vw), 16px)",
 
