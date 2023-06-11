@@ -41,6 +41,7 @@ export const AboutBody_BoxImage = style({
     "screen and (min-width: 767px)": {
       width: "45%",
       borderRadius: "10px 0 0 10px",
+      marginTop: 0,
     },
   },
 });
