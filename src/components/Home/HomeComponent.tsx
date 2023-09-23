@@ -17,7 +17,7 @@ export default function HomeComponent() {
         <p
           className={`${Title_Gradient} ${HomeSubtitle} ${poppinsBold.className}`}
         >
-          MOVILE JÚNIOR
+          MOBILE JÚNIOR
         </p>
         <h2 className={`${HomeTitle} ${poppinsBold.className}`}>
           OLÁ , VISITANTE <br />
