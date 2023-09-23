@@ -12,6 +12,7 @@ export const ProjectsStyle = style({
 export const ProjectsStyle_Box = style({
   width: "100%",
   display: "grid",
+  alignItems: "flex-start",
   justifyContent: "center",
   justifyItems: "center",
   gap: 50,

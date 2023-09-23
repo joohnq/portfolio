@@ -53,7 +53,6 @@ export default function HabilitiesComponent() {
             GIT
           </p>
         </div>
-
         <div className={`${HabilitiesCard}`}>
           <Icon icon="devicon:bootstrap" color="white" width="50" height="50" />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
@@ -98,6 +97,17 @@ export default function HabilitiesComponent() {
           />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
             STYLED <br /> COMPONENT
+          </p>
+        </div>
+        <div className={`${HabilitiesCard}`}>
+          <Icon
+            icon="logos:flutter"
+            color="white"
+            width="50"
+            height="50"
+          />
+          <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
+            FLUTTER
           </p>
         </div>
       </div>

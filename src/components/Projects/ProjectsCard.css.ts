@@ -7,7 +7,7 @@ export const ProjectCard = style({
   backgroundColor: vars.color.gray,
   display: "flex",
   alignItems: "flex-start",
-  justifyContent: "space-between",
+  justifyContent: "flex-start",
   flexDirection: "column",
   gap: 10,
   borderRadius: 10,

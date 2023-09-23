@@ -83,6 +83,8 @@ export default function ExperienceComponent() {
               <Icon icon="bxl:css3" color="#888" width="35" />
               <Icon icon="bxl:javascript" color="#888" width="35" />
               <Icon icon="bxl:bootstrap" color="#888" width="35" />
+              <Icon icon="material-symbols:flutter" color="#888" width="35" />
+              <Icon icon="mdi:react" color="#888" width="35" />
             </p>
           </div>
         </div>

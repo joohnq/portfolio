@@ -48,7 +48,7 @@ export default function ProjectCardComponent({
                 key={index}
                 icon={`${item}`}
                 color="#888"
-                width="40"
+                width="36"
               />
             );
           })}

@@ -21,37 +21,22 @@ export default function ProjectsComponent() {
             image: "pokedex.png",
             imageAlt: "Imagem do projeto Pokedex no mobile",
             deployLink: "",
-            codeLink: "",
+            codeLink: "https://github.com/joohnq/app-pokedex",
           }}
         />
+
         <ProjectCardComponent
           projectData={{
-            title: "Weather Website",
+            title: "Movies and Series App",
             languages: [
-              "tabler:brand-react-native",
-              "bxl:javascript",
-              "bxl:css3",
-              "mdi:api",
-              "devicon-plain:axios-wordmark",
+              "material-symbols:flutter",
+              "simple-icons:dart",
+              "material-symbols:http",
             ],
-            image: "weather-app.png",
-            imageAlt: "Imagem do projeto Weather no navegador",
+            image: "movies-app.png",
+            imageAlt: "Imagem do aplicativo de filmes e series",
             deployLink: "",
-            codeLink: "",
-          }}
-        />
-        <ProjectCardComponent
-          projectData={{
-            title: "Timer e Cronometro",
-            languages: [
-              "ant-design:html5-filled",
-              "bxl:css3",
-              "bxl:javascript",
-            ],
-            image: "timer-cronometro.png",
-            imageAlt: "Imagem do projeto Timer e Cronometro no navegador",
-            deployLink: "",
-            codeLink: "",
+            codeLink: "https://github.com/joohnq/movies_app",
           }}
         />
       </div>

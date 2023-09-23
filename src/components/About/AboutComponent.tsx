@@ -35,17 +35,20 @@ export default function AboutComponent() {
           <p className={`${AboutBodyDesc} ${poppinsSemiBold.className}`}>
             👋 Olá caro visitante!
             <br />
-            😄 Meu nome é João e sou um entusiasta da programação.
+            😄 Sou João Henrique, desenvolvedor Front-End evoluindo para a área
+            Mobile. 🌟
             <br />
-            💻 Sou apaixonado pela área e tenho dedicado meu tempo aos estudos.
+            💻 Atualmente sou desenvolvedor front-end, moldando a web com código
+            e design.
             <br />
-            🌍 Além disso, estou aprimorando meu inglês para ampliar minhas
-            oportunidades.
+            💡 📲 Mas meu olhar está firmemente voltado para o futuro, onde
+            estou mergulhando no emocionante mundo do desenvolvimento móvel.
             <br />
-            📱 Estou explorando o mundo do desenvolvimento mobile para expandir
-            minhas habilidades.
-            <br />⏰ Dedico-me diariamente para alcançar meus objetivos e
-            crescer como profissional.
+            💪 🎯Meu objetivo? Unir minha paixão por tecnologia e criar soluções
+            que transformem a vida das pessoas.
+            <br />✨ 💬 Vamos nos conectar! Adoro trocar ideias e conhecimentos
+            com colegas profissionais da área. Juntos, podemos alcançar novos
+            patamares na criação de experiências digitais!
           </p>
         </div>
       </div>
