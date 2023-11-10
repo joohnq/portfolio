@@ -3,7 +3,7 @@ import { style } from "@vanilla-extract/css";
 
 export const FooterStyle = style({
   backgroundColor: vars.color.gray,
-  height: 200,
+  height: 150,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",

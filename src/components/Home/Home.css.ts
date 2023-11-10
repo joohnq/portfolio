@@ -1,3 +1,4 @@
+import { vars } from "@/styles/global.css";
 import { style } from "@vanilla-extract/css";
 
 export const HomeStyle = style({
@@ -43,6 +44,10 @@ export const HomeIcons = style({
 export const HomeIcon = style({
   fontSize: "clamp(30px, calc(100vw - 93vw), 40px)",
   maxWidth: 50,
+  ":hover": {
+    scale: "1.2",
+    transition: "all linear 0.3s",
+  },
 });
 
 export const HomeIconScroll = style({

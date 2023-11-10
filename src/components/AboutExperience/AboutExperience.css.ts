@@ -61,10 +61,8 @@ export const AboutExperienceHeader = style({
 
 export const AboutExperienceSelected = style({
   padding: "15px 20px",
-
   borderRadius: "10px 10px 0 0",
-
-  background: vars.color.gradient,
+  background: vars.color.secondaryDark,
 });
 
 export const AboutExperienceBody = style({

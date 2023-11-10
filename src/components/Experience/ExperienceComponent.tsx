@@ -49,10 +49,10 @@ export default function ExperienceComponent() {
             <div
               className={`${ExperienceBodyJobLanguages} ${poppinsBold.className}`}
             >
-              <Icon icon="bxl:html5" color="#888" width="35" />
-              <Icon icon="bxl:css3" color="#888" width="35" />
-              <Icon icon="bxl:javascript" color="#888" width="35" />
-              <Icon icon="bxl:bootstrap" color="#888" width="35" />
+              <Icon icon="bxl:html5" color="#f0f2f5" width="35" />
+              <Icon icon="bxl:css3" color="#f0f2f5" width="35" />
+              <Icon icon="bxl:javascript" color="#f0f2f5" width="35" />
+              <Icon icon="bxl:bootstrap" color="#f0f2f5" width="35" />
             </div>
           </div>
         </div>
@@ -79,12 +79,16 @@ export default function ExperienceComponent() {
             <p
               className={`${ExperienceBodyJobLanguages} ${poppinsBold.className}`}
             >
-              <Icon icon="bxl:html5" color="#888" width="35" />
-              <Icon icon="bxl:css3" color="#888" width="35" />
-              <Icon icon="bxl:javascript" color="#888" width="35" />
-              <Icon icon="bxl:bootstrap" color="#888" width="35" />
-              <Icon icon="material-symbols:flutter" color="#888" width="35" />
-              <Icon icon="mdi:react" color="#888" width="35" />
+              <Icon icon="bxl:html5" color="#f0f2f5" width="35" />
+              <Icon icon="bxl:css3" color="#f0f2f5" width="35" />
+              <Icon icon="bxl:javascript" color="#f0f2f5" width="35" />
+              <Icon icon="bxl:bootstrap" color="#f0f2f5" width="35" />
+              <Icon
+                icon="material-symbols:flutter"
+                color="#f0f2f5"
+                width="35"
+              />
+              <Icon icon="mdi:react" color="#f0f2f5" width="35" />
             </p>
           </div>
         </div>

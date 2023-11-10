@@ -4,7 +4,7 @@ import { vars } from "@/styles/global.css";
 export const ProjectCard = style({
   maxWidth: 500,
   padding: 30,
-  backgroundColor: vars.color.gray,
+  backgroundColor: vars.color.secondaryDark,
   display: "flex",
   alignItems: "flex-start",
   justifyContent: "flex-start",

@@ -134,6 +134,5 @@ export const HeaderListItem_link = style({
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
     MozBackgroundClip: "text",
-    transition: "0.1s linear",
   },
 });

@@ -5,7 +5,7 @@ export const ExperienceBody = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  backgroundColor: vars.color.gray,
+  backgroundColor: vars.color.secondaryDark,
   borderRadius: 10,
   minHeight: 700,
   maxWidth: 1200,

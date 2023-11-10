@@ -12,7 +12,7 @@ import {
   AboutBodyDesc,
 } from "./About.css";
 import { MediumTitle } from "@/styles/styles.css";
-import { poppinsBold, poppinsSemiBold } from "@/styles/fonts";
+import { poppinsBold, poppinsMedium } from "@/styles/fonts";
 
 export default function AboutComponent() {
   return (
@@ -32,22 +32,28 @@ export default function AboutComponent() {
           <h3 className={`${MediumTitle} ${poppinsBold.className}`}>
             João Henrique
           </h3>
-          <p className={`${AboutBodyDesc} ${poppinsSemiBold.className}`}>
+          <p className={`${AboutBodyDesc} ${poppinsMedium.className}`}>
             👋 Olá caro visitante!
-            <br />
+          </p>
+          <p className={`${AboutBodyDesc} ${poppinsMedium.className}`}>
             😄 Sou João Henrique, desenvolvedor Front-End evoluindo para a área
-            Mobile. 🌟
-            <br />
+            Mobile.
+          </p>
+          <p className={`${AboutBodyDesc} ${poppinsMedium.className}`}>
             💻 Atualmente sou desenvolvedor front-end, moldando a web com código
             e design.
-            <br />
+          </p>
+          <p className={`${AboutBodyDesc} ${poppinsMedium.className}`}>
             💡 📲 Mas meu olhar está firmemente voltado para o futuro, onde
             estou mergulhando no emocionante mundo do desenvolvimento móvel.
-            <br />
+          </p>
+          <p className={`${AboutBodyDesc} ${poppinsMedium.className}`}>
             💪 🎯Meu objetivo? Unir minha paixão por tecnologia e criar soluções
             que transformem a vida das pessoas.
-            <br />✨ 💬 Vamos nos conectar! Adoro trocar ideias e conhecimentos
-            com colegas profissionais da área. Juntos, podemos alcançar novos
+          </p>
+          <p className={`${AboutBodyDesc} ${poppinsMedium.className}`}>
+            ✨ 💬 Vamos nos conectar! Adoro trocar ideias e conhecimentos com
+            colegas profissionais da área. Juntos, podemos alcançar novos
             patamares na criação de experiências digitais!
           </p>
         </div>
