@@ -1,8 +1,6 @@
 import { keyframes, style } from "@vanilla-extract/css";
 
 export const HomeStyle = style({
-  position: "absolute",
-  top: 0,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -24,19 +22,9 @@ export const HomeStyle = style({
   },
 });
 
-export const Background = style({
-  // objectFit: "cover",
-  // objectPosition: "center",
-
-  width: "100%",
-  height: "100%",
-  objectFit: "cover",
-  objectPosition: "center",
-});
-
 export const HomeSubtitle = style({
   margin: 0,
-  fontSize: "clamp(20px, 20vw, 32px)",
+  fontSize: "clamp(18px, 4vw, 32px)",
   textAlign: "center",
 });
 
@@ -67,6 +55,14 @@ export const HomeIcon = style({
 
 export const HomeIconFloating = style({
   position: "absolute",
+  "@media": {
+    "screen and (max-width: 992px)": {
+      display: "none",
+    },
+    "screen and (min-width: 992px)": {
+      fontSize: "clamp(120px, 10vw, 180px)",
+    },
+  },
 });
 
 export const moveUpDown = keyframes({
@@ -133,13 +129,13 @@ export const triangle = keyframes({
 });
 
 export const AndroidIcon = style({
-  top: 200,
+  top: 100,
   left: 0,
   animation: `${hideAndSeek} 7s linear infinite`,
 });
 
 export const JetpackComposeIcon = style({
-  top: 200,
+  top: 80,
   right: 100,
   animation: `${triangle} 3s linear infinite`,
 });

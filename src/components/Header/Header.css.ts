@@ -6,7 +6,6 @@ export const HeaderStyle = style({
   top: 0,
   left: 0,
   right: 0,
-  height: 70,
   zIndex: 100,
   backdropFilter: "blur(10px)",
   WebkitBackdropFilter: "blur(4px)",
@@ -14,13 +13,12 @@ export const HeaderStyle = style({
   "@media": {
     "screen and (min-width: 0px)": {
       padding: "0px 20px",
+      height: 60,
     },
     "screen and (min-width: 500px)": {
       padding: "0px 50px",
+      height: 70,
     },
-    // "screen and (min-width: 768px)": {
-    //   borderRadius: "0 10px 10px 0",
-    // },
   },
 });
 
@@ -145,14 +143,5 @@ export const HeaderListItem_link = style({
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
     MozBackgroundClip: "text",
-  },
-});
-
-export const moveUpDown = style({
-  "0%, 100%": {
-    transform: "translateY(0)",
-  },
-  "50%": {
-    transform: "translateY(-20px)",
   },
 });

@@ -15,6 +15,13 @@ export const AboutBody = style({
   margin: "0 auto",
   position: "relative",
 
+  selectors: {
+    "&:hover": {
+      boxShadow:
+        "0 14px 25px 0 rgba(255, 255, 255, 0.01) , 0 4px 13px 0 rgba(255,255,255,0.05)",
+    },
+  },
+
   "@media": {
     "screen and (min-width: 0px)": {
       flexDirection: "column",

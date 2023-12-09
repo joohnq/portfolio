@@ -23,6 +23,12 @@ export default function HeaderComponent() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState<number>(0);
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === "Enter" || event.key === " ") {
+      handleMenu();
+    }
+  };
+
   useEffect(() => {
     function handleScroll() {
       setScrollY(window.scrollY);
@@ -135,7 +141,11 @@ export default function HeaderComponent() {
             </li>
           </ul>
         </nav>
-        <div className={HeaderListMenu} onClick={handleMenu}>
+        <div
+          className={HeaderListMenu}
+          onClick={handleMenu}
+          onKeyDown={handleKeyDown}
+        >
           <div
             className={`${HeaderListMenu_line} ${
               menuOpen

@@ -3,7 +3,6 @@ import { poppinsBold } from "@/styles/fonts";
 import { Title_Gradient } from "@/styles/styles.css";
 import {
   HomeStyle,
-  Background,
   HomeSubtitle,
   HomeTitle,
   HomeIcons,
@@ -14,42 +13,36 @@ import {
   XMLIcon,
   UiKitIcon,
 } from "./Home.css";
-import Image from "next/image";
-import BackgroundImage from "/public/Demo (4).png";
+import LoaderComponent from "../Loader/LoaderComponent";
+import { useState } from "react";
 
 export default function HomeComponent() {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  setTimeout(() => {
+    setIsLoading(false);
+  }, 3000);
+
   return (
     <>
-      <Image
-        quality={100}
-        src={BackgroundImage}
-        alt="Image"
-        className={Background}
-        width={0}
-        height={0}
-      />
+      <LoaderComponent isLoading={isLoading} />
       <Icon
         className={`${HomeIconFloating} ${AndroidIcon}`}
         icon="logos:android-icon"
-        width={150}
         rotate={1}
       />
       <Icon
         className={`${HomeIconFloating} ${JetpackComposeIcon}`}
         icon="devicon:jetpackcompose"
-        width={200}
       />
       <Icon
         className={`${HomeIconFloating} ${XMLIcon}`}
         icon="vscode-icons:file-type-xml"
-        width={150}
       />
       <Icon
         className={`${HomeIconFloating} ${UiKitIcon}`}
         icon="devicon:androidstudio"
-        width={200}
       />
-
       <section className={`${HomeStyle}`} id="Home">
         <p
           className={`${Title_Gradient} ${HomeSubtitle} ${poppinsBold.className}`}

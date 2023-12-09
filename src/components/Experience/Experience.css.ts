@@ -7,13 +7,20 @@ export const ExperienceBody = style({
   justifyContent: "center",
   backgroundColor: vars.color.secondaryBackground,
   borderColor: vars.color.blueBorder,
-  borderWidth: "1.2px",
+  borderWidth: "1px",
   borderStyle: "solid",
   borderRadius: 10,
   minHeight: 700,
   maxWidth: 1200,
   margin: "0 auto 20px",
   position: "relative",
+
+  selectors: {
+    "&:hover": {
+      boxShadow:
+        "0 14px 25px 0 rgba(255, 255, 255, 0.01) , 0 4px 13px 0 rgba(255,255,255,0.05)",
+    },
+  },
 
   "@media": {
     "screen and (min-width: 0px)": {

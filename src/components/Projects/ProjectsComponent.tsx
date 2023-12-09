@@ -23,6 +23,7 @@ export default function ProjectsComponent() {
             deployLink: "",
             codeLink: "https://github.com/joohnq/app-pokedex",
           }}
+          glareColor="#3ddc84"
         />
 
         <ProjectCardComponent
@@ -38,6 +39,7 @@ export default function ProjectsComponent() {
             deployLink: "",
             codeLink: "https://github.com/joohnq/movies_app",
           }}
+          glareColor="#4285f4"
         />
       </div>
       <a

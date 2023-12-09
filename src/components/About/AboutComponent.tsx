@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import ProfilePhoto from "/public/profilephoto.jpg";
 import MacPointsComponent from "@/components/MacPoints/MacPoints";
+import Tilt from "react-parallax-tilt";
 import {
   AboutBody,
   AboutBody_BoxImage,

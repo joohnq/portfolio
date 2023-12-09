@@ -6,7 +6,7 @@ export const ProjectCard = style({
   padding: 30,
   backgroundColor: vars.color.secondaryBackground,
   borderColor: vars.color.blueBorder,
-  borderWidth: "1.2px",
+  borderWidth: "1px",
   borderStyle: "solid",
   display: "flex",
   alignItems: "flex-start",
@@ -14,6 +14,12 @@ export const ProjectCard = style({
   flexDirection: "column",
   gap: 10,
   borderRadius: 10,
+  selectors: {
+    "&:hover": {
+      boxShadow:
+        "0 14px 25px 0 rgba(255, 255, 255, 0.01) , 0 4px 13px 0 rgba(255,255,255,0.05)",
+    },
+  },
 
   "@media": {
     "screen and (min-width: 0px)": {
