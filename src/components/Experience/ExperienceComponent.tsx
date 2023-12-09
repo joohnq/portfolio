@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import TGAPhoto from "/public/tgaphoto.png";
-import { poppinsBold, poppinsMedium } from "@/styles/fonts";
+import { poppinsBold, poppinsMedium, poppinsRegular } from "@/styles/fonts";
 import MacPointsComponent from "@/components/MacPoints/MacPoints";
 import {
   ExperienceBody,
@@ -41,7 +41,7 @@ export default function ExperienceComponent() {
               TGA MARKETING - FEVEREIRO / ATUAL
             </h3>
             <p
-              className={`${ExperienceBodyJobDesc} ${poppinsMedium.className}`}
+              className={`${ExperienceBodyJobDesc} ${poppinsRegular.className}`}
             >
               Desenvolvimento de Langing Pages responsivas e eficazes,
               utilizando boas práticas de código, de SEO, e acessibilidade.
@@ -49,10 +49,10 @@ export default function ExperienceComponent() {
             <div
               className={`${ExperienceBodyJobLanguages} ${poppinsBold.className}`}
             >
-              <Icon icon="bxl:html5" color="#f0f2f5" width="35" />
-              <Icon icon="bxl:css3" color="#f0f2f5" width="35" />
-              <Icon icon="bxl:javascript" color="#f0f2f5" width="35" />
-              <Icon icon="bxl:bootstrap" color="#f0f2f5" width="35" />
+              <Icon icon="bxl:html5" color="#848d97" width="35" />
+              <Icon icon="bxl:css3" color="#848d97" width="35" />
+              <Icon icon="bxl:javascript" color="#848d97" width="35" />
+              <Icon icon="bxl:bootstrap" color="#848d97" width="35" />
             </div>
           </div>
         </div>
@@ -72,23 +72,23 @@ export default function ExperienceComponent() {
               99FRELAS - 1 MÊS
             </h3>
             <p
-              className={`${ExperienceBodyJobDesc} ${poppinsMedium.className}`}
+              className={`${ExperienceBodyJobDesc} ${poppinsRegular.className}`}
             >
               Desenvolvimento de landing pages.
             </p>
             <p
               className={`${ExperienceBodyJobLanguages} ${poppinsBold.className}`}
             >
-              <Icon icon="bxl:html5" color="#f0f2f5" width="35" />
-              <Icon icon="bxl:css3" color="#f0f2f5" width="35" />
-              <Icon icon="bxl:javascript" color="#f0f2f5" width="35" />
-              <Icon icon="bxl:bootstrap" color="#f0f2f5" width="35" />
+              <Icon icon="bxl:html5" color="#848d97" width="35" />
+              <Icon icon="bxl:css3" color="#848d97" width="35" />
+              <Icon icon="bxl:javascript" color="#848d97" width="35" />
+              <Icon icon="bxl:bootstrap" color="#848d97" width="35" />
               <Icon
                 icon="material-symbols:flutter"
-                color="#f0f2f5"
+                color="#848d97"
                 width="35"
               />
-              <Icon icon="mdi:react" color="#f0f2f5" width="35" />
+              <Icon icon="mdi:react" color="#848d97" width="35" />
             </p>
           </div>
         </div>

@@ -62,7 +62,13 @@ export const AboutExperienceHeader = style({
 export const AboutExperienceSelected = style({
   padding: "15px 20px",
   borderRadius: "10px 10px 0 0",
-  background: vars.color.secondaryDark,
+  background: vars.color.secondaryBackground,
+  // borderLeft: `1.2px solid ${vars.color.blueBorder}`,
+  // borderTop: `1.2px solid ${vars.color.blueBorder}`,
+  // borderRight: `1.2px solid ${vars.color.blueBorder}`,
+  // marginBottom: "-1px",
+  // position: "relative",
+  // zIndex: 1000,
 });
 
 export const AboutExperienceBody = style({

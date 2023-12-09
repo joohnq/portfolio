@@ -5,7 +5,10 @@ export const AboutBody = style({
   display: "flex",
   justifyContent: "center",
   marginBottom: 20,
-  backgroundColor: vars.color.secondaryDark,
+  backgroundColor: vars.color.secondaryBackground,
+  borderColor: vars.color.blueBorder,
+  borderWidth: "1px",
+  borderStyle: "solid",
   borderRadius: 10,
   minHeight: 700,
   maxWidth: 1200,
@@ -108,7 +111,7 @@ export const AboutBody_Content = style({
 export const AboutBodyDesc = style({
   fontSize: "clamp(16px, calc(100vw - 98vw),18px)",
   letterSpacing: 1,
-  color: vars.color.lightGray,
+  color: vars.color.grayd9d9d9,
   margin: "5px 20px 5px 0",
 
   "@media": {

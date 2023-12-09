@@ -1,11 +1,16 @@
-import { vars } from "@/styles/global.css";
-import { style } from "@vanilla-extract/css";
+import { keyframes, style } from "@vanilla-extract/css";
 
 export const HomeStyle = style({
+  position: "absolute",
+  top: 0,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   flexDirection: "column",
+  backgroundPosition: "center",
+  backgroundSize: "cover",
+  width: "100%",
+  height: "1000px",
   gap: 10,
 
   "@media": {
@@ -19,9 +24,19 @@ export const HomeStyle = style({
   },
 });
 
+export const Background = style({
+  // objectFit: "cover",
+  // objectPosition: "center",
+
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+  objectPosition: "center",
+});
+
 export const HomeSubtitle = style({
   margin: 0,
-  fontSize: "clamp(20px, calc(100vw - 96vw), 40px)",
+  fontSize: "clamp(20px, 20vw, 32px)",
   textAlign: "center",
 });
 
@@ -50,17 +65,96 @@ export const HomeIcon = style({
   },
 });
 
-export const HomeIconScroll = style({
+export const HomeIconFloating = style({
   position: "absolute",
-  top: "calc(100vh - 100px)",
-  right: "50%",
-  transform: "translateX(50%)",
-  "@media": {
-    "screen and (min-height: 0px)": {
-      display: "none",
-    },
-    "screen and (min-height: 768px)": {
-      display: "block",
-    },
+});
+
+export const moveUpDown = keyframes({
+  "0%, 100%": {
+    transform: "translateY(0)",
   },
+  "50%": {
+    transform: "translateY(-20px)",
+  },
+});
+
+export const orbit = keyframes({
+  "0%": {
+    transform: "rotate(0deg) translateX(10px) rotate(0deg)",
+  },
+  "100%": {
+    transform: "rotate(360deg) translateX(10px) rotate(-360deg)",
+  },
+});
+
+export const orbitReverse = keyframes({
+  "0%": {
+    transform: "rotate(360deg) translateX(10px) rotate(-360deg)",
+  },
+  "100%": {
+    transform: "rotate(0deg) translateX(10px) rotate(0deg)",
+  },
+});
+
+export const hideAndSeek = keyframes({
+  "0%": {
+    left: -100,
+  },
+  "10%": {
+    left: -100,
+  },
+  "30%": {
+    left: 0,
+  },
+  "80%": {
+    left: 0,
+  },
+  "100%": {
+    left: -100,
+  },
+});
+
+export const triangle = keyframes({
+  "0%": {
+    transform: "translate(0, 0)",
+  },
+  "25%": {
+    transform: "translate(20px, 0)",
+  },
+  "50%": {
+    transform: "translate(20px, 20px)",
+  },
+  "75%": {
+    transform: "translate(0, 20px)",
+  },
+  "100%": {
+    transform: "translate(0, 0)",
+  },
+});
+
+export const AndroidIcon = style({
+  top: 200,
+  left: 0,
+  animation: `${hideAndSeek} 7s linear infinite`,
+});
+
+export const JetpackComposeIcon = style({
+  top: 200,
+  right: 100,
+  animation: `${triangle} 3s linear infinite`,
+});
+
+export const XMLIcon = style({
+  position: "absolute",
+  bottom: 150,
+  right: 250,
+  animation: `${orbit} 3s linear infinite`,
+});
+
+export const UiKitIcon = style({
+  position: "absolute",
+  bottom: 50,
+  left: 250,
+  transform: "rotate(-30deg)",
+  animation: `${orbit} 3s linear infinite`,
 });

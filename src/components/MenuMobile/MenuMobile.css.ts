@@ -9,7 +9,7 @@ export const MenuMobile = style({
   bottom: 0,
   height: "calc(100vh - 70px)",
   zIndex: 20,
-  background: vars.color.blueDark,
+  background: vars.color.background,
   overflow: "hidden",
   transition: "all 1s linear",
 });

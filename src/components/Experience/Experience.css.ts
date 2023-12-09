@@ -5,7 +5,10 @@ export const ExperienceBody = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  backgroundColor: vars.color.secondaryDark,
+  backgroundColor: vars.color.secondaryBackground,
+  borderColor: vars.color.blueBorder,
+  borderWidth: "1.2px",
+  borderStyle: "solid",
   borderRadius: 10,
   minHeight: 700,
   maxWidth: 1200,
@@ -129,7 +132,7 @@ export const ExperienceBodyJobTitle = style({
 export const ExperienceBodyJobDesc = style({
   marginTop: 10,
   marginBottom: 0,
-  color: vars.color.lightGray,
+  color: vars.color.grayd9d9d9,
 
   fontSize: "clamp(14px, calc(100vw - 96vw), 16px)",
 

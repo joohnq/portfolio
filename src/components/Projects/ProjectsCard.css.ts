@@ -4,7 +4,10 @@ import { vars } from "@/styles/global.css";
 export const ProjectCard = style({
   maxWidth: 500,
   padding: 30,
-  backgroundColor: vars.color.secondaryDark,
+  backgroundColor: vars.color.secondaryBackground,
+  borderColor: vars.color.blueBorder,
+  borderWidth: "1.2px",
+  borderStyle: "solid",
   display: "flex",
   alignItems: "flex-start",
   justifyContent: "flex-start",
@@ -82,13 +85,21 @@ export const ProjectCard_Button = style({
   borderRadius: 5,
   border: 0,
   cursor: "pointer",
+  transition: "background 0.3s linear",
 
   ":hover": {
-    background: vars.color.lightGray,
+    background: `#7742c7`,
   },
 });
 
 export const ProjectCard_Button_a = style({
   textDecoration: "none",
-  color: vars.color.blueDark,
+  color: vars.color.background,
+  transition: "color 0.1s ease",
+
+  selectors: {
+    [`${ProjectCard_Button}:hover &`]: {
+      color: vars.color.white,
+    },
+  },
 });

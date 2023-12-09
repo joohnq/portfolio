@@ -12,7 +12,7 @@ import {
   AboutBodyDesc,
 } from "./About.css";
 import { MediumTitle } from "@/styles/styles.css";
-import { poppinsBold, poppinsMedium } from "@/styles/fonts";
+import { poppinsBold, poppinsRegular } from "@/styles/fonts";
 
 export default function AboutComponent() {
   return (
@@ -32,26 +32,26 @@ export default function AboutComponent() {
           <h3 className={`${MediumTitle} ${poppinsBold.className}`}>
             João Henrique
           </h3>
-          <p className={`${AboutBodyDesc} ${poppinsMedium.className}`}>
+          <p className={`${AboutBodyDesc} ${poppinsRegular.className}`}>
             👋 Olá caro visitante!
           </p>
-          <p className={`${AboutBodyDesc} ${poppinsMedium.className}`}>
+          <p className={`${AboutBodyDesc} ${poppinsRegular.className}`}>
             😄 Sou João Henrique, desenvolvedor Front-End evoluindo para a área
             Mobile.
           </p>
-          <p className={`${AboutBodyDesc} ${poppinsMedium.className}`}>
+          <p className={`${AboutBodyDesc} ${poppinsRegular.className}`}>
             💻 Atualmente sou desenvolvedor front-end, moldando a web com código
             e design.
           </p>
-          <p className={`${AboutBodyDesc} ${poppinsMedium.className}`}>
+          <p className={`${AboutBodyDesc} ${poppinsRegular.className}`}>
             💡 📲 Mas meu olhar está firmemente voltado para o futuro, onde
             estou mergulhando no emocionante mundo do desenvolvimento móvel.
           </p>
-          <p className={`${AboutBodyDesc} ${poppinsMedium.className}`}>
+          <p className={`${AboutBodyDesc} ${poppinsRegular.className}`}>
             💪 🎯Meu objetivo? Unir minha paixão por tecnologia e criar soluções
             que transformem a vida das pessoas.
           </p>
-          <p className={`${AboutBodyDesc} ${poppinsMedium.className}`}>
+          <p className={`${AboutBodyDesc} ${poppinsRegular.className}`}>
             ✨ 💬 Vamos nos conectar! Adoro trocar ideias e conhecimentos com
             colegas profissionais da área. Juntos, podemos alcançar novos
             patamares na criação de experiências digitais!

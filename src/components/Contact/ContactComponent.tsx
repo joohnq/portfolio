@@ -6,7 +6,7 @@ import React, {
   useEffect,
 } from "react";
 import { Container, DisabledButton, BigTitle } from "@/styles/styles.css";
-import { poppinsBold, poppinsSemiBold } from "@/styles/fonts";
+import { poppinsBold, poppinsMedium, poppinsSemiBold } from "@/styles/fonts";
 import ModalContactComponent from "../ModalContact/ModalContactComponent";
 import {
   ContactStyle,
@@ -77,7 +77,7 @@ export default function ContactComponent() {
   return (
     <section className={`${ContactStyle} ${Container}`} id="Contact">
       <h2 className={`${BigTitle} ${poppinsBold.className} `}>Contato</h2>
-      <p className={`${ContactStyle_Desc} ${poppinsSemiBold.className} `}>
+      <p className={`${ContactStyle_Desc} ${poppinsMedium.className} `}>
         Vamos iniciar uma conversa! Envie-me uma mensagem ou conecte-se comigo
         através das minhas redes sociais.
       </p>
@@ -102,7 +102,7 @@ export default function ContactComponent() {
             Nome:{" "}
           </label>
           <input
-            className={`${ContactForm_Input} ${poppinsSemiBold.className}`}
+            className={`${ContactForm_Input} ${poppinsMedium.className}`}
             type="text"
             name="name"
             id="name"
@@ -120,7 +120,7 @@ export default function ContactComponent() {
             Email:{" "}
           </label>
           <input
-            className={`${ContactForm_Input} ${poppinsSemiBold.className}`}
+            className={`${ContactForm_Input} ${poppinsMedium.className}`}
             type="email"
             name="email"
             id="email"
@@ -138,7 +138,7 @@ export default function ContactComponent() {
             Mensagem:{" "}
           </label>
           <textarea
-            className={`${ContactForm_TextArea} ${poppinsSemiBold.className}`}
+            className={`${ContactForm_TextArea} ${poppinsMedium.className}`}
             name="message"
             id="message"
             value={formState.message}

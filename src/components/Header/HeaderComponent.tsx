@@ -4,6 +4,7 @@ import { poppinsBold } from "@/styles/fonts";
 import MenuMobileComponent from "@/components/MenuMobile/MenuMobileComponent";
 import {
   HeaderStyle,
+  HeaderInsider,
   Logo,
   LogoMobile,
   LogoTabletDesktop,
@@ -79,77 +80,79 @@ export default function HeaderComponent() {
   };
 
   return (
-    <header className={`${HeaderStyle} ${Container}`}>
-      <h1 className={`${Logo} ${poppinsBold.className}`}>
-        <span className={`${LogoMobile}`}>JH</span>{" "}
-        <span className={`${LogoTabletDesktop}`}>JOOHNQ</span>
-      </h1>
-      <nav className={Nav}>
-        <ul className={HeaderList}>
-          <li>
-            <a
-              href="#Home"
-              className={`${HeaderListItem_link} ${poppinsBold.className}`}
-              onClick={handleMenuItemClick}
-            >
-              HOME
-            </a>
-          </li>
-          <li>
-            <a
-              href="#AboutExperience"
-              className={`${HeaderListItem_link} ${poppinsBold.className}`}
-              onClick={handleMenuItemClick}
-            >
-              SOBRE
-            </a>
-          </li>
-          <li>
-            <a
-              href="#Habilities"
-              className={`${HeaderListItem_link} ${poppinsBold.className}`}
-              onClick={handleMenuItemClick}
-            >
-              HABILIDADES
-            </a>
-          </li>
-          <li>
-            <a
-              href="#Projects"
-              className={`${HeaderListItem_link} ${poppinsBold.className}`}
-              onClick={handleMenuItemClick}
-            >
-              PROJETOS
-            </a>
-          </li>
-          <li>
-            <a
-              href="#Contact"
-              className={`${HeaderListItem_link} ${poppinsBold.className}`}
-              onClick={handleMenuItemClick}
-            >
-              CONTATO
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div className={`${HeaderListMenu} `} onClick={handleMenu}>
-        <div
-          className={`${HeaderListMenu_line} ${
-            menuOpen
-              ? `${HeaderListMenu_lineUpOpen}`
-              : `${HeaderListMenu_lineUpClose}`
-          }`}
-        ></div>
-        <div
-          className={`${HeaderListMenu_line} ${
-            menuOpen
-              ? `${HeaderListMenu_lineDownOpen}`
-              : `${HeaderListMenu_lineDownClose}`
-          }`}
-        ></div>
+    <header className={`${HeaderStyle}`}>
+      <div className={`${Container} ${HeaderInsider}`}>
+        <h1 className={`${Logo} ${poppinsBold.className}`}>
+          <span className={`${LogoMobile}`}>JH</span>{" "}
+          <span className={`${LogoTabletDesktop}`}>JOOHNQ</span>
+        </h1>
+        <nav className={Nav}>
+          <ul className={HeaderList}>
+            <li>
+              <a
+                href="#Home"
+                className={`${HeaderListItem_link} ${poppinsBold.className}`}
+                onClick={handleMenuItemClick}
+              >
+                HOME
+              </a>
+            </li>
+            <li>
+              <a
+                href="#AboutExperience"
+                className={`${HeaderListItem_link} ${poppinsBold.className}`}
+                onClick={handleMenuItemClick}
+              >
+                SOBRE
+              </a>
+            </li>
+            <li>
+              <a
+                href="#Habilities"
+                className={`${HeaderListItem_link} ${poppinsBold.className}`}
+                onClick={handleMenuItemClick}
+              >
+                HABILIDADES
+              </a>
+            </li>
+            <li>
+              <a
+                href="#Projects"
+                className={`${HeaderListItem_link} ${poppinsBold.className}`}
+                onClick={handleMenuItemClick}
+              >
+                PROJETOS
+              </a>
+            </li>
+            <li>
+              <a
+                href="#Contact"
+                className={`${HeaderListItem_link} ${poppinsBold.className}`}
+                onClick={handleMenuItemClick}
+              >
+                CONTATO
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div className={HeaderListMenu} onClick={handleMenu}>
+          <div
+            className={`${HeaderListMenu_line} ${
+              menuOpen
+                ? `${HeaderListMenu_lineUpOpen}`
+                : `${HeaderListMenu_lineUpClose}`
+            }`}
+          ></div>
+          <div
+            className={`${HeaderListMenu_line} ${
+              menuOpen
+                ? `${HeaderListMenu_lineDownOpen}`
+                : `${HeaderListMenu_lineDownClose}`
+            }`}
+          ></div>
+        </div>
+        <MenuMobileComponent isOpen={menuOpen} handleMenuClick={handleMenu} />
       </div>
-      <MenuMobileComponent isOpen={menuOpen} handleMenuClick={handleMenu} />
     </header>
   );
 }

@@ -5,7 +5,7 @@ export const MessageModal = style({
   gap: 20,
 
   position: "fixed",
-  background: vars.color.blueDarkTransparent,
+  background: vars.color.background700,
   top: 0,
   right: 0,
   bottom: 0,
@@ -38,7 +38,7 @@ export const MessageModalBox_close = style({
 });
 
 export const MessageModalBox_message = style({
-  color: vars.color.blueDark,
+  color: vars.color.background,
   textAlign: "center",
   fontSize: 18,
   marginBottom: 30,

@@ -8,10 +8,6 @@ export const HeaderStyle = style({
   right: 0,
   height: 70,
   zIndex: 100,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  backgroundColor: vars.color.blueDark,
   backdropFilter: "blur(10px)",
   WebkitBackdropFilter: "blur(4px)",
 
@@ -22,8 +18,23 @@ export const HeaderStyle = style({
     "screen and (min-width: 500px)": {
       padding: "0px 50px",
     },
-    "screen and (min-width: 768px)": {
-      borderRadius: "0 10px 10px 0",
+    // "screen and (min-width: 768px)": {
+    //   borderRadius: "0 10px 10px 0",
+    // },
+  },
+});
+
+export const HeaderInsider = style({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+
+  "@media": {
+    "screen and (min-width: 0px)": {
+      padding: "0px 20px",
+    },
+    "screen and (min-width: 500px)": {
+      padding: "0px 50px",
     },
   },
 });
@@ -134,5 +145,14 @@ export const HeaderListItem_link = style({
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
     MozBackgroundClip: "text",
+  },
+});
+
+export const moveUpDown = style({
+  "0%, 100%": {
+    transform: "translateY(0)",
+  },
+  "50%": {
+    transform: "translateY(-20px)",
   },
 });

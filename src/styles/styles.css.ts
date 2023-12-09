@@ -6,11 +6,11 @@ globalStyle("body", {
   border: 0,
   padding: 0,
   boxSizing: "border-box",
-  backgroundColor: vars.color.blueDark,
+  backgroundColor: vars.color.background,
 });
 
 export const BigTitle = style({
-  color: vars.color.lightGray,
+  color: vars.color.grayd9d9d9,
   textAlign: "start",
   margin: 0,
 
@@ -30,11 +30,11 @@ export const Container = style({
 });
 
 export const Disabled = style({
-  background: vars.color.mediumGray,
+  background: vars.color.gray888,
 });
 
 export const DisabledButton = style({
-  background: `${vars.color.mediumGray} !important`,
+  background: `${vars.color.gray888} !important`,
 
   selectors: {
     "&:hover::after": {
@@ -80,12 +80,13 @@ export const HtmlStyle = style({
   scrollbarColor: "#FF00B8",
 
   "::-webkit-scrollbar": {
-    width: "5px",
-    height: "5px",
+    width: "10px",
+    height: "1px",
   },
 
   "::-webkit-scrollbar-thumb": {
-    backgroundColor: vars.color.gradientColor1,
+    backgroundColor: vars.color.secondaryBackground,
+    border: `1.2px solid ${vars.color.blueBorder}`,
   },
   WebkitTapHighlightColor: "transparent",
 
@@ -93,7 +94,7 @@ export const HtmlStyle = style({
 });
 
 export const LinkExternal = style({
-  color: vars.color.lightGray,
+  color: vars.color.grayd9d9d9,
   fontSize: 16,
   marginTop: 20,
 });
@@ -115,7 +116,7 @@ export const MediumTitle = style({
 });
 
 export const Title_Gradient = style({
-  background: vars.color.gradient,
+  background: vars.color.white,
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",

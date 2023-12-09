@@ -19,7 +19,7 @@ export const ContactStyle = style({
 });
 
 export const ContactStyle_Desc = style({
-  color: vars.color.mediumGray,
+  color: vars.color.gray888,
   maxWidth: 400,
   textAlign: "center",
   fontSize: 18,
@@ -50,7 +50,7 @@ export const ContactFormField = style({
 });
 
 export const ContactForm_Label = style({
-  color: vars.color.lightGray,
+  color: vars.color.grayd9d9d9,
   marginBottom: 5,
   fontSize: "clamp(16px, calc(100vw - 98vw),20px)",
 });
@@ -62,11 +62,6 @@ export const ContactForm_Input = style({
   borderRadius: 5,
   fontSize: 16,
   padding: "0px 10px",
-
-  ":focus": {
-    border: 0,
-    outline: "none",
-  },
 });
 
 export const ContactForm_TextArea = style({
@@ -77,10 +72,6 @@ export const ContactForm_TextArea = style({
   fontSize: 16,
   padding: 10,
   resize: "none",
-  ":focus": {
-    border: 0,
-    outline: "none",
-  },
 });
 
 export const ContactFormBoxButton = style({
@@ -104,7 +95,7 @@ export const ContactFormButton = style({
         "&:hover": {
           width: "80%",
           borderRadius: 5,
-          transition: ".1s ease",
+          transition: ".2s linear",
           padding: "0 30px",
           display: "flex",
           alignItems: "center",
@@ -115,7 +106,7 @@ export const ContactFormButton = style({
         "&:focus": {
           width: "80%",
           borderRadius: 5,
-          transition: ".1s ease",
+          transition: ".2s linear",
           padding: "0 30px",
           display: "flex",
           alignItems: "center",
