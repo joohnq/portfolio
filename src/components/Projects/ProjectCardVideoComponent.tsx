@@ -37,7 +37,8 @@ export default function ProjectCardVideoComponent({
   return (
     <Tilt
       style={{ width: "100%" }}
-      perspective={10000}
+      scale={1}
+      perspective={100000000}
       glareEnable={true}
       glareColor={glareColor}
       glareMaxOpacity={0.1}

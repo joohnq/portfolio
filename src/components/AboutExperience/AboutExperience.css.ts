@@ -2,9 +2,7 @@ import { style } from "@vanilla-extract/css";
 import { vars } from "@/styles/global.css";
 
 export const AboutExperience = style({
-  borderRadius: 50,
   color: vars.color.white,
-
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -25,10 +23,14 @@ export const AboutExperience = style({
 });
 
 export const AboutExperienceHeaders = style({
+  background: vars.color.background700,
+  padding: "10px",
+  borderRadius: "10px",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  gap: 40,
+  gap: 20,
+  marginBottom: "20px",
 
   "@media": {
     "screen and (min-width: 0px)": {
@@ -46,7 +48,6 @@ export const AboutExperienceHeader = style({
   color: vars.color.white,
   border: 0,
   cursor: "pointer",
-  marginBottom: "-1px",
 
   "@media": {
     "screen and (min-width: 0px)": {
@@ -60,15 +61,9 @@ export const AboutExperienceHeader = style({
 });
 
 export const AboutExperienceSelected = style({
-  padding: "15px 20px",
-  borderRadius: "10px 10px 0 0",
+  padding: "10px",
+  borderRadius: "10px",
   background: vars.color.secondaryBackground,
-  // borderLeft: `1.2px solid ${vars.color.blueBorder}`,
-  // borderTop: `1.2px solid ${vars.color.blueBorder}`,
-  // borderRight: `1.2px solid ${vars.color.blueBorder}`,
-  // marginBottom: "-1px",
-  // position: "relative",
-  // zIndex: 1000,
 });
 
 export const AboutExperienceBody = style({
