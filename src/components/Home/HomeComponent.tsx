@@ -13,31 +13,11 @@ import {
   XMLIcon,
   UiKitIcon,
 } from "./Home.css";
-import LoaderComponent from "../Loader/LoaderComponent";
 import { useEffect, useState } from "react";
 
-interface HomeComponentProps {
-  readonly videoMoviesLoaded: boolean;
-  readonly videoWhatsappLoaded: boolean;
-}
-
-export default function HomeComponent({
-  videoMoviesLoaded,
-  videoWhatsappLoaded,
-}: HomeComponentProps) {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-
-  if (videoMoviesLoaded && videoWhatsappLoaded) {
-    setIsLoading(true);
-  }
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, [videoMoviesLoaded, videoWhatsappLoaded]);
-
+export default function HomeComponent() {
   return (
     <>
-      <LoaderComponent isLoading={isLoading} />
       <Icon
         className={`${HomeIconFloating} ${AndroidIcon}`}
         icon="logos:android-icon"

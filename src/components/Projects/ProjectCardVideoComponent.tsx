@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import { poppinsBold, poppinsSemiBold } from "@/styles/fonts";
 import MacPointsComponent from "@/components/MacPoints/MacPoints";
@@ -11,11 +11,13 @@ import {
   ProjectCard_Languages,
   ProjectCard_LanguagesIcon,
   ProjectCard_Image,
+  ProjectCard_SpinnerLoader,
   ProjectCard_Video,
   ProjectCard_Buttons,
   ProjectCard_Button,
   ProjectCard_Button_a,
 } from "./ProjectsCard.css";
+import Spinner from "../Loader/Spinner";
 
 interface ProjectCardProps {
   readonly projectData: {
@@ -26,18 +28,18 @@ interface ProjectCardProps {
     readonly codeLink: string;
     readonly glareColor: string;
   };
-  readonly setVideoLoaded: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function ProjectCardVideoComponent({
   projectData,
-  setVideoLoaded,
 }: ProjectCardProps) {
   const { title, languages, video, deployLink, codeLink, glareColor } =
     projectData;
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
   return (
     <Tilt
+      style={{ width: "100%" }}
       perspective={10000}
       glareEnable={true}
       glareColor={glareColor}
@@ -80,7 +82,6 @@ export default function ProjectCardVideoComponent({
               loop
               muted
               controls={false}
-              onLoadedMetadata={() => setVideoLoaded(true)}
             />
           </div>
           <div className={`${ProjectCard_Buttons}`}>

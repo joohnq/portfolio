@@ -1,16 +1,10 @@
-import { LoaderContainerStyle, loader } from "./Loader.css";
+import { LoaderContainerStyle } from "./Loader.css";
+import Spinner from "./Spinner";
 
-interface LoaderProps {
-  readonly isLoading: boolean;
-}
-
-export default function LoaderComponent({ isLoading }: LoaderProps) {
-  if (isLoading) {
-    return (
-      <div className={LoaderContainerStyle}>
-        <div className={loader}></div>
-      </div>
-    );
-  }
-  return null;
+export default function LoaderComponent() {
+  return (
+    <div className={LoaderContainerStyle}>
+      <Spinner />
+    </div>
+  );
 }

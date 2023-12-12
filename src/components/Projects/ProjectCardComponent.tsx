@@ -45,6 +45,7 @@ export default function ProjectCardComponent({
 
   return (
     <Tilt
+      style={{ width: "100%" }}
       perspective={10000}
       glareEnable={true}
       glareColor={glareColor}

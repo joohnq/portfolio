@@ -8,9 +8,7 @@ import ProjectsComponent from "@/components/Projects/ProjectsComponent";
 import ContactComponent from "@/components/Contact/ContactComponent";
 import FooterComponent from "@/components/Footer/FooterComponent";
 
-export default function Home() {
-  const [videoMoviesLoaded, setVideoMoviesLoaded] = React.useState(false);
-  const [videoWhatsappLoaded, setVideoWhatsappLoaded] = React.useState(false);
+export default function Index() {
   return (
     <>
       <Head>
@@ -20,16 +18,10 @@ export default function Home() {
       </Head>
       <HeaderComponent />
       <main>
-        <HomeComponent
-          videoMoviesLoaded={videoMoviesLoaded}
-          videoWhatsappLoaded={videoWhatsappLoaded}
-        />
+        <HomeComponent />
         <AboutExperience />
         <HabilitiesComponent />
-        <ProjectsComponent
-          setVideoMoviesLoaded={setVideoMoviesLoaded}
-          setVideoWhatsappLoaded={setVideoWhatsappLoaded}
-        />
+        <ProjectsComponent />
         <ContactComponent />
         <FooterComponent />
       </main>

@@ -5,17 +5,7 @@ import { poppinsBold } from "@/styles/fonts";
 import ProjectCardComponent from "./ProjectCardComponent";
 import ProjectCardVideoComponent from "./ProjectCardVideoComponent";
 
-interface ProjectsComponentProps {
-  readonly setVideoMoviesLoaded: React.Dispatch<React.SetStateAction<boolean>>;
-  readonly setVideoWhatsappLoaded: React.Dispatch<
-    React.SetStateAction<boolean>
-  >;
-}
-
-export default function ProjectsComponent({
-  setVideoMoviesLoaded,
-  setVideoWhatsappLoaded,
-}: ProjectsComponentProps) {
+export default function ProjectsComponent() {
   return (
     <section className={`${ProjectsStyle} ${Container}`} id="Projects">
       <h2 className={`${BigTitle} ${poppinsBold.className}`}>PROJETOS</h2>
@@ -51,7 +41,6 @@ export default function ProjectsComponent({
             codeLink: "https://github.com/joohnq/movies_app",
             glareColor: "#33b3ae",
           }}
-          setVideoLoaded={setVideoMoviesLoaded}
         />
         <ProjectCardVideoComponent
           projectData={{
@@ -67,7 +56,6 @@ export default function ProjectsComponent({
             codeLink: "https://github.com/joohnq/whatsapp",
             glareColor: "#f778ba",
           }}
-          setVideoLoaded={setVideoWhatsappLoaded}
         />
       </div>
       <a

@@ -30,7 +30,7 @@ export const loader = style({
   boxSizing: "border-box",
   animation: `${rotation} 1s linear infinite`,
   selectors: {
-    [`&::after`]: {
+    [`&:after`]: {
       content: "",
       boxSizing: "border-box",
       position: "absolute",
@@ -47,7 +47,7 @@ export const loader = style({
 
 export const loaderAfter = style({
   selectors: {
-    [`${loader}::after &`]: {
+    [`${loader}:after &`]: {
       content: "",
       boxSizing: "border-box",
       position: "absolute",
