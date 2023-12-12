@@ -66,7 +66,7 @@ export default function ProjectCardVideoComponent({
               return (
                 <Icon
                   className={`${ProjectCard_LanguagesIcon}`}
-                  key={index}
+                  key={item.length * 5.3}
                   icon={`${item}`}
                   color="#888"
                   width="36"

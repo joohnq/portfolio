@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import TGAPhoto from "/public/tgaphoto.png";
-import { poppinsBold, poppinsMedium, poppinsRegular } from "@/styles/fonts";
+import { poppinsBold, poppinsRegular } from "@/styles/fonts";
 import MacPointsComponent from "@/components/MacPoints/MacPoints";
 import {
   ExperienceBody,
