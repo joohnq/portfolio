@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Icon } from "@iconify/react";
 import { poppinsBold, poppinsSemiBold } from "@/styles/fonts";
 import MacPointsComponent from "@/components/MacPoints/MacPoints";
@@ -11,13 +11,11 @@ import {
   ProjectCard_Languages,
   ProjectCard_LanguagesIcon,
   ProjectCard_Image,
-  ProjectCard_SpinnerLoader,
   ProjectCard_Video,
   ProjectCard_Buttons,
   ProjectCard_Button,
   ProjectCard_Button_a,
 } from "./ProjectsCard.css";
-import Spinner from "../Loader/Spinner";
 
 interface ProjectCardProps {
   readonly projectData: {
@@ -35,7 +33,6 @@ export default function ProjectCardVideoComponent({
 }: ProjectCardProps) {
   const { title, languages, video, deployLink, codeLink, glareColor } =
     projectData;
-  const [videoLoaded, setVideoLoaded] = useState(false);
 
   return (
     <Tilt
