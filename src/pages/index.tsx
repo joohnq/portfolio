@@ -7,6 +7,7 @@ import HabilitiesComponent from "@/components/Habilities/HabilitiesComponent";
 import ProjectsComponent from "@/components/Projects/ProjectsComponent";
 import ContactComponent from "@/components/Contact/ContactComponent";
 import FooterComponent from "@/components/Footer/FooterComponent";
+import "@/i18n/index";
 
 export default function Index() {
   return (

@@ -22,6 +22,7 @@ import {
   ContactFormButton_Icon,
 } from "./Contact.css";
 import { Icon } from "@iconify/react";
+import { useTranslation } from "react-i18next";
 interface FormState {
   name: string;
   email: string;
@@ -35,6 +36,7 @@ function encode(data: any): string {
 }
 
 export default function ContactComponent() {
+  const { t } = useTranslation();
   const btnSubmit = useRef<HTMLButtonElement>(null);
   const [formState, setFormState] = useState<FormState>({
     name: "",
@@ -76,10 +78,11 @@ export default function ContactComponent() {
 
   return (
     <section className={`${ContactStyle} ${Container}`} id="Contact">
-      <h2 className={`${BigTitle} ${poppinsBold.className} `}>Contato</h2>
+      <h2 className={`${BigTitle} ${poppinsBold.className} `}>
+        {t("contato")}
+      </h2>
       <p className={`${ContactStyle_Desc} ${poppinsMedium.className} `}>
-        Vamos iniciar uma conversa! Envie-me uma mensagem ou conecte-se comigo
-        através das minhas redes sociais.
+        {t("contatoAbove")}
       </p>
       <form
         className={`${ContactForm}`}
@@ -99,7 +102,7 @@ export default function ContactComponent() {
             className={`${ContactForm_Label} ${poppinsSemiBold.className}`}
             htmlFor="name"
           >
-            Nome:{" "}
+            {t("nome")}
           </label>
           <input
             className={`${ContactForm_Input} ${poppinsMedium.className}`}
@@ -108,7 +111,7 @@ export default function ContactComponent() {
             id="name"
             value={formState.name}
             onChange={handleChange}
-            placeholder="Digite o seu nome..."
+            placeholder={t("digiteSeuNome")}
             required
           />
         </div>
@@ -117,7 +120,7 @@ export default function ContactComponent() {
             className={`${ContactForm_Label} ${poppinsSemiBold.className}`}
             htmlFor="email"
           >
-            Email:{" "}
+            {t("email")}
           </label>
           <input
             className={`${ContactForm_Input} ${poppinsMedium.className}`}
@@ -126,7 +129,7 @@ export default function ContactComponent() {
             id="email"
             value={formState.email}
             onChange={handleChange}
-            placeholder="Digite o seu e-mail..."
+            placeholder={t("digiteSeuEmail")}
             required
           />
         </div>
@@ -135,7 +138,7 @@ export default function ContactComponent() {
             className={`${ContactForm_Label} ${poppinsSemiBold.className}`}
             htmlFor="message"
           >
-            Mensagem:{" "}
+            {t("mensagem")}
           </label>
           <textarea
             className={`${ContactForm_TextArea} ${poppinsMedium.className}`}
@@ -143,7 +146,7 @@ export default function ContactComponent() {
             id="message"
             value={formState.message}
             onChange={handleChange}
-            placeholder="Digite a sua mensagem..."
+            placeholder={t("digiteSuaMensagem")}
             required
           ></textarea>
         </div>
@@ -165,7 +168,7 @@ export default function ContactComponent() {
             <p
               className={`${ContactFormButton_Text} ${poppinsSemiBold.className}`}
             >
-              ENVIAR
+              {t("enviar")}
             </p>
           </button>
         </div>

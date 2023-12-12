@@ -16,6 +16,7 @@ import {
   ProjectCard_Button,
   ProjectCard_Button_a,
 } from "./ProjectsCard.css";
+import { useTranslation } from "react-i18next";
 
 interface ProjectCardProps {
   readonly projectData: {
@@ -31,6 +32,7 @@ interface ProjectCardProps {
 export default function ProjectCardVideoComponent({
   projectData,
 }: ProjectCardProps) {
+  const { t } = useTranslation();
   const { title, languages, video, deployLink, codeLink, glareColor } =
     projectData;
 
@@ -80,6 +82,8 @@ export default function ProjectCardVideoComponent({
               loop
               muted
               controls={false}
+              onMouseEnter={(e) => e.currentTarget.pause()}
+              onMouseLeave={(e) => e.currentTarget.play()}
             />
           </div>
           <div className={`${ProjectCard_Buttons}`}>
@@ -98,7 +102,7 @@ export default function ProjectCardVideoComponent({
                 className={`${ProjectCard_Button_a} ${poppinsSemiBold.className} `}
                 href={`${codeLink}`}
               >
-                CÓDIGO
+                {t("codigo")}
               </a>
             </button>
           </div>

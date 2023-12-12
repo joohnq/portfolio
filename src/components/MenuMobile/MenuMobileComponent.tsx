@@ -5,19 +5,34 @@ import {
   MenuMobile,
   MenuMobileList,
   MenuMobileListItem_text,
+  HeaderLanguages,
+  HeaderLanguagesText,
+  HeaderLanguagesTextSelected,
 } from "./MenuMobile.css";
+import { useTranslation } from "react-i18next";
+import languageOption from "@/i18n/languageOptions";
 
 interface MobileMenuProps {
-  isOpen: boolean;
-  handleMenuClick: () => void;
+  readonly isOpen: boolean;
+  readonly handleMenuClick: () => void;
+  readonly handleLanguage: (value: string) => void;
+  readonly selectedLanguage: string;
+  readonly handleKeyDownLanguage: (
+    event: React.KeyboardEvent<HTMLDivElement>
+  ) => void;
 }
 
 export default function MenuMobileComponent({
   isOpen,
   handleMenuClick,
+  handleLanguage,
+  selectedLanguage,
+  handleKeyDownLanguage,
 }: MobileMenuProps) {
+  const { t } = useTranslation();
+
   return (
-    <div className={`${MenuMobile} ${isOpen ? "" : `${DisNone}`}`}>
+    <div className={`${MenuMobile} ${!isOpen && DisNone} `}>
       <ul className={MenuMobileList}>
         <li>
           <a
@@ -25,7 +40,7 @@ export default function MenuMobileComponent({
             className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
             onClick={handleMenuClick}
           >
-            HOME
+            {t("home")}
           </a>
         </li>
         <li>
@@ -34,7 +49,7 @@ export default function MenuMobileComponent({
             className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
             onClick={handleMenuClick}
           >
-            SOBRE
+            {t("sobre")}
           </a>
         </li>
         <li>
@@ -43,7 +58,7 @@ export default function MenuMobileComponent({
             className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
             onClick={handleMenuClick}
           >
-            HABILIDADES
+            {t("habilidades")}
           </a>
         </li>
         <li>
@@ -52,7 +67,7 @@ export default function MenuMobileComponent({
             className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
             onClick={handleMenuClick}
           >
-            PROJETOS
+            {t("projetos")}
           </a>
         </li>
         <li>
@@ -61,10 +76,34 @@ export default function MenuMobileComponent({
             className={`${MenuMobileListItem_text} ${poppinsBold.className}`}
             onClick={handleMenuClick}
           >
-            CONTATO
+            {t("contato")}
           </a>
         </li>
       </ul>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <div className={`${HeaderLanguages}`}>
+          {languageOption.map((language) => (
+            <p
+              onClick={() => handleLanguage(language.type)}
+              className={`${HeaderLanguagesText} ${poppinsBold.className} ${
+                language.type === selectedLanguage
+                  ? HeaderLanguagesTextSelected
+                  : ""
+              }`}
+              key={language.value}
+              onKeyDown={handleKeyDownLanguage}
+            >
+              {language.value}
+            </p>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

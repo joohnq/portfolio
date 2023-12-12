@@ -13,8 +13,10 @@ import {
   XMLIcon,
   UiKitIcon,
 } from "./Home.css";
+import { useTranslation } from "react-i18next";
 
 export default function HomeComponent() {
+  const { t } = useTranslation();
   return (
     <>
       <Icon
@@ -38,17 +40,18 @@ export default function HomeComponent() {
         <p
           className={`${Title_Gradient} ${HomeSubtitle} ${poppinsBold.className}`}
         >
-          DESENVOLVEDOR ANDROID
+          {t("desenvolvedorAndroid")}
         </p>
         <h2 className={`${HomeTitle} ${poppinsBold.className}`}>
-          OLÁ , VISITANTE <br />
-          EU SOU O <span className={`${Title_Gradient}`}>JOÃO</span>
+          {t("apresentacao1")}
+          <br />
+          {t("apresentacao2")}
         </h2>
         <div className={`${HomeIcons}`}>
           <a
             href="https://github.com/joohnq"
             target="__blank"
-            aria-label="Link para o meu Github"
+            aria-label="Github"
           >
             <Icon
               className={`${HomeIcon}`}
@@ -60,7 +63,7 @@ export default function HomeComponent() {
           <a
             href="https://www.instagram.com/jhenrique.dev/"
             target="__blank"
-            aria-label="Link para o meu Instagram"
+            aria-label="Instagram"
           >
             <Icon
               className={`${HomeIcon}`}
@@ -72,7 +75,7 @@ export default function HomeComponent() {
           <a
             href="https://www.linkedin.com/in/joao-henrique-de-souza-silva-b43921196/"
             target="__blank"
-            aria-label="Link para o meu Linkedin"
+            aria-label="Linkedin"
           >
             <Icon
               className={`${HomeIcon}`}

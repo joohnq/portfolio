@@ -8,25 +8,19 @@ export const HabilitiesStyle = style({
 });
 
 export const HabilitiesGridCards = style({
-  display: "grid",
+  display: "flex",
+  flexWrap: "wrap",
   gap: 20,
   rowGap: 30,
   justifyContent: "center",
-  justifyItems: "center ",
-  "@media": {
-    "screen and (min-width: 0px)": {
-      gridTemplateColumns: " repeat(auto-fit, minmax(70px, 70px))",
-    },
-    "screen and (min-width: 500px)": {
-      gridTemplateColumns: " repeat(auto-fit, minmax(200px, 200px))",
-    },
-  },
 });
 
 export const HabilitiesCard = style({
+  maxWidth: "200px",
+  width: "100%",
   display: "flex",
   alignItems: "center",
-  justifyContent: "stretch",
+  justifyContent: "center",
   gap: 10,
 
   padding: 5,
@@ -36,15 +30,6 @@ export const HabilitiesCard = style({
 export const HabilitiesCard_Title = style({
   margin: 0,
   color: vars.color.white,
-
-  "@media": {
-    "screen and (min-width: 0px)": {
-      display: "none",
-    },
-    "screen and (min-width: 500px)": {
-      display: "inline-block",
-    },
-  },
 });
 
 export const HabilitiesTitle = style({

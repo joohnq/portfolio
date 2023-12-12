@@ -17,6 +17,7 @@ import {
   ProjectCard_Button,
   ProjectCard_Button_a,
 } from "./ProjectsCard.css";
+import { useTranslation } from "react-i18next";
 
 interface ProjectCardProps {
   readonly projectData: {
@@ -33,6 +34,7 @@ interface ProjectCardProps {
 export default function ProjectCardComponent({
   projectData,
 }: ProjectCardProps) {
+  const { t } = useTranslation();
   const {
     title,
     languages,
@@ -106,7 +108,7 @@ export default function ProjectCardComponent({
                 className={`${ProjectCard_Button_a} ${poppinsSemiBold.className} `}
                 href={`${codeLink}`}
               >
-                CÓDIGO
+                {t("codigo")}
               </a>
             </button>
           </div>

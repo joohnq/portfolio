@@ -7,15 +7,18 @@ import {
 } from "./Footer.css";
 import { Icon } from "@iconify/react";
 import { poppinsBold } from "@/styles/fonts";
+import { useTranslation } from "react-i18next";
 
 export default function FooterComponent() {
+  const { t } = useTranslation();
+
   return (
     <footer className={`${FooterStyle}`}>
       <div className={`${Footer_SocialMedias}`}>
         <a
           href="https://github.com/joohnq"
           target="__blank"
-          aria-label="Link para o meu Github"
+          aria-label="Github"
         >
           <Icon
             className={`${Footer_SocialMediasIcon}`}
@@ -28,7 +31,7 @@ export default function FooterComponent() {
         <a
           href="https://www.instagram.com/jhenrique.dev/"
           target="__blank"
-          aria-label="Link para o meu Instagram"
+          aria-label="Instagram"
         >
           <Icon
             className={`${Footer_SocialMediasIcon}`}
@@ -41,7 +44,7 @@ export default function FooterComponent() {
         <a
           href="https://www.linkedin.com/in/joao-henrique-de-souza-silva-b43921196/"
           target="__blank"
-          aria-label="Link para o meu Linkedin"
+          aria-label="Linkedin"
         >
           <Icon
             className={`${Footer_SocialMediasIcon}`}
@@ -52,7 +55,7 @@ export default function FooterComponent() {
         </a>
       </div>
       <p className={`${Footer_Desc} ${poppinsBold.className}`}>
-        &copy; 2023 João Henrique. Todos os direitos reservados.
+        &copy; 2023 João Henrique. {t("direitos")}
       </p>
     </footer>
   );

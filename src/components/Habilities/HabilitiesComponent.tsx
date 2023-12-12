@@ -9,8 +9,11 @@ import {
   HabilitiesCard_Title,
   HabilitiesTitle,
 } from "./Habilities.css";
+import { useTranslation } from "react-i18next";
 
 export default function HabilitiesComponent() {
+  const { t } = useTranslation();
+
   return (
     <div className={`${Container} ${HabilitiesStyle}`} id="Habilities">
       <div className={`${HabilitiesGridCards}`}>
@@ -49,6 +52,18 @@ export default function HabilitiesComponent() {
           </p>
         </div>
         <div className={`${HabilitiesCard}`}>
+          <Icon icon="logos:mysql" color="#fff" width={50} height={50} />
+          <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
+            MYSQL
+          </p>
+        </div>
+        <div className={`${HabilitiesCard}`}>
+          <Icon icon="devicon:sqlite" color="#fff" width={50} height={50} />
+          <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
+            SQLLITE
+          </p>
+        </div>
+        <div className={`${HabilitiesCard}`}>
           <Icon icon="logos:flutter" color="white" width="50" height="50" />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
             FLUTTER
@@ -62,7 +77,7 @@ export default function HabilitiesComponent() {
         </div>
       </div>
       <h4 className={`${HabilitiesTitle} ${poppinsBold.className}`}>
-        ... FERRAMENTAS
+        {t("ferramentas")}
       </h4>
       <div className={`${HabilitiesGridCards}`}>
         <div className={`${HabilitiesCard}`}>

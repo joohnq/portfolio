@@ -4,11 +4,16 @@ import { ProjectsStyle, ProjectsStyle_Box } from "./Projects.css";
 import { poppinsBold } from "@/styles/fonts";
 import ProjectCardComponent from "./ProjectCardComponent";
 import ProjectCardVideoComponent from "./ProjectCardVideoComponent";
+import { useTranslation } from "react-i18next";
 
 export default function ProjectsComponent() {
+  const { t } = useTranslation();
+
   return (
     <section className={`${ProjectsStyle} ${Container}`} id="Projects">
-      <h2 className={`${BigTitle} ${poppinsBold.className}`}>PROJETOS</h2>
+      <h2 className={`${BigTitle} ${poppinsBold.className}`}>
+        {t("projetos")}
+      </h2>
       <div className={`${ProjectsStyle_Box}`}>
         <ProjectCardComponent
           projectData={{
@@ -63,7 +68,7 @@ export default function ProjectsComponent() {
         target="__blank"
         className={`${LinkExternal} ${poppinsBold.className}`}
       >
-        Ver mais no meu GitHub...
+        {t("verMaisNoGithub")}
       </a>
     </section>
   );

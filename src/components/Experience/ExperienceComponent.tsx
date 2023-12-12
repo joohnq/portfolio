@@ -17,8 +17,11 @@ import {
   ExperienceBodyJobLanguages,
 } from "./Experience.css";
 import { Icon } from "@iconify/react";
+import { useTranslation } from "react-i18next";
 
 export default function ExperienceComponent() {
+  const { t } = useTranslation();
+
   return (
     <div className={`${ExperienceBody}`} id="Experience">
       <div className={`${Experience_MacPoints}`}>
@@ -38,13 +41,12 @@ export default function ExperienceComponent() {
             <h3
               className={`${ExperienceBodyJobTitle} ${poppinsBold.className}`}
             >
-              TGA MARKETING - FEVEREIRO / ATUAL
+              {t("tgaMarketingTitle")}
             </h3>
             <p
               className={`${ExperienceBodyJobDesc} ${poppinsRegular.className}`}
             >
-              Desenvolvimento de Langing Pages responsivas e eficazes,
-              utilizando boas práticas de código, de SEO, e acessibilidade.
+              {t("tgaMarketingDesc")}
             </p>
             <div
               className={`${ExperienceBodyJobLanguages} ${poppinsBold.className}`}
@@ -53,6 +55,8 @@ export default function ExperienceComponent() {
               <Icon icon="bxl:css3" color="#848d97" width="35" />
               <Icon icon="bxl:javascript" color="#848d97" width="35" />
               <Icon icon="bxl:bootstrap" color="#848d97" width="35" />
+              <Icon icon="file-icons:php" color="#848d97" width="35" />
+              <Icon icon="cib:mysql" color="#848d97" width="35" />
             </div>
           </div>
         </div>
@@ -69,12 +73,12 @@ export default function ExperienceComponent() {
             <h3
               className={`${ExperienceBodyJobTitle} ${poppinsBold.className}`}
             >
-              99FRELAS - 1 MÊS
+              {t("freelancerTitle")}
             </h3>
             <p
               className={`${ExperienceBodyJobDesc} ${poppinsRegular.className}`}
             >
-              Desenvolvimento de landing pages.
+              {t("freelancerDesc")}
             </p>
             <p
               className={`${ExperienceBodyJobLanguages} ${poppinsBold.className}`}

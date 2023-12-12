@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import ProfilePhoto from "/public/profilephoto.jpg";
 import MacPointsComponent from "@/components/MacPoints/MacPoints";
-import Tilt from "react-parallax-tilt";
 import {
   AboutBody,
   AboutBody_BoxImage,
@@ -14,8 +13,10 @@ import {
 } from "./About.css";
 import { MediumTitle } from "@/styles/styles.css";
 import { poppinsBold, poppinsRegular } from "@/styles/fonts";
+import { useTranslation } from "react-i18next";
 
 export default function AboutComponent() {
+  const { t } = useTranslation();
   return (
     <div className={`${AboutBody}`}>
       <div className={`${AboutBody_BoxImage}`}>
@@ -34,28 +35,22 @@ export default function AboutComponent() {
             João Henrique
           </h3>
           <p className={`${AboutBodyDesc} ${poppinsRegular.className}`}>
-            👋 Olá caro visitante!
+            👋 {t("sobreMimTexto1")}
           </p>
           <p className={`${AboutBodyDesc} ${poppinsRegular.className}`}>
-            😄 Sou João Henrique, desenvolvedor Front-End evoluindo para a área
-            Mobile.
+            😄 {t("sobreMimTexto2")}
           </p>
           <p className={`${AboutBodyDesc} ${poppinsRegular.className}`}>
-            💻 Atualmente sou desenvolvedor front-end, moldando a web com código
-            e design.
+            💻 {t("sobreMimTexto3")}
           </p>
           <p className={`${AboutBodyDesc} ${poppinsRegular.className}`}>
-            💡 📲 Mas meu olhar está firmemente voltado para o futuro, onde
-            estou mergulhando no emocionante mundo do desenvolvimento móvel.
+            💡 📲 {t("sobreMimTexto4")}
           </p>
           <p className={`${AboutBodyDesc} ${poppinsRegular.className}`}>
-            💪 🎯Meu objetivo? Unir minha paixão por tecnologia e criar soluções
-            que transformem a vida das pessoas.
+            💪 🎯 {t("sobreMimTexto5")}
           </p>
           <p className={`${AboutBodyDesc} ${poppinsRegular.className}`}>
-            ✨ 💬 Vamos nos conectar! Adoro trocar ideias e conhecimentos com
-            colegas profissionais da área. Juntos, podemos alcançar novos
-            patamares na criação de experiências digitais!
+            ✨ 💬 {t("sobreMimTexto6")}
           </p>
         </div>
       </div>

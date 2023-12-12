@@ -9,8 +9,10 @@ import {
 } from "./AboutExperience.css";
 import AboutComponent from "../About/AboutComponent";
 import ExperienceComponent from "../Experience/ExperienceComponent";
+import { useTranslation } from "react-i18next";
 
 export default function AboutExperienceComponent() {
+  const { t } = useTranslation();
   const [aboutState, setAboutState] = useState<boolean>(true);
   const AboutExperienceBodyRef = useRef<HTMLDivElement>(null);
 
@@ -33,8 +35,7 @@ export default function AboutExperienceComponent() {
           }  ${poppinsBold.className}`}
           onClick={(e) => handleHeader(e)}
         >
-          {" "}
-          SOBRE MIM{" "}
+          {t("sobreMim")}
         </button>
 
         <button
@@ -45,7 +46,7 @@ export default function AboutExperienceComponent() {
           }  ${poppinsBold.className}`}
           onClick={(e) => handleHeader(e)}
         >
-          EXPERIÊNCIA
+          {t("experiencia")}
         </button>
       </div>
 

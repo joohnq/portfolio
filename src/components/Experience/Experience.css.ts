@@ -153,4 +153,8 @@ export const ExperienceBodyJobDesc = style({
 export const ExperienceBodyJobLanguages = style({
   marginTop: 20,
   color: vars.color.gradientColor1,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: 5,
 });

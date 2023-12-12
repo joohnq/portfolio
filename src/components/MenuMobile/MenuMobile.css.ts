@@ -12,6 +12,11 @@ export const MenuMobile = style({
   background: vars.color.background,
   overflow: "hidden",
   transition: "all 1s linear",
+  "@media": {
+    "screen and (min-width: 992px)": {
+      display: "none",
+    },
+  },
 });
 
 export const MenuMobileList = style({
@@ -29,4 +34,38 @@ export const MenuMobileListItem_text = style({
   fontSize: 28,
   textDecoration: "none",
   color: vars.color.white,
+});
+
+export const HeaderLanguages = style({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "flex-end",
+  position: "relative",
+  right: 0,
+  width: "100%",
+  maxWidth: 120,
+  gap: 20,
+  background: vars.color.background700,
+  padding: "8px",
+  borderRadius: "15px",
+
+  "@media": {
+    "screen and (min-width: 576px)": {
+      display: "none",
+    },
+  },
+});
+
+export const HeaderLanguagesText = style({
+  color: vars.color.white,
+  padding: "0 8px",
+  margin: 0,
+  fontSize: 14,
+});
+
+export const HeaderLanguagesTextSelected = style({
+  color: vars.color.white,
+  padding: "5px 10px",
+  background: vars.color.secondaryBackground,
+  borderRadius: "10px",
 });

@@ -5,6 +5,10 @@ import MenuMobileComponent from "@/components/MenuMobile/MenuMobileComponent";
 import {
   HeaderStyle,
   HeaderInsider,
+  HeaderLogoLanguage,
+  HeaderLanguages,
+  HeaderLanguagesText,
+  HeaderLanguagesTextSelected,
   Logo,
   LogoMobile,
   LogoTabletDesktop,
@@ -18,16 +22,34 @@ import {
   HeaderListMenu_lineDownClose,
   HeaderListItem_link,
 } from "./Header.css";
+import languageOption from "@/i18n/languageOptions";
+import i18n from "@/i18n";
+import { useTranslation } from "react-i18next";
 
 export default function HeaderComponent() {
+  const { t } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState<number>(0);
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("ptBR");
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     if (event.key === "Enter" || event.key === " ") {
       handleMenu();
     }
   };
+
+  const handleKeyDownLanguage = (
+    event: React.KeyboardEvent<HTMLDivElement>
+  ) => {
+    if (event.key === "Enter" || event.key === " ") {
+      handleLanguage(selectedLanguage);
+    }
+  };
+
+  function handleLanguage(value: string) {
+    i18n.changeLanguage(value);
+    setSelectedLanguage(value);
+  }
 
   useEffect(() => {
     function handleScroll() {
@@ -88,10 +110,28 @@ export default function HeaderComponent() {
   return (
     <header className={`${HeaderStyle}`}>
       <div className={`${Container} ${HeaderInsider}`}>
-        <h1 className={`${Logo} ${poppinsBold.className}`}>
-          <span className={`${LogoMobile}`}>JH</span>{" "}
-          <span className={`${LogoTabletDesktop}`}>JOOHNQ</span>
-        </h1>
+        <div className={`${HeaderLogoLanguage}`}>
+          <h1 className={`${Logo} ${poppinsBold.className}`}>
+            <span className={`${LogoMobile}`}>JH</span>{" "}
+            <span className={`${LogoTabletDesktop}`}>JOOHNQ</span>
+          </h1>
+          <div className={`${HeaderLanguages}`}>
+            {languageOption.map((language) => (
+              <p
+                onClick={() => handleLanguage(language.type)}
+                className={`${HeaderLanguagesText} ${poppinsBold.className} ${
+                  language.type === selectedLanguage
+                    ? HeaderLanguagesTextSelected
+                    : ""
+                }`}
+                key={language.value}
+                onKeyDown={handleKeyDownLanguage}
+              >
+                {language.value}
+              </p>
+            ))}
+          </div>
+        </div>
         <nav className={Nav}>
           <ul className={HeaderList}>
             <li>
@@ -100,7 +140,7 @@ export default function HeaderComponent() {
                 className={`${HeaderListItem_link} ${poppinsBold.className}`}
                 onClick={handleMenuItemClick}
               >
-                HOME
+                {t("home")}
               </a>
             </li>
             <li>
@@ -109,7 +149,7 @@ export default function HeaderComponent() {
                 className={`${HeaderListItem_link} ${poppinsBold.className}`}
                 onClick={handleMenuItemClick}
               >
-                SOBRE
+                {t("sobre")}
               </a>
             </li>
             <li>
@@ -118,7 +158,7 @@ export default function HeaderComponent() {
                 className={`${HeaderListItem_link} ${poppinsBold.className}`}
                 onClick={handleMenuItemClick}
               >
-                HABILIDADES
+                {t("habilidades")}
               </a>
             </li>
             <li>
@@ -127,7 +167,7 @@ export default function HeaderComponent() {
                 className={`${HeaderListItem_link} ${poppinsBold.className}`}
                 onClick={handleMenuItemClick}
               >
-                PROJETOS
+                {t("projetos")}
               </a>
             </li>
             <li>
@@ -136,7 +176,7 @@ export default function HeaderComponent() {
                 className={`${HeaderListItem_link} ${poppinsBold.className}`}
                 onClick={handleMenuItemClick}
               >
-                CONTATO
+                {t("contato")}
               </a>
             </li>
           </ul>
@@ -161,7 +201,13 @@ export default function HeaderComponent() {
             }`}
           ></div>
         </div>
-        <MenuMobileComponent isOpen={menuOpen} handleMenuClick={handleMenu} />
+        <MenuMobileComponent
+          isOpen={menuOpen}
+          handleMenuClick={handleMenu}
+          handleLanguage={handleLanguage}
+          handleKeyDownLanguage={handleKeyDownLanguage}
+          selectedLanguage={selectedLanguage}
+        />
       </div>
     </header>
   );
