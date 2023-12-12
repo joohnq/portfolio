@@ -40,8 +40,6 @@ export const HeaderLanguages = style({
   display: "flex",
   alignItems: "center",
   justifyContent: "flex-end",
-  position: "relative",
-  right: 0,
   width: "100%",
   maxWidth: 120,
   gap: 20,

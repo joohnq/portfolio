@@ -34,6 +34,9 @@ export const HeaderInsider = style({
     "screen and (min-width: 500px)": {
       padding: "0px 50px",
     },
+    "(min-width: 992px) and (max-width: 1200px)": {
+      alignItems: "start",
+    },
   },
 });
 
@@ -42,6 +45,11 @@ export const HeaderLogoLanguage = style({
   alignItems: "center",
   justifyContent: "center",
   gap: 10,
+  "@media": {
+    "(min-width: 992px) and (max-width: 1200px)": {
+      flexDirection: "column",
+    },
+  },
 });
 
 export const HeaderLanguages = style({

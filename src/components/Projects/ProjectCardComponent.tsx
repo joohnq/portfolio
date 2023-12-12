@@ -75,7 +75,7 @@ export default function ProjectCardComponent({
               return (
                 <Icon
                   className={`${ProjectCard_LanguagesIcon}`}
-                  key={item.length}
+                  key={item.length * 2}
                   icon={`${item}`}
                   color="#888"
                   width="36"
