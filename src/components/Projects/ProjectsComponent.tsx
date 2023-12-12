@@ -3,8 +3,19 @@ import { Container, BigTitle, LinkExternal } from "@/styles/styles.css";
 import { ProjectsStyle, ProjectsStyle_Box } from "./Projects.css";
 import { poppinsBold } from "@/styles/fonts";
 import ProjectCardComponent from "./ProjectCardComponent";
+import ProjectCardVideoComponent from "./ProjectCardVideoComponent";
 
-export default function ProjectsComponent() {
+interface ProjectsComponentProps {
+  readonly setVideoMoviesLoaded: React.Dispatch<React.SetStateAction<boolean>>;
+  readonly setVideoWhatsappLoaded: React.Dispatch<
+    React.SetStateAction<boolean>
+  >;
+}
+
+export default function ProjectsComponent({
+  setVideoMoviesLoaded,
+  setVideoWhatsappLoaded,
+}: ProjectsComponentProps) {
   return (
     <section className={`${ProjectsStyle} ${Container}`} id="Projects">
       <h2 className={`${BigTitle} ${poppinsBold.className}`}>PROJETOS</h2>
@@ -22,24 +33,41 @@ export default function ProjectsComponent() {
             imageAlt: "Imagem do projeto Pokedex no mobile",
             deployLink: "",
             codeLink: "https://github.com/joohnq/app-pokedex",
+            glareColor: "#3fb950",
           }}
-          glareColor="#3ddc84"
         />
 
-        <ProjectCardComponent
+        <ProjectCardVideoComponent
           projectData={{
             title: "Movies and Series App",
             languages: [
-              "material-symbols:flutter",
-              "simple-icons:dart",
-              "material-symbols:http",
+              "ic:round-android",
+              "mdi:file-xml-box",
+              "mdi:firebase",
+              "simple-icons:kotlin",
             ],
-            image: "movies-app.png",
-            imageAlt: "Imagem do aplicativo de filmes e series",
+            video: "movies-app.mp4",
             deployLink: "",
             codeLink: "https://github.com/joohnq/movies_app",
+            glareColor: "#33b3ae",
           }}
-          glareColor="#4285f4"
+          setVideoLoaded={setVideoMoviesLoaded}
+        />
+        <ProjectCardVideoComponent
+          projectData={{
+            title: "WhatsApp Clone",
+            languages: [
+              "ic:round-android",
+              "mdi:file-xml-box",
+              "mdi:firebase",
+              "simple-icons:kotlin",
+            ],
+            video: "whatsapp.mp4",
+            deployLink: "",
+            codeLink: "https://github.com/joohnq/whatsapp",
+            glareColor: "#f778ba",
+          }}
+          setVideoLoaded={setVideoWhatsappLoaded}
         />
       </div>
       <a

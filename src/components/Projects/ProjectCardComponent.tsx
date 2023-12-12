@@ -26,25 +26,31 @@ interface ProjectCardProps {
     readonly imageAlt: string;
     readonly deployLink: string;
     readonly codeLink: string;
+    readonly glareColor: string;
   };
-  readonly glareColor: string;
 }
 
 export default function ProjectCardComponent({
   projectData,
-  glareColor,
 }: ProjectCardProps) {
-  const { title, languages, image, imageAlt, deployLink, codeLink } =
-    projectData;
+  const {
+    title,
+    languages,
+    image,
+    imageAlt,
+    deployLink,
+    codeLink,
+    glareColor,
+  } = projectData;
 
   return (
     <Tilt
-      perspective={4000}
+      perspective={10000}
       glareEnable={true}
       glareColor={glareColor}
       glareMaxOpacity={0.1}
       glarePosition="all"
-      glareBorderRadius="20"
+      glareBorderRadius="20px"
     >
       <div
         className={`${ProjectCard}`}
@@ -83,14 +89,16 @@ export default function ProjectCardComponent({
             />
           </div>
           <div className={`${ProjectCard_Buttons}`}>
-            <button className={`${ProjectCard_Button}`}>
-              <a
-                className={`${ProjectCard_Button_a} ${poppinsSemiBold.className}`}
-                href={`${deployLink}`}
-              >
-                DEPLOY
-              </a>
-            </button>
+            {deployLink !== "" && (
+              <button className={`${ProjectCard_Button}`}>
+                <a
+                  className={`${ProjectCard_Button_a} ${poppinsSemiBold.className}`}
+                  href={`${deployLink}`}
+                >
+                  DEPLOY
+                </a>
+              </button>
+            )}
             <button className={`${ProjectCard_Button}`}>
               <a
                 className={`${ProjectCard_Button_a} ${poppinsSemiBold.className} `}

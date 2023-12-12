@@ -15,99 +15,49 @@ export default function HabilitiesComponent() {
     <div className={`${Container} ${HabilitiesStyle}`} id="Habilities">
       <div className={`${HabilitiesGridCards}`}>
         <div className={`${HabilitiesCard}`}>
+          <Icon icon="logos:android-icon" color="#fff" width={50} height={50} />
+          <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
+            Android
+          </p>
+        </div>
+        <div className={`${HabilitiesCard}`}>
+          <Icon icon="logos:kotlin-icon" color="#fff" width={50} height={50} />
+          <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
+            Kotlin
+          </p>
+        </div>
+        <div className={`${HabilitiesCard}`}>
           <Icon
-            icon="vscode-icons:file-type-html"
+            icon="vscode-icons:file-type-xml"
             color="#fff"
             width={50}
             height={50}
           />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
-            HTML
+            XML
           </p>
         </div>
         <div className={`${HabilitiesCard}`}>
           <Icon
-            icon="vscode-icons:file-type-css"
+            icon="vscode-icons:file-type-firebase"
             color="#fff"
             width={50}
             height={50}
           />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
-            CSS
+            FIREBASE
           </p>
         </div>
         <div className={`${HabilitiesCard}`}>
-          <Icon icon="logos:javascript" color="white" width="50" height="50" />
-          <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
-            JAVASCRIPT
-          </p>
-        </div>
-        <div className={`${HabilitiesCard}`}>
-          <Icon
-            icon="vscode-icons:file-type-git"
-            color="white"
-            width="50"
-            height="50"
-          />
-          <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
-            GIT
-          </p>
-        </div>
-        <div className={`${HabilitiesCard}`}>
-          <Icon icon="devicon:bootstrap" color="white" width="50" height="50" />
-          <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
-            BOOTSTRAP
-          </p>
-        </div>
-        <div className={`${HabilitiesCard}`}>
-          <Icon icon="devicon:react" color="white" width="50" height="50" />
-          <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
-            REACT JS <br /> REACT NATIVE
-          </p>
-        </div>
-        <div className={`${HabilitiesCard}`}>
-          <Icon icon="logos:nodejs-icon" color="white" width="50" height="50" />
-          <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
-            NODE JS
-          </p>
-        </div>
-        <div className={`${HabilitiesCard}`}>
-          <Icon icon="logos:nextjs-icon" color="white" width="50" height="50" />
-          <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
-            NEXT JS
-          </p>
-        </div>
-        <div className={`${HabilitiesCard}`}>
-          <Icon
-            icon="vscode-icons:file-type-vanilla-extract"
-            color="white"
-            width="50"
-            height="50"
-          />
-          <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
-            VANILLA <br /> EXTRACT
-          </p>
-        </div>
-        <div className={`${HabilitiesCard}`}>
-          <Icon
-            icon="vscode-icons:file-type-styled"
-            color="white"
-            width="50"
-            height="50"
-          />
-          <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
-            STYLED <br /> COMPONENT
-          </p>
-        </div>
-        <div className={`${HabilitiesCard}`}>
-          <Icon
-            icon="logos:flutter"
-            color="white"
-            width="50"
-            height="50"
-          />
+          <Icon icon="logos:flutter" color="white" width="50" height="50" />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
             FLUTTER
+          </p>
+        </div>
+        <div className={`${HabilitiesCard}`}>
+          <Icon icon="logos:dart" color="white" width="50" height="50" />
+          <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
+            DART
           </p>
         </div>
       </div>
@@ -142,6 +92,17 @@ export default function HabilitiesComponent() {
           <Icon icon="devicon:vscode" color="white" width="50" height="50" />
           <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
             VS CODE
+          </p>
+        </div>
+        <div className={`${HabilitiesCard}`}>
+          <Icon
+            icon="devicon:androidstudio"
+            color="white"
+            width="50"
+            height="50"
+          />
+          <p className={`${HabilitiesCard_Title} ${poppinsBold.className}`}>
+            ANDROID STUDIO
           </p>
         </div>
         <div className={`${HabilitiesCard}`}>

@@ -69,6 +69,12 @@ export const ProjectCard_Image = style({
   marginBottom: 20,
 });
 
+export const ProjectCard_Video = style({
+  width: "100%",
+  height: "100%",
+  marginBottom: 20,
+});
+
 export const ProjectCard_Img = style({
   width: "100%",
   height: "100%",

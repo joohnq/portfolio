@@ -14,14 +14,26 @@ import {
   UiKitIcon,
 } from "./Home.css";
 import LoaderComponent from "../Loader/LoaderComponent";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function HomeComponent() {
+interface HomeComponentProps {
+  readonly videoMoviesLoaded: boolean;
+  readonly videoWhatsappLoaded: boolean;
+}
+
+export default function HomeComponent({
+  videoMoviesLoaded,
+  videoWhatsappLoaded,
+}: HomeComponentProps) {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  setTimeout(() => {
+  if (videoMoviesLoaded && videoWhatsappLoaded) {
+    setIsLoading(true);
+  }
+
+  useEffect(() => {
     setIsLoading(false);
-  }, 3000);
+  }, [videoMoviesLoaded, videoWhatsappLoaded]);
 
   return (
     <>

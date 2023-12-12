@@ -9,6 +9,8 @@ import ContactComponent from "@/components/Contact/ContactComponent";
 import FooterComponent from "@/components/Footer/FooterComponent";
 
 export default function Home() {
+  const [videoMoviesLoaded, setVideoMoviesLoaded] = React.useState(false);
+  const [videoWhatsappLoaded, setVideoWhatsappLoaded] = React.useState(false);
   return (
     <>
       <Head>
@@ -18,10 +20,16 @@ export default function Home() {
       </Head>
       <HeaderComponent />
       <main>
-        <HomeComponent />
+        <HomeComponent
+          videoMoviesLoaded={videoMoviesLoaded}
+          videoWhatsappLoaded={videoWhatsappLoaded}
+        />
         <AboutExperience />
         <HabilitiesComponent />
-        <ProjectsComponent />
+        <ProjectsComponent
+          setVideoMoviesLoaded={setVideoMoviesLoaded}
+          setVideoWhatsappLoaded={setVideoWhatsappLoaded}
+        />
         <ContactComponent />
         <FooterComponent />
       </main>
