@@ -53,8 +53,7 @@ export default function ProjectsComponent() {
               "mdi:file-xml-box",
               "mdi:firebase",
             ],
-            video:
-              "https://private-user-images.githubusercontent.com/72231799/305162328-9b768f33-de8e-4a4a-87b8-4330ea7a0e00.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDgwMTgxODksIm5iZiI6MTcwODAxNzg4OSwicGF0aCI6Ii83MjIzMTc5OS8zMDUxNjIzMjgtOWI3NjhmMzMtZGU4ZS00YTRhLTg3YjgtNDMzMGVhN2EwZTAwLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMTUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjE1VDE3MjQ0OVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTE2ZTM4MzU0MzhiNjJhMDM2Njk4NzgxYzQyNWM3NTQ5MmQxNDU2NDY0OGFiNDg3YWIyYTcwOWQ5NDkxMDFjNDMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.3eHb7VnDjnNSQlzirY88DR_TZ5CI3xve1FFpH-o_1s0",
+            video: "jobsfinderapp.mp4",
             deployLink: "",
             codeLink: "https://github.com/joohnq/JobsFinderApp",
             glareColor: "#3fb950",
