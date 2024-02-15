@@ -15,6 +15,7 @@ export const ProjectsStyle_Box = style({
   alignItems: "flex-start",
   justifyContent: "center",
   justifyItems: "center",
+  gridAutoFlow: "dense",
   gap: 50,
   gridTemplateColumns: "repeat(auto-fit, minmax(0, 400px))",
   marginTop: 100,

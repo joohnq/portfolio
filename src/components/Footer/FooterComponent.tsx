@@ -55,7 +55,7 @@ export default function FooterComponent() {
         </a>
       </div>
       <p className={`${Footer_Desc} ${poppinsBold.className}`}>
-        &copy; 2023 João Henrique. {t("direitos")}
+        &copy; 2024 João Henrique. {t("direitos")}
       </p>
     </footer>
   );
